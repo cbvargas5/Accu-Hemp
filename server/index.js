@@ -15,6 +15,4 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // app.use('/dosages', DOSAGES)
 
 
-
-
 app.listen(port, err => err ? console.error('SERVER ERROR: ', err) : console.log(`Server is listening on port ${port}`))
