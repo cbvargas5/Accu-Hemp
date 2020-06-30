@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const dosages = require('../controllers/dosages')
+const products = require('../controllers/products')
 
 router
     .route('/')
-    .get(dosages.getAll);
+    .get(products.getAll);
 
 
 module.exports = router
