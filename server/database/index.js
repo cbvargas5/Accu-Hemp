@@ -1,4 +1,4 @@
-const express = require('express');
+const { Pool } = require('pg');
 require('dotenv').config();
 
 
@@ -10,14 +10,20 @@ const pool = new Pool({
     port: 5432
 })
 
-const getUsers = (request, response) => {
-    pool.query('SELECT * FROM dosage;', (error, results) => {
-        if (error) {
-            throw error
-        }
-        console.log('rows:', results.rows)
-    })
-}
+// const getUsers = (request, response) => {
+//     pool.query('SELECT * FROM dosage;', (error, results) => {
+//         if (error) {
+//             throw error
+//         }
+//         console.log('rows:', results.rows)
+//     })
+// }
 
-getUsers()
-console.log()
+// getUsers()
+// console.log()
+
+pool.connect()
+    .then(() => console.log('Connected to PSQL'))
+    .catch((err) => console.error(err))
+
+module.exports = pool;

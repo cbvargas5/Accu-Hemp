@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3131;
 const path = require('path');
-const { Pool } = require('pg');
 require('dotenv').config();
 // const DOSAGES = require('./routers/dosages')
 
