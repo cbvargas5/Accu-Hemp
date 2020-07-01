@@ -6,5 +6,12 @@ router
     .route('/')
     .get(dosages.getAll);
 
+router
+    .route('/:condition')
+    .get(dosages.getByCondition);
+
+router
+    .route('/dose/:id')
+    .get(dosages.getDose)
 
 module.exports = router
