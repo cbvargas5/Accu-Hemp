@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './Header.jsx'
+import Header from './Header.jsx';
+import FeatureNav from './FeatureNav.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class App extends React.Component {
    return (
     <div>
       <Header />
+      <FeatureNav />
     </div>
     )
   }

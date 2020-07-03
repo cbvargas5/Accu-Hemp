@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = (props) => (
-  <nav>
+  <nav className="main-nav">
     <ul>
       <li>Home</li>
       <li>Companies</li>
