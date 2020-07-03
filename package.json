@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon server/index.js",
         "build": "webpack -w",
-        "sass": "node-sass -w client/src/sass/ -o dist/css --recursive"
+        "sass": "node-sass -w client/src/sass/ -o client/dist/styles --recursive"
     },
     "repository": {
         "type": "git",
