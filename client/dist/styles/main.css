@@ -3,14 +3,30 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  display: flex;
+  align-items: center;
+  max-width: 100rem; }
+
 ul {
   list-style: none; }
-
-header {
-  display: flex; }
 
 footer {
   display: flex; }
 
 a {
   text-decoration: none; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header img {
+    max-width: 18rem; }
+
+.main-nav ul {
+  display: flex; }
+  .main-nav ul li {
+    padding: 0 .4rem;
+    color: #63b380;
+    font-weight: 600; }

@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+body {
+    display: flex;
+    align-items: center;
+    max-width: 100rem;
 }
 
-header {
-    display: flex;
+ul {
+    list-style: none;
 }
 
 footer {
@@ -19,4 +21,25 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+// Header \\
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        max-width: 18rem;
+    }
+}
+
+.main-nav {
+    ul {
+        display: flex;
+        li {
+            padding: 0 .4rem;
+            color: $primary-color;
+            font-weight: 600;
+        }
+    }
 }

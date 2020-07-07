@@ -15,10 +15,10 @@ const Footer = (props) => (
         <p>&copy; Copyright Accugentix LLC 2020. All rights reserved</p>
       </div>
       <div className="social-wrappers">
-        <SocialButton link="https://www.facebook.com/accugentix/" icon=""/>
-        <SocialButton link="https://twitter.com/accuhemp/" icon=""/>
-        <SocialButton link="https://www.instagram.com/accuhemp/" icon=""/>
-        <SocialButton link="https://www.pinterest.com/accuhemp/" icon=""/>
+        <SocialButton link="https://www.facebook.com/accugentix/" icon="icon-facebook"/>
+        <SocialButton link="https://twitter.com/accuhemp/" icon="icon-twitter"/>
+        <SocialButton link="https://www.instagram.com/accuhemp/" icon="fab fa-instagram"/>
+        <SocialButton link="https://www.pinterest.com/accuhemp/" icon="icon-pinterest"/>
       </div>
     </div>
   </footer>
