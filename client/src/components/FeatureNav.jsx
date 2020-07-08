@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = (props) => (
-  <section className="feature-nav-wrapper">
+  <section className="feature-nav-section">
     <nav className="feature-nav">
       {/* Experiment Naver class */}
       <ul className="naver">
