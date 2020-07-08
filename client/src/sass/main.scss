@@ -6,10 +6,14 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    max-width: 100rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     font-family: $main-font;
+    &:first-child {
+        max-width: 60rem;
+        margin: auto;
+    }
 }
 
 ul {
@@ -26,9 +30,9 @@ a {
 
 // Header \\
 header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     img {
         max-width: 18rem;
     }
@@ -38,9 +42,17 @@ header {
     ul {
         display: flex;
         li {
-            padding: 0 .4rem;
             color: $primary-color;
-            font-weight: 600;
+            font-weight: 500;
+            padding: 0 .5rem;
+            transition: .4s;
+            &:hover {
+                transform: translateY(.5rem);
+                color: $secondary-color;
+            }
+            &:active {
+                color: $secondary-color;
+            }
         }
     }
 }

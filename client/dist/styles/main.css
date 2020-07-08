@@ -4,10 +4,10 @@
   box-sizing: border-box; }
 
 body {
-  display: flex;
-  align-items: center;
-  max-width: 100rem;
-  font-family: "Montserrat", Josefin Sans; }
+  font-family: "Josefin Sans", sans-serif; }
+  body:first-child {
+    max-width: 60rem;
+    margin: auto; }
 
 ul {
   list-style: none; }
@@ -19,15 +19,21 @@ a {
   text-decoration: none; }
 
 header {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: space-between; }
   header img {
     max-width: 18rem; }
 
 .main-nav ul {
   display: flex; }
   .main-nav ul li {
-    padding: 0 .4rem;
     color: #63b380;
-    font-weight: 600; }
+    font-weight: 500;
+    padding: 0 .5rem;
+    transition: .4s; }
+    .main-nav ul li:hover {
+      transform: translateY(0.5rem);
+      color: #6396b3; }
+    .main-nav ul li:active {
+      color: #6396b3; }
