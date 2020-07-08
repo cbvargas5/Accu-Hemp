@@ -1,16 +1,17 @@
 import React from 'react';
 
 const Navbar = (props) => (
-  <div className="feature-nav-wrapper">
+  <section className="feature-nav-wrapper">
     <nav className="feature-nav">
-      <ul>
+      {/* Experiment Naver class */}
+      <ul className="naver">
         <li>DOSE</li>
         <li>PRODUCTS</li>
         <li>MEASURE</li>
       </ul>
     </nav>
 
-  </div>
+  </section>
 );
 
 export default Navbar

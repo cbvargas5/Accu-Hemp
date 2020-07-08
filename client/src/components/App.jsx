@@ -13,8 +13,8 @@ class App extends React.Component {
    return (
     <div>
       <Header />
-      <FeatureNav />
       <main>
+        <FeatureNav />
         <section className="homepage-mid-sec">
           <div className="opening-msgs">
             <h3>Why is using CBD Hemp Oil so <span>complicated?</span></h3>
