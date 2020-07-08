@@ -1,0 +1,7 @@
+@import 'variables';
+//select all "h" tags
+@for $index from 1 through 6 {
+    h#{$index} {
+        color: $primary-color
+    }
+}

@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'functions';
+// @import 'utilities';
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,10 @@
 
 body {
     font-family: $main-font;
+}
+
+.section-underline {
+    border-bottom: blue solid 10px;
 }
 
 #root {
@@ -26,17 +32,32 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: $secondary-color;
+}
+
 // Header \\
 header {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    min-height: 12.5rem;
+    .header-logo-wrapper {
+        .image-wrapper {
+            width: 100%;
+        }
+    }
+    .main-nav-wrapper {
+        padding: 0 3rem;
+    }
     img {
         max-width: 18rem;
     }
 }
 
+// Navs \\
 .main-nav {
+    // width: 100%;
     ul {
         display: flex;
         li {
@@ -53,4 +74,16 @@ header {
             }
         }
     }
+}
+
+.feature-nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .feature-nav {
+        ul {
+            display: flex;
+        }
+    }
+    border: blue solid 1px;
 }

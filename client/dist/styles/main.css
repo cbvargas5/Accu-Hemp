@@ -1,3 +1,21 @@
+h1 {
+  color: #63b380; }
+
+h2 {
+  color: #63b380; }
+
+h3 {
+  color: #63b380; }
+
+h4 {
+  color: #63b380; }
+
+h5 {
+  color: #63b380; }
+
+h6 {
+  color: #63b380; }
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +23,9 @@
 
 body {
   font-family: "Josefin Sans", sans-serif; }
+
+.section-underline {
+  border-bottom: blue solid 10px; }
 
 #root {
   max-width: 71rem;
@@ -19,10 +40,18 @@ footer {
 a {
   text-decoration: none; }
 
+p {
+  color: #6396b3; }
+
 header {
   align-items: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  min-height: 12.5rem; }
+  header .header-logo-wrapper .image-wrapper {
+    width: 100%; }
+  header .main-nav-wrapper {
+    padding: 0 3rem; }
   header img {
     max-width: 18rem; }
 
@@ -38,3 +67,11 @@ header {
       color: #6396b3; }
     .main-nav ul li:active {
       color: #6396b3; }
+
+.feature-nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: blue solid 1px; }
+  .feature-nav-wrapper .feature-nav ul {
+    display: flex; }
