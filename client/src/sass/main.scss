@@ -6,14 +6,12 @@
 }
 
 body {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     font-family: $main-font;
-    &:first-child {
-        max-width: 60rem;
-        margin: auto;
-    }
+}
+
+#root {
+    max-width: 71rem;
+    margin: 0 auto;
 }
 
 ul {

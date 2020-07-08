@@ -5,9 +5,10 @@
 
 body {
   font-family: "Josefin Sans", sans-serif; }
-  body:first-child {
-    max-width: 60rem;
-    margin: auto; }
+
+#root {
+  max-width: 71rem;
+  margin: 0 auto; }
 
 ul {
   list-style: none; }
