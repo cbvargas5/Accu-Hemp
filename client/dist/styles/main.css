@@ -55,6 +55,19 @@ header {
   header img {
     max-width: 18rem; }
 
+.naver {
+  display: flex; }
+  .naver li {
+    color: #63b380;
+    font-weight: 500;
+    padding: 0 .5rem;
+    transition: .4s; }
+    .naver li:hover {
+      transform: translateY(0.5rem);
+      color: #6396b3; }
+    .naver li:active {
+      color: #6396b3; }
+
 .main-nav ul {
   display: flex; }
   .main-nav ul li {
