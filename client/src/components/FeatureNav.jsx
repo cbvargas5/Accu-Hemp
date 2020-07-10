@@ -5,9 +5,9 @@ const Navbar = (props) => (
     <nav className="feature-nav">
       {/* Experiment Naver class */}
       <ul className="naver">
-        <li>DOSE</li>
-        <li>PRODUCTS</li>
-        <li>MEASURE</li>
+        <li><span className="steps-nav">Step 1</span><br/>DOSE</li>
+        <li><span className="steps-nav">Step 2</span><br/>PRODUCTS</li>
+        <li><span className="steps-nav">Step 3</span><br/>MEASURE</li>
       </ul>
     </nav>
 

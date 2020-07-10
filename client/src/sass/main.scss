@@ -16,7 +16,7 @@ body {
 }
 
 #root {
-    max-width: 71rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
@@ -97,18 +97,22 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.3rem;
     .feature-nav {
         ul {
             display: flex;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             li {
+                text-align: center;
                 color: $primary-color;
                 transition: .6s;
                 padding: 0 1.2rem;
                 &:hover {
                     transform: translateY(-.5rem);
                     color: $secondary-color;
+                    .steps-nav {
+                        display: none;
+                    }
                 }
                 &:active {
                     color: $secondary-color;
@@ -117,4 +121,13 @@ header {
         }
     }
     border-bottom: $secondary-color solid .15rem;
+}
+
+.steps-nav {
+    font-size: .8rem;
+    // font-weight: 700;
+    // display: none;
+    // text-decoration: underline;
+    color: $secondary-color;
+    // transition: .5s;
 }
