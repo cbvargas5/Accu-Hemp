@@ -16,6 +16,10 @@ h5 {
 h6 {
   color: #63b380; }
 
+.underline-sec {
+  border-bottom: #6396b3 solid 0.15rem;
+  padding-bottom: 1.4rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +27,6 @@ h6 {
 
 body {
   font-family: "Josefin Sans", sans-serif; }
-
-.section-underline {
-  border-bottom: blue solid 10px; }
 
 #root {
   max-width: 75rem;
@@ -71,9 +72,7 @@ header {
 .feature-nav-section {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding-bottom: 1.3rem;
-  border-bottom: #6396b3 solid 0.15rem; }
+  justify-content: center; }
   .feature-nav-section .feature-nav ul {
     display: flex;
     font-size: 1.6rem; }
