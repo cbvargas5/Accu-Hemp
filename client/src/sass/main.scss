@@ -97,10 +97,24 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 1.25rem;
     .feature-nav {
         ul {
             display: flex;
+            font-size: 1.5rem;
+            li {
+                color: $primary-color;
+                transition: .6s;
+                padding: 0 1.2rem;
+                &:hover {
+                    transform: translateY(-.5rem);
+                    color: $secondary-color;
+                }
+                &:active {
+                    color: $secondary-color;
+                }
+            }
         }
     }
-    border: blue solid 1px;
+    border-bottom: $secondary-color solid .15rem;
 }

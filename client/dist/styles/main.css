@@ -72,6 +72,17 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  border: blue solid 1px; }
+  padding-bottom: 1.25rem;
+  border-bottom: #6396b3 solid 0.15rem; }
   .feature-nav-section .feature-nav ul {
-    display: flex; }
+    display: flex;
+    font-size: 1.5rem; }
+    .feature-nav-section .feature-nav ul li {
+      color: #63b380;
+      transition: .6s;
+      padding: 0 1.2rem; }
+      .feature-nav-section .feature-nav ul li:hover {
+        transform: translateY(-0.5rem);
+        color: #6396b3; }
+      .feature-nav-section .feature-nav ul li:active {
+        color: #6396b3; }
