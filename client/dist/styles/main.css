@@ -110,6 +110,9 @@ header {
   margin-top: 2rem; }
   .homepage-steps .icon-card {
     text-align: center; }
+    .homepage-steps .icon-card a {
+      color: #63b380;
+      font-size: 6.25rem; }
     .homepage-steps .icon-card h3 {
       font-size: 2.25rem;
       font-family: "Montserrat", sans-serif;

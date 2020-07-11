@@ -136,6 +136,12 @@ header {
     margin-top: 2rem;
     .icon-card {
         text-align: center;
+        a {
+            // fill: $primary-color;
+            color: $primary-color;
+            // border-color: $primary-color;
+            font-size: 6.25rem;
+        }
         h3 {
             font-size: 2.25rem;
             font-family: $secondary-font;
