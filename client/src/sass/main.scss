@@ -32,7 +32,9 @@ p {
     color: $secondary-color;
 }
 
-// Header \\
+//////////////
+/// HEADER ///
+//////////////
 header {
     align-items: center;
     display: flex;
@@ -109,7 +111,10 @@ header {
     // transition: .5s;
 }
 
-// HomePage mid section \\
+////////////////////////////
+/// HomePage mid section ///
+////////////////////////////
+// Title Section \\
 .opening-msgs {
     line-height: 5rem;
     margin-top: 3.5rem;
@@ -123,4 +128,9 @@ header {
         font-size: 2.5rem;
         font-weight: 500;
     }
+}
+
+// Step Section \\
+.homepage-steps {
+    display: flex;
 }

@@ -104,3 +104,6 @@ header {
   .opening-msgs h2 {
     font-size: 2.5rem;
     font-weight: 500; }
+
+.homepage-steps {
+  display: flex; }
