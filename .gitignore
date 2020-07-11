@@ -5,3 +5,5 @@ client/dist/bundle.js
 .env
 
 /server/database/schema.sql
+
+client/src/scss
