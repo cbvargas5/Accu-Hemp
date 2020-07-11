@@ -134,12 +134,11 @@ header {
 .homepage-steps {
     display: flex;
     margin-top: 2rem;
+    line-height: 1.5rem;
     .icon-card {
         text-align: center;
         a {
-            // fill: $primary-color;
             color: $primary-color;
-            // border-color: $primary-color;
             font-size: 6.25rem;
         }
         h3 {
@@ -147,10 +146,19 @@ header {
             font-family: $secondary-font;
             font-weight: 600;
         }
+        h4 {
+            padding: 1.5rem 0 .75rem 0;
+            a {
+                font-size: 2rem;
+            }
+        }
+        p {
+            font-family: $secondary-font;
+        }
         .icon-card-container {
             border: $secondary-color solid 1px;
             border-radius: 1.25rem;
-            margin: 1.25rem;
+            margin: 1rem;
             padding: 1.5rem;
         }
         // .icon-card-txt-parent {

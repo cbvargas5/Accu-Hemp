@@ -107,7 +107,8 @@ header {
 
 .homepage-steps {
   display: flex;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  line-height: 1.5rem; }
   .homepage-steps .icon-card {
     text-align: center; }
     .homepage-steps .icon-card a {
@@ -117,8 +118,14 @@ header {
       font-size: 2.25rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 600; }
+    .homepage-steps .icon-card h4 {
+      padding: 1.5rem 0 .75rem 0; }
+      .homepage-steps .icon-card h4 a {
+        font-size: 2rem; }
+    .homepage-steps .icon-card p {
+      font-family: "Montserrat", sans-serif; }
     .homepage-steps .icon-card .icon-card-container {
       border: #6396b3 solid 1px;
       border-radius: 1.25rem;
-      margin: 1.25rem;
+      margin: 1rem;
       padding: 1.5rem; }

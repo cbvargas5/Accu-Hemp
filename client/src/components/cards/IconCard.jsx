@@ -12,7 +12,7 @@ export default function IconCard(props) {
             </a>
           </div>
           <div className="icon-card-txt-parent">
-            <h4>{props.title}</h4>
+            <h4><a href="#">{props.title}</a></h4>
             <p>{props.children}</p>
           </div>
         </div>
