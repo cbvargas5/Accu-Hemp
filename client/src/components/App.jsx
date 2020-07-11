@@ -15,7 +15,7 @@ class App extends React.Component {
       <Header />
       <main>
         <FeatureNav />
-        <section className="homepage-mid-sec">
+        <section className="homepage-mid-sec underline-sec">
           <div className="opening-msgs">
             <h3>Why is using CBD Hemp Oil so <span>complicated?</span></h3>
             <h2>AccuHemp can make it easy:</h2>
