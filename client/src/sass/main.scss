@@ -133,7 +133,22 @@ header {
 // Step Section \\
 .homepage-steps {
     display: flex;
+    margin-top: 2rem;
     .icon-card {
         text-align: center;
+        h3 {
+            font-size: 2.25rem;
+            font-family: $secondary-font;
+            font-weight: 600;
+        }
+        .icon-card-container {
+            border: $secondary-color solid 1px;
+            border-radius: 1.25rem;
+            margin: 1.25rem;
+            padding: 1.5rem;
+        }
+        // .icon-card-txt-parent {
+        //     padding: 1rem;
+        // }
     }
 }
