@@ -7,7 +7,9 @@ export default function IconCard(props) {
       <div className="icon-card-container">
         <div className="icon-card-wrapper">
           <div className="icon-card-icon-parent">
-            <a href="#">{props.icon}</a>
+            <a href="#">
+              <i className={props.icon}></i>
+            </a>
           </div>
           <div className="icon-card-txt-parent">
             <h4>{props.title}</h4>
