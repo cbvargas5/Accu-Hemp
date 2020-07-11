@@ -107,3 +107,5 @@ header {
 
 .homepage-steps {
   display: flex; }
+  .homepage-steps .icon-card {
+    text-align: center; }
