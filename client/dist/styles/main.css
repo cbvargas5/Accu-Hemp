@@ -128,15 +128,26 @@ header {
       padding: 1.5rem; }
 
 footer .disclaimer-section {
-  display: flex; }
-
-footer .main-nav li {
-  transition: .4s; }
-  footer .main-nav li:hover {
-    transform: translateY(-0.25rem);
-    color: #6396b3; }
-  footer .main-nav li:active {
-    color: #6396b3; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: #9b9b9b dotted 1px; }
+  footer .disclaimer-section .main-nav {
+    flex: 1; }
+    footer .disclaimer-section .main-nav li {
+      font-weight: 700;
+      padding: 0 .5rem;
+      transition: .4s; }
+      footer .disclaimer-section .main-nav li:hover {
+        transform: translateY(-0.25rem);
+        color: #6396b3; }
+      footer .disclaimer-section .main-nav li:active {
+        color: #6396b3; }
+  footer .disclaimer-section .disclaimer-wrapper {
+    flex: 1; }
+    footer .disclaimer-section .disclaimer-wrapper p {
+      color: #63b380; }
 
 footer .footer-end-wrapper {
   display: flex; }
