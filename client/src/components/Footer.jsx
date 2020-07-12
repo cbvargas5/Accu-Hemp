@@ -13,7 +13,7 @@ const Footer = (props) => (
       </div>
     </section>
     <section className="footer-end-wrapper">
-      <div className="copyright-parent">
+      <div className="copyright">
         <p>&copy; Copyright Accugentix LLC 2020. All rights reserved</p>
       </div>
       <div className="social-wrapper">
