@@ -160,3 +160,14 @@ footer .footer-end-wrapper {
     font-weight: 400; }
   footer .footer-end-wrapper .social-wrapper {
     display: flex; }
+    footer .footer-end-wrapper .social-wrapper .social-btn {
+      margin-right: 1.25rem;
+      width: 100%;
+      overflow: visible;
+      padding: 1rem;
+      border: #6396b3 solid 2px;
+      border-radius: .5rem; }
+      footer .footer-end-wrapper .social-wrapper .social-btn .fab {
+        display: inline-block;
+        color: #63b380;
+        font-size: 2rem; }

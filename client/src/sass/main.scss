@@ -210,6 +210,21 @@ footer {
         }
         .social-wrapper {
             display: flex;
+            .social-btn {
+                margin-right: 1.25rem;
+                // a {
+                width: 100%;
+                overflow: visible;
+                padding: 1rem;
+                border: $secondary-color solid 2px;
+                border-radius: .5rem;
+                // }
+                .fab {
+                    display: inline-block;
+                    color: $primary-color;
+                    font-size: 2rem;
+                }
+            }
         }
     }
 }
