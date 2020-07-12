@@ -35,9 +35,6 @@ body {
 ul {
   list-style: none; }
 
-footer {
-  display: flex; }
-
 a {
   text-decoration: none; }
 
@@ -129,3 +126,19 @@ header {
       border-radius: 1.25rem;
       margin: 1rem;
       padding: 1.5rem; }
+
+footer .disclaimer-section {
+  display: flex; }
+
+footer .main-nav li {
+  transition: .4s; }
+  footer .main-nav li:hover {
+    transform: translateY(-0.25rem);
+    color: #6396b3; }
+  footer .main-nav li:active {
+    color: #6396b3; }
+
+footer .footer-end-wrapper {
+  display: flex; }
+  footer .footer-end-wrapper .social-wrapper {
+    display: flex; }
