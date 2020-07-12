@@ -161,13 +161,19 @@ footer .footer-end-wrapper {
   footer .footer-end-wrapper .social-wrapper {
     display: flex; }
     footer .footer-end-wrapper .social-wrapper .social-btn {
+      background-color: #96ccaa;
       margin-right: 1.25rem;
-      width: 100%;
       overflow: visible;
-      padding: 1rem;
+      padding: .5rem .7rem;
       border: #6396b3 solid 2px;
-      border-radius: .5rem; }
+      border-radius: 1rem;
+      transition: .3s; }
+      footer .footer-end-wrapper .social-wrapper .social-btn .fa-facebook-f {
+        margin: 0 .25rem; }
       footer .footer-end-wrapper .social-wrapper .social-btn .fab {
-        display: inline-block;
-        color: #63b380;
+        color: #6396b3;
         font-size: 2rem; }
+      footer .footer-end-wrapper .social-wrapper .social-btn:hover {
+        background-color: #fff; }
+        footer .footer-end-wrapper .social-wrapper .social-btn:hover .fab {
+          color: #63b380; }

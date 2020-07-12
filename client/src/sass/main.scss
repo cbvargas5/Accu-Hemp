@@ -211,18 +211,25 @@ footer {
         .social-wrapper {
             display: flex;
             .social-btn {
+                background-color: $primary-light;
                 margin-right: 1.25rem;
-                // a {
-                width: 100%;
                 overflow: visible;
-                padding: 1rem;
+                padding: .5rem .7rem;
                 border: $secondary-color solid 2px;
-                border-radius: .5rem;
-                // }
+                border-radius: 1rem;
+                transition: .3s;
+                .fa-facebook-f {
+                    margin: 0 .25rem;
+                }
                 .fab {
-                    display: inline-block;
-                    color: $primary-color;
+                    color: $secondary-color;
                     font-size: 2rem;
+                }
+                &:hover {
+                    background-color: #fff;
+                    .fab {
+                        color: $primary-color;
+                    }
                 }
             }
         }
