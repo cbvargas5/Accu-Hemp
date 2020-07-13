@@ -11,12 +11,11 @@ export default function() {
       {
         BRANDS.map((brand, index) => (
           <Carousel.Item key={index}>
-            <img src={`${PATH}${brand}.png`} alt=""/>
+            <img src={`${PATH}${brand}.png`} alt={`${brand} logo`}/>
           </Carousel.Item>
         ))
       }
       </Carousel>
-      {/* <div className="carousel-wrapper">CAROUSEL WILL GO HERE</div> */}
     </section>
   )
 }
