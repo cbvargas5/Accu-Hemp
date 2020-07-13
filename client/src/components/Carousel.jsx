@@ -7,8 +7,8 @@ export default function() {
   return (
     <Carousel>
       {
-        BRANDS.map((brand) => (
-          <Carousel.Item>
+        BRANDS.map((brand, index) => (
+          <Carousel.Item key={index}>
             <img src={`${PATH}${brand}.png`} alt=""/>
           </Carousel.Item>
         ))
