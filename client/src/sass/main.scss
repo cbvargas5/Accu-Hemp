@@ -24,7 +24,8 @@ ul {
 // footer {
 //     display: flex;
 // }
-a {
+a,
+a:hover {
     text-decoration: none;
 }
 
@@ -164,6 +165,13 @@ header {
         // .icon-card-txt-parent {
         //     padding: 1rem;
         // }
+    }
+}
+
+// Carousel \\
+.brand-carousel-section {
+    img {
+        width: 16rem;
     }
 }
 

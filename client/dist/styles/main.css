@@ -36,7 +36,8 @@ body {
 ul {
   list-style: none; }
 
-a {
+a,
+a:hover {
   text-decoration: none; }
 
 p {
@@ -127,6 +128,9 @@ header {
       border-radius: 1.25rem;
       margin: 1rem;
       padding: 1.5rem; }
+
+.brand-carousel-section img {
+  width: 16rem; }
 
 footer .disclaimer-section {
   display: flex;
