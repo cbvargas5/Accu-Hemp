@@ -1,5 +1,6 @@
 import React from 'react';
-import Homepage from './pages/Hompage.jsx';
+import Homepage from './pages/Homepage.jsx';
+import DosePage from './pages/DosePage.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -7,7 +8,8 @@ class App extends React.Component {
   }
   render() {
    return (
-      <Homepage />
+      // <Homepage />
+      <DosePage />
     )
   }
 }
