@@ -172,9 +172,14 @@ header {
 .brand-carousel-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     text-align: center;
+    padding: 2.5rem 0;
+    h3 {
+        font-size: 2.5rem;
+        font-family: $secondary-font;
+    }
     img {
         width: 16rem;
     }
