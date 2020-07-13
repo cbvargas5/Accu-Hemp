@@ -2,27 +2,23 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 
 export default function() {
+  const PATH = `./images/${"Brand logos"}/`
+  const BRANDS = ['cbdmd', 'cw', 'elixinol', 'elsol', 'endoca', 'incann', 'joy_organics']
   return (
     <Carousel>
-      <Carousel.Item>
-<<<<<<< HEAD
+      {
+        BRANDS.map((brand) => (
+          <Carousel.Item>
+            <img src={`${PATH}${brand}.png`} alt=""/>
+          </Carousel.Item>
+        ))
+      }
+      {/* <Carousel.Item>
         <img src="./images/" alt=""/>
       </Carousel.Item>
       <Carousel.Item>
         <img src="./images/" alt=""/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="./images/" alt=""/>
-=======
-        Slide 1
-      </Carousel.Item>
-      <Carousel.Item>
-        Slide 2
-      </Carousel.Item>
-      <Carousel.Item>
-        Slide 3
->>>>>>> c3ef1405d0833497d746d62f41152171f6873be5
-      </Carousel.Item>
+      </Carousel.Item> */}
     </Carousel>
 
 
