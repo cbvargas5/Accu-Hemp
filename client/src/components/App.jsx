@@ -4,7 +4,7 @@ import DosePage from './pages/DosePage.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
-import { Link, NavLink, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +17,13 @@ class App extends React.Component {
       <main>
         <FeatureNav />
         <section className="homepage-mid-sec underline-sec">
-        <Homepage />
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact component={Homepage} />
+              <Route path="/dose" exact component={DosePage} />
+            </Switch>
+          </BrowserRouter>
+        {/* <Homepage /> */}
         {/* <DosePage /> */}
         </section>
       </main>
