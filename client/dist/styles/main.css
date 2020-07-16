@@ -57,16 +57,20 @@ header {
 
 .main-nav ul {
   display: flex; }
-  .main-nav ul li {
+  .main-nav ul li a {
     color: #63b380;
     font-weight: 500;
     padding: 0 .5rem;
     transition: .4s; }
-    .main-nav ul li:hover {
+    .main-nav ul li a:hover {
       transform: translateY(0.5rem);
       color: #6396b3; }
-    .main-nav ul li:active {
+    .main-nav ul li a:active {
       color: #6396b3; }
+
+.steps-nav {
+  font-size: .8rem;
+  color: #6396b3; }
 
 .feature-nav-section {
   width: 100%;
@@ -77,20 +81,19 @@ header {
     font-size: 1.6rem; }
     .feature-nav-section .feature-nav ul li {
       text-align: center;
-      color: #63b380;
-      transition: .6s;
-      padding: 0 1.2rem; }
-      .feature-nav-section .feature-nav ul li:hover {
+      margin: 0 1.2rem;
+      transition: .6s; }
+      .feature-nav-section .feature-nav ul li a {
+        color: #63b380; }
+        .feature-nav-section .feature-nav ul li a:active {
+          color: #6396b3; }
+      .feature-nav-section .feature-nav ul li:hover,
+      .feature-nav-section .feature-nav ul li a:hover {
         transform: translateY(-0.5rem);
         color: #6396b3; }
-        .feature-nav-section .feature-nav ul li:hover .steps-nav {
+        .feature-nav-section .feature-nav ul li:hover .steps-nav,
+        .feature-nav-section .feature-nav ul li a:hover .steps-nav {
           display: none; }
-      .feature-nav-section .feature-nav ul li:active {
-        color: #6396b3; }
-
-.steps-nav {
-  font-size: .8rem;
-  color: #6396b3; }
 
 .opening-msgs {
   line-height: 5rem;

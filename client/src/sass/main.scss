@@ -59,41 +59,14 @@ header {
     ul {
         display: flex;
         li {
-            color: $primary-color;
-            font-weight: 500;
-            padding: 0 .5rem;
-            transition: .4s;
-            &:hover {
-                transform: translateY(.5rem);
-                color: $secondary-color;
-            }
-            &:active {
-                color: $secondary-color;
-            }
-        }
-    }
-}
-
-.feature-nav-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    // padding-bottom: 1.3rem;
-    .feature-nav {
-        ul {
-            display: flex;
-            font-size: 1.6rem;
-            li {
-                text-align: center;
+            a {
                 color: $primary-color;
-                transition: .6s;
-                padding: 0 1.2rem;
+                font-weight: 500;
+                padding: 0 .5rem;
+                transition: .4s;
                 &:hover {
-                    transform: translateY(-.5rem);
+                    transform: translateY(.5rem);
                     color: $secondary-color;
-                    .steps-nav {
-                        display: none;
-                    }
                 }
                 &:active {
                     color: $secondary-color;
@@ -110,6 +83,38 @@ header {
     // text-decoration: underline;
     color: $secondary-color;
     // transition: .5s;
+}
+
+.feature-nav-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // padding-bottom: 1.3rem;
+    .feature-nav {
+        ul {
+            display: flex;
+            font-size: 1.6rem;
+            li {
+                text-align: center;
+                margin: 0 1.2rem;
+                transition: .6s;
+                a {
+                    color: $primary-color;
+                    &:active {
+                        color: $secondary-color;
+                    }
+                }
+                &:hover,
+                & a:hover {
+                    transform: translateY(-.5rem);
+                    color: $secondary-color;
+                    .steps-nav {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 ////////////////////////////

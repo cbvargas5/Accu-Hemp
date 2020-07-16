@@ -15,13 +15,15 @@ class App extends React.Component {
     <>
       <Header />
       <main>
-        <FeatureNav />
+        <BrowserRouter>
+          <FeatureNav />
+        </BrowserRouter>
         <section className="homepage-mid-sec underline-sec">
           <BrowserRouter>
-            <Switch>
+            {/* <Switch> */}
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />
-            </Switch>
+            {/* </Switch> */}
           </BrowserRouter>
         {/* <Homepage /> */}
         {/* <DosePage /> */}
