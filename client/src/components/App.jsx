@@ -4,6 +4,7 @@ import DosePage from './pages/DosePage.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
+import { Link, NavLink, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {

@@ -10,14 +10,7 @@ export default class DosePage extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <main>
-        <FeatureNav />
-        <div className="">
-
-        </div>
-        </main>
-        <Footer />
+        <h2>This is a test</h2>
       </div>
     )
   }
