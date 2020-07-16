@@ -10,7 +10,7 @@ export default class DosePage extends Component {
   render() {
     return (
       <div>
-        <h2>This is a test</h2>
+        <h2>This is the Dose page</h2>
       </div>
     )
   }

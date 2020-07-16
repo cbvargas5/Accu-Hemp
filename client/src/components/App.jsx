@@ -17,17 +17,13 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <FeatureNav />
-        </BrowserRouter>
-        <section className="homepage-mid-sec underline-sec">
-          <BrowserRouter>
-            {/* <Switch> */}
+          <section className="homepage-mid-sec underline-sec">
+            <Switch>
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />
-            {/* </Switch> */}
-          </BrowserRouter>
-        {/* <Homepage /> */}
-        {/* <DosePage /> */}
-        </section>
+            </Switch>
+          </section>
+        </BrowserRouter>
       </main>
       <Footer />
 
