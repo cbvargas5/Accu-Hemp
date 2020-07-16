@@ -13,6 +13,7 @@ class App extends React.Component {
   render() {
    return (
     <>
+    {/* Wrap whole thing in Router */}
       <Header />
       <main>
         <BrowserRouter>
