@@ -1,6 +1,9 @@
 import React from 'react';
 import Homepage from './pages/Homepage.jsx';
 import DosePage from './pages/DosePage.jsx';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import FeatureNav from './FeatureNav.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,8 +11,18 @@ class App extends React.Component {
   }
   render() {
    return (
-      // <Homepage />
-      <DosePage />
+    <div>
+      <Header />
+      <main>
+        <FeatureNav />
+        <section className="homepage-mid-sec underline-sec">
+        <Homepage />
+        {/* <DosePage /> */}
+        </section>
+      </main>
+      <Footer />
+
+    </div>
     )
   }
 }
