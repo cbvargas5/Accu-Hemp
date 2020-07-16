@@ -11,7 +11,7 @@ class App extends React.Component {
   }
   render() {
    return (
-    <div>
+    <>
       <Header />
       <main>
         <FeatureNav />
@@ -22,7 +22,7 @@ class App extends React.Component {
       </main>
       <Footer />
 
-    </div>
+    </>
     )
   }
 }
