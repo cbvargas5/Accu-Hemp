@@ -7,8 +7,8 @@ const Navbar = (props) => (
     <nav className="feature-nav">
       <ul>
         <li><NavLink to="/dose"><span className="steps-nav">Step 1</span><br/>DOSE</NavLink></li>
-        <li><span className="steps-nav">Step 2</span><br/>PRODUCTS</li>
-        <li><span className="steps-nav">Step 3</span><br/>MEASURE</li>
+        <li><NavLink to="/"><span className="steps-nav">Step 2</span><br/>PRODUCTS</NavLink></li>
+        <li><NavLink to="/"><span className="steps-nav">Step 3</span><br/>MEASURE</NavLink></li>
       </ul>
     </nav>
 
