@@ -1,4 +1,6 @@
 import React from 'react'
+import { ProgressBar } from 'react-bootstrap'
+
 
 export default function ProgressTracker(props) {
   return (
@@ -6,7 +8,7 @@ export default function ProgressTracker(props) {
       <h2>{props.title}</h2>
       <div className="progressbar-wrapper">
         <h5>{props.currStep} of {props.lastStep}</h5>
-        <div className="progressbar">Progress Bar coming soon...</div>
+        <ProgressBar now={(props.currStep % props.lastStep) * 100}/>
       </div>
     </div>
   )
