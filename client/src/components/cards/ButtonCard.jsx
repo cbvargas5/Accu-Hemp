@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default class ButtonCard extends Component {
-  render() {
-    return (
-      <div className="quiz-card">
-        <Link to="">CBD Dose Estimator</Link>
-      </div>
-    )
-  }
+export default function ButtonCard(props) {
+  return (
+    <div className="btn-card">
+      <Link to={props.link}>{props.children}</Link>
+    </div>
+  )
 }

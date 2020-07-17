@@ -18,7 +18,7 @@ export default class DosePage extends Component {
             <h3>Estimate your dose of CBD</h3>
             <p>This CBD Dose Estimator is not intended to be medical advice. We strongly recommend you discuss your CBD Hemp oil dose with a licensed medical professional.</p>
           </div>
-          <ButtonCard />
+          <ButtonCard link="/">CBD Dose Estimator</ButtonCard>
         </section>
         <section className="survey-wrapper">
           <h3>survey</h3>
