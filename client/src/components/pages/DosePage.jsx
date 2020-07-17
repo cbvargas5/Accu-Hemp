@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../Header.jsx'
-import FeatureNav from '../FeatureNav.jsx'
-import Footer from '../Footer.jsx'
+import { Link } from 'react-router-dom'
+
 
 export default class DosePage extends Component {
   constructor(props) {
@@ -14,7 +13,13 @@ export default class DosePage extends Component {
           <h2>Dose</h2>
         </section>
         <section className="estimator-wrapper">
-          <h3>estimator</h3>
+          <div>
+            <h3>Estimate your dose of CBD</h3>
+            <p>This CBD Dose Estimator is not intended to be medical advice. We strongly recommend you discuss your CBD Hemp oil dose with a licensed medical professional.</p>
+          </div>
+          <div className="quiz-card">
+            <Link to="">CBD Dose Estimator</Link>
+          </div>
         </section>
         <section className="survey-wrapper">
           <h3>survey</h3>
