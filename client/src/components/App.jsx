@@ -15,10 +15,9 @@ class App extends React.Component {
   render() {
    return (
     <>
-    {/* Wrap whole thing in Router */}
+      <BrowserRouter>
       <Header />
       <main>
-        <BrowserRouter>
           <FeatureNav />
           <section className="homepage-mid-sec underline-sec">
             <Switch>
@@ -28,9 +27,9 @@ class App extends React.Component {
               <Route path="/measure" exact component={MeasurePage} />
             </Switch>
           </section>
-        </BrowserRouter>
       </main>
       <Footer />
+      </BrowserRouter>
 
     </>
     )
