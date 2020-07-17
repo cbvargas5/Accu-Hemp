@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ButtonCard from '../cards/ButtonCard.jsx'
 
 
 export default class DosePage extends Component {
@@ -17,9 +18,7 @@ export default class DosePage extends Component {
             <h3>Estimate your dose of CBD</h3>
             <p>This CBD Dose Estimator is not intended to be medical advice. We strongly recommend you discuss your CBD Hemp oil dose with a licensed medical professional.</p>
           </div>
-          <div className="quiz-card">
-            <Link to="">CBD Dose Estimator</Link>
-          </div>
+          <ButtonCard />
         </section>
         <section className="survey-wrapper">
           <h3>survey</h3>
