@@ -10,7 +10,15 @@ export default class DosePage extends Component {
   render() {
     return (
       <div>
-        <h2>This is the Dose page</h2>
+        <section className="mini-header">
+          <h2>Dose</h2>
+        </section>
+        <section className="estimator-wrapper">
+          <h3>estimator</h3>
+        </section>
+        <section className="survey-wrapper">
+          <h3>survey</h3>
+        </section>
       </div>
     )
   }
