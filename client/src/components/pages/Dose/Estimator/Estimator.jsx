@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ProgressTracker from '../../../ProgressTracker.jsx'
 import { Link } from 'react-router-dom'
+import { getDoses } from '../../../../actions/dose'
+
+import ProgressTracker from '../../../ProgressTracker.jsx'
 import TabCondition from './TabCondition.jsx'
 import TabSeverity from './TabSeverity.jsx'
 import TabResults from './TabResults.jsx'
@@ -16,6 +18,7 @@ export class Estimator extends Component {
     const third = TabResults
   }
   render() {
+    console.log('State in Estimator -->', this.props)
     return (
       <section className="estimator-wrapper">
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
@@ -28,12 +31,10 @@ export class Estimator extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
+const mapStateToProps = (state) => ({ ...state })
 
 const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Estimator)
+export default connect(mapStateToProps, { getDoses })(Estimator)
