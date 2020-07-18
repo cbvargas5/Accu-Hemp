@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ResultsTab extends Component {
+export default class TabSeverity extends Component {
   render() {
     return (
       <div>

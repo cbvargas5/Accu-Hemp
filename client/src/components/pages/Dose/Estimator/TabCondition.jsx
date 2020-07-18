@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProgressTracker from '../../../ProgressTracker.jsx'
 
-export default class ConditionTab extends Component {
+export default class TabCondition extends Component {
   render() {
     return (
       <section className="estimator-wrapper">
