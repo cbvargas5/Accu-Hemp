@@ -1,4 +1,4 @@
-// import {} from '../constants'
+import { AGREE } from '../constants/action-types'
 
 
 const initialState = {

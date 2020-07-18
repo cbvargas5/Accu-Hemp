@@ -1,4 +1,4 @@
-// import {} from '../constants'
+import { GET_DOSE } from '../constants/action-types'
 
 
 const initialState = {
