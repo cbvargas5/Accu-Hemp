@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
+import ProgressTracker from '../../../ProgressTracker.jsx'
 
 export default class ConditionTab extends Component {
   render() {
     return (
       <section className="estimator-wrapper">
-        <div>
-          <h2>Dose Estimator</h2>
-          <div className="progressbar-wrapper">
-            <p></p>
-          </div>
-        </div>
+        <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
       </section>
     )
   }
