@@ -8,7 +8,7 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
     switch (type) {
 
-        case typeName:
+        case AGREE:
             return {...state, ...payload }
 
         default:
