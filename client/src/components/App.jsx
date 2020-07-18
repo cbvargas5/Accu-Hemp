@@ -7,7 +7,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Estimator } from './pages/Dose/Estimator/Estimator.jsx';
+import Estimator from './pages/Dose/Estimator/Estimator.jsx';
 
 class App extends React.Component {
   constructor(props) {

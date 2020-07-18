@@ -9,7 +9,7 @@ import TabSeverity from './TabSeverity.jsx'
 import TabResults from './TabResults.jsx'
 
 
-export class Estimator extends Component {
+class Estimator extends Component {
   constructor(props) {
     super(props)
 
