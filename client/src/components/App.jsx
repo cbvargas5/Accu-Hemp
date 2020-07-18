@@ -7,6 +7,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Estimator } from './pages/Dose/Estimator/Estimator.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />
+              <Route path="/dose/estimator" exact component={Estimator} />
               <Route path="/products" exact component={ProductsPage} />
               <Route path="/measure" exact component={MeasurePage} />
             </Switch>
