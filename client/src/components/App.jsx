@@ -7,6 +7,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ConditionTab from './pages/Dose/Estimator/ConditionTab.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends React.Component {
       <main>
           <FeatureNav />
           <section className="homepage-mid-sec underline-sec">
+            <ConditionTab />
             <Switch>
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />
