@@ -7,6 +7,10 @@ router
     .get(dosages.getAll);
 
 router
+    .route('/conditions')
+    .get(dosages.getConditions);
+
+router
     .route('/:condition')
     .get(dosages.getByCondition);
 

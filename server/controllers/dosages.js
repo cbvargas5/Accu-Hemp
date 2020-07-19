@@ -7,6 +7,11 @@ module.exports = {
             .then(data => res.status(200).send(data.rows))
             .catch(err => res.status(400).send(err))
     },
+    getConditions: (req, res) => {
+        dosages.getConditions()
+            .then(data => res.status(200).send(data.rows))
+            .catch(err => res.status(400).send(err))
+    },
     getByCondition: (req, res) => {
         dosages.getByCondition(req.params.condition)
             .then(data => res.status(200).send(data.rows))
