@@ -1,2 +1,2 @@
 export const AGREE = 'AGREE'
-export const GET_DOSE = 'GET_DOSE'
+export const GET_CONDITIONS = 'GET_CONDITIONS'

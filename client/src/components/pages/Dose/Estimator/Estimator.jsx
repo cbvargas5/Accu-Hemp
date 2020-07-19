@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getDoses } from '../../../../actions/dose'
+import { getConditions } from '../../../../actions/dose'
 
 import ProgressTracker from '../../../ProgressTracker.jsx'
 import TabCondition from './TabCondition.jsx'
@@ -15,7 +15,7 @@ class Estimator extends Component {
 
   }
   componentDidMount() {
-    this.props.getDoses()
+    this.props.getConditions()
       .then(data => {
         console.log('after action -->', this.props)
       })
@@ -27,7 +27,7 @@ class Estimator extends Component {
         {/* Need to set up sub routes here to conditionally
             render different tabs */}
         <ul>
-          {this.props.estimator.doses
+          {this.props.estimator.conditions
             .map(({ condition }, index) => (
               <li key={index}>{condition}</li>
             ))}
@@ -43,4 +43,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, { getDoses })(Estimator)
+export default connect(mapStateToProps, { getConditions })(Estimator)
