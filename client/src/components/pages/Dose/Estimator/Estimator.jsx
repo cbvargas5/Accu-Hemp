@@ -13,19 +13,25 @@ class Estimator extends Component {
   constructor(props) {
     super(props)
 
-    const first = TabCondition
-    const second = TabSeverity
-    const third = TabResults
+  }
+  componentDidMount() {
+    this.props.getDoses()
+      .then(data => {
+        console.log('after action -->', this.props)
+      })
   }
   render() {
-    console.log('State in Estimator -->', this.props)
     return (
       <section className="estimator-wrapper">
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
         {/* Need to set up sub routes here to conditionally
             render different tabs */}
-        
-        {/* Need to map over condition array from state that was grabbed from database */}
+        <ul>
+          {this.props.estimator.doses
+            .map(({ condition }, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+        </ul>
       </section>
     )
   }
