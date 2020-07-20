@@ -34,10 +34,12 @@ class Estimator extends Component {
     const { step } = this.props.estimator
     if (step <= 0) {
       this.props.updateSteps({step: 1})
+      this.props.history.push(`${this.props.match.url}/${1}`)
     } else if (step === 1) {
       this.props.history.goBack()
     } else {
       this.props.updateSteps({step: step - 1})
+      this.props.history.push(`${this.props.match.url}/${step - 1}`)
     }
   }
   render() {
@@ -51,8 +53,10 @@ class Estimator extends Component {
             <Link to={URL + '/results'}>Results</Link>
         <Switch>
           <Route path={`${URL}/1`} exact render={props => <TabCondition {...this.props}/>} />
-          <Route path={`${URL}/2`} exact component={TabSeverity} />
-          <Route path={`${URL}/3`} exact component={TabResults} />
+          <Route path={`${URL}/2`} exact render={props => <TabSeverity {...this.props}/>} />
+          <Route path={`${URL}/3`} exact render={props => <TabResults {...this.props}/>} />
+          {/* <Route path={`${URL}/2`} exact component={TabSeverity} />
+          <Route path={`${URL}/3`} exact component={TabResults} /> */}
         </Switch>
         <Button onClick={this.onPrevious}>Previous</Button>
         <Button onClick={this.onNext}>Next</Button>

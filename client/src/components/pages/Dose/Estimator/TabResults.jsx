@@ -15,6 +15,7 @@ export class TabResults extends Component {
     //   })
   }
   render() {
+    console.log('Results props ->', this.props)
     return (
       <div>
         <h2>Results section</h2>
