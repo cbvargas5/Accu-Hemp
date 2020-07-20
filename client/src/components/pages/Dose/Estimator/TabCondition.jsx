@@ -15,6 +15,7 @@ export class TabCondition extends Component {
       })
   }
   render() {
+    console.log('state ->', this.props.estimator)
     return (
       <div>
         <ul>

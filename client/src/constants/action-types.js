@@ -1,3 +1,4 @@
 export const AGREE = 'AGREE'
 export const GET_CONDITIONS = 'GET_CONDITIONS'
 export const UPDATE_STEPS = 'UPDATE_STEPS'
+export const SELECT_CONDITION = 'SELECT_CONDITION'

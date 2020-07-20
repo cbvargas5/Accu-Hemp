@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, UPDATE_STEPS } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION } from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditions = () => (dispatch, getState) => {
@@ -10,5 +10,10 @@ export const getConditions = () => (dispatch, getState) => {
 
 export const updateSteps = (payload) => ({
     type: UPDATE_STEPS,
+    payload
+})
+
+export const selectCondition = (payload) => ({
+    type: SELECT_CONDITION,
     payload
 })
