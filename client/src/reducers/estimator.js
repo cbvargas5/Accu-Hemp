@@ -1,10 +1,12 @@
-import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, GET_SEVERITIES, SELECT_SEVERITY } from '../constants/action-types'
 
 
 const initialState = {
     step: 1,
     conditions: [],
-    selectedCondition: ''
+    severities: [],
+    selectedCondition: '',
+    selectedSeverity: '',
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -13,10 +15,16 @@ export default (state = initialState, { type, payload }) => {
         case GET_CONDITIONS:
             return {...state, conditions: [...payload] }
 
+        case GET_SEVERITIES:
+            return {...state, severities: [...payload] }
+
         case UPDATE_STEPS:
             return {...state, ...payload }
 
         case SELECT_CONDITION:
+            return {...state, ...payload }
+
+        case SELECT_SEVERITY:
             return {...state, ...payload }
 
         default:
