@@ -23,14 +23,14 @@ class Estimator extends Component {
     return (
       <section className="estimator-wrapper">
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
-        {/* Need to set up sub routes here to conditionally
-            render different tabs */}
+            <Link to={URL}>Dose</Link>
+            <Link to={URL + '/severity'}>Severity</Link>
+            <Link to={URL + '/results'}>Results</Link>
         <Switch>
           <Route path={URL} exact render={props => <TabCondition {...this.props}/>} />
           <Route path={`${URL}/severity`} exact component={TabSeverity} />
           <Route path={`${URL}/results`} exact component={TabResults} />
         </Switch>
-        {/* <TabCondition /> */}
         <Button>Previous</Button>
         <Button>Next</Button>
       </section>
