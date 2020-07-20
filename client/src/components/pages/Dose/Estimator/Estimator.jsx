@@ -44,10 +44,11 @@ class Estimator extends Component {
   }
   render() {
     const { url: URL } = this.props.match
+    const { estimator } = this.props 
     console.log('Estimator Parent -->', URL)
     return (
       <section className="estimator-wrapper">
-        <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
+        <ProgressTracker title="Dose Estimator" currStep={estimator.step} lastStep={3}/>
             <Link to={URL + '/1'}>Dose</Link>
             <Link to={URL + '/2'}>Severity</Link>
             <Link to={URL + '/3'}>Results</Link>
