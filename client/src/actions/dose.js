@@ -1,4 +1,4 @@
-import { GET_CONDITIONS } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS } from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditions = () => (dispatch, getState) => {
@@ -7,3 +7,8 @@ export const getConditions = () => (dispatch, getState) => {
         .then(({ data }) => dispatch({ type: GET_CONDITIONS, payload: data }))
         .catch(err => console.log('failed to get doses. ERROR-->', err))
 }
+
+export const updateSteps = (payload) => ({
+    type: UPDATE_STEPS,
+    payload
+})

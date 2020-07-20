@@ -8,7 +8,6 @@ export default class DosePage extends Component {
     super(props)
   }
   render() {
-    console.log('Dose Props ->', this.props)
     return (
       <div>
         <section className="mini-header">
