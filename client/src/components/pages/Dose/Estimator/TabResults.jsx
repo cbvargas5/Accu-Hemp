@@ -9,20 +9,15 @@ export class TabResults extends Component {
     super(props)
   }
   componentDidMount() {
-    this.props.getConditions()
-      .then(data => {
-        console.log('after action -->', this.props)
-      })
+    // this.props.getConditions()
+    //   .then(data => {
+    //     console.log('after action -->', this.props)
+    //   })
   }
   render() {
     return (
       <div>
-        <ul>
-          {this.props.estimator.conditions
-            .map(({ condition }, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-        </ul>
+
       </div>
     )
   }

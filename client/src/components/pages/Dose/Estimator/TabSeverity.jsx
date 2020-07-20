@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class TabSeverity extends Component {
+export class TabSeverity extends Component {
   render() {
     return (
       <div>
@@ -9,3 +10,10 @@ export default class TabSeverity extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  
+})
+
+
+export default connect(mapStateToProps)(TabSeverity)

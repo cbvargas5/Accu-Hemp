@@ -20,7 +20,9 @@ class Estimator extends Component {
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
         {/* Need to set up sub routes here to conditionally
             render different tabs */}
-      <TabResults />
+      <TabCondition />
+      {/* <TabSeverity />
+      <TabResults /> */}
       </section>
     )
   }
@@ -32,4 +34,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, { getConditions })(Estimator)
+export default connect(mapStateToProps)(Estimator)
