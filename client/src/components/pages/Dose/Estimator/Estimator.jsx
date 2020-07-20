@@ -16,7 +16,12 @@ class Estimator extends Component {
     super(props)
 
   }
-
+  onNext = () => {
+    console.log('Next Clicked!')
+  }
+  onPrevious = () => {
+    console.log('Previous Clicked!')
+  }
   render() {
     const { url: URL } = this.props.match
     console.log('Estimator Parent -->', URL)
@@ -31,8 +36,8 @@ class Estimator extends Component {
           <Route path={`${URL}/severity`} exact component={TabSeverity} />
           <Route path={`${URL}/results`} exact component={TabResults} />
         </Switch>
-        <Button>Previous</Button>
-        <Button>Next</Button>
+        <Button onClick={this.onPrevious}>Previous</Button>
+        <Button onClick={this.onNext}>Next</Button>
       </section>
     )
   }

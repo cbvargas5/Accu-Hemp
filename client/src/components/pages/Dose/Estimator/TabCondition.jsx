@@ -9,10 +9,9 @@ export class TabCondition extends Component {
     super(props)
   }
   componentDidMount() {
-    console.log('before action -->', this.props)
     this.props.getConditions()
       .then(data => {
-        console.log('after action -->', this.props)
+        console.log('C-Tab props after mount -->', this.props)
       })
   }
   render() {
