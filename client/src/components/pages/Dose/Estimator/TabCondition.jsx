@@ -12,7 +12,7 @@ export class TabCondition extends Component {
     this.props.getConditions()
   }
   handleSelection = (e) => {
-    this.props.selectCondition({selectCondition: e.target.value})
+    this.props.selectCondition({selectedCondition: e.target.value})
   }
   render() {
     console.log('state ->', this.props.estimator)

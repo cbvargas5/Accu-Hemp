@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { updateSteps } from '../../../../actions/dose'
@@ -45,19 +44,13 @@ class Estimator extends Component {
   render() {
     const { url: URL } = this.props.match
     const { estimator } = this.props 
-    console.log('Estimator Parent -->', URL)
     return (
       <section className="estimator-wrapper">
         <ProgressTracker title="Dose Estimator" currStep={estimator.step} lastStep={3}/>
-            <Link to={URL + '/1'}>Dose</Link>
-            <Link to={URL + '/2'}>Severity</Link>
-            <Link to={URL + '/3'}>Results</Link>
         <Switch>
           <Route path={`${URL}/1`} exact render={props => <TabCondition {...this.props}/>} />
           <Route path={`${URL}/2`} exact render={props => <TabSeverity {...this.props}/>} />
           <Route path={`${URL}/3`} exact render={props => <TabResults {...this.props}/>} />
-          {/* <Route path={`${URL}/2`} exact component={TabSeverity} />
-          <Route path={`${URL}/3`} exact component={TabResults} /> */}
         </Switch>
         <Button onClick={this.onPrevious}>Previous</Button>
         <Button onClick={this.onNext}>Next</Button>
