@@ -11,7 +11,7 @@ export class TabCondition extends Component {
   componentDidMount() {
     this.props.getConditions()
       .then(data => {
-        console.log('C-Tab props after mount -->', this.props)
+        // console.log('C-Tab props after mount -->', this.props)
       })
   }
   render() {
@@ -20,7 +20,9 @@ export class TabCondition extends Component {
         <ul>
           {this.props.estimator.conditions
             .map(({ condition }, index) => (
-              <li key={index}>{condition}</li>
+              <li key={index}>
+                <input type="button" value={condition}/>
+              </li>
             ))}
         </ul>
       </div>
