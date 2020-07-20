@@ -23,11 +23,11 @@ class Estimator extends Component {
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
         {/* Need to set up sub routes here to conditionally
             render different tabs */}
-        {/* <Switch>
-          <Route path="/" exact component={TabCondition} />
-          <Route path="/dose" exact component={TabSeverity} />
-          <Route path="/dose/estimator" exact component={TabResults} />
-        </Switch> */}
+        <Switch>
+          <Route path="/dose/estimator/" exact component={TabCondition} />
+          <Route path="/dose/estimator/severity" exact component={TabSeverity} />
+          <Route path="/dose/estimator/results" exact component={TabResults} />
+        </Switch>
         <TabCondition />
         <Button>Previous</Button>
         <Button>Next</Button>

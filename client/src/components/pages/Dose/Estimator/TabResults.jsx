@@ -17,7 +17,7 @@ export class TabResults extends Component {
   render() {
     return (
       <div>
-
+        <h2>Results section</h2>
       </div>
     )
   }

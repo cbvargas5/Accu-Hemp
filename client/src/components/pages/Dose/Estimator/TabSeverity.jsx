@@ -5,7 +5,7 @@ export class TabSeverity extends Component {
   render() {
     return (
       <div>
-        
+        <h2>Severity Section</h2>
       </div>
     )
   }
