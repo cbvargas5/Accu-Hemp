@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getConditions } from '../../../../actions/dose'
+import { getConditions, selectCondition } from '../../../../actions/dose'
 
 
 export class TabCondition extends Component {
@@ -10,9 +10,9 @@ export class TabCondition extends Component {
   }
   componentDidMount() {
     this.props.getConditions()
-      .then(data => {
-        // console.log('C-Tab props after mount -->', this.props)
-      })
+  }
+  handleSelection = (e) => {
+    this.props.selectCondition({selectCondition: e.target.value})
   }
   render() {
     console.log('state ->', this.props.estimator)
@@ -22,7 +22,7 @@ export class TabCondition extends Component {
           {this.props.estimator.conditions
             .map(({ condition }, index) => (
               <li key={index}>
-                <input type="button" value={condition}/>
+                <input onClick={this.handleSelection} type="button" value={condition}/>
               </li>
             ))}
         </ul>
@@ -38,4 +38,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, { getConditions })(TabCondition)
+export default connect(mapStateToProps, { getConditions, selectCondition })(TabCondition)
