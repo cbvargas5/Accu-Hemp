@@ -36,7 +36,7 @@ class Estimator extends Component {
       this.props.updateSteps({step: 1})
       this.props.history.push(`${this.props.match.url}/${1}`)
     } else if (step === 1) {
-      this.props.history.goBack()
+      this.props.history.push(`/Dose`)
     } else {
       this.props.updateSteps({step: step - 1})
       this.props.history.push(`${this.props.match.url}/${step - 1}`)
@@ -48,9 +48,9 @@ class Estimator extends Component {
     return (
       <section className="estimator-wrapper">
         <ProgressTracker title="Dose Estimator" currStep={1} lastStep={3}/>
-            <Link to={URL}>Dose</Link>
-            <Link to={URL + '/severity'}>Severity</Link>
-            <Link to={URL + '/results'}>Results</Link>
+            <Link to={URL + '/1'}>Dose</Link>
+            <Link to={URL + '/2'}>Severity</Link>
+            <Link to={URL + '/3'}>Results</Link>
         <Switch>
           <Route path={`${URL}/1`} exact render={props => <TabCondition {...this.props}/>} />
           <Route path={`${URL}/2`} exact render={props => <TabSeverity {...this.props}/>} />
