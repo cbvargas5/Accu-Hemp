@@ -10,8 +10,9 @@
 }
 
 .big-card {
-    border: solid $secondary-color 2px;
+    border: solid $secondary-color 1px;
     border-radius: 1.25rem;
+    box-shadow: 7px 1px 5px 0px rgba(0, 0, 0, 0.14);
     display: flex;
     align-items: center;
     flex-direction: column;

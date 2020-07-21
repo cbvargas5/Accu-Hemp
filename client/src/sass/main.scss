@@ -277,6 +277,29 @@ footer {
 /////////////////
 /// ESTIMATOR ///
 /////////////////
-.progress-bar {
-    background-color: $secondary-color;
+.tracker-parent {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 2rem;
+    h2 {
+        font-weight: 600;
+        font-family: $secondary-font;
+    }
+    .progressbar-wrapper {
+        text-align: left;
+        h5 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        .progress {
+            border: solid #fff 4px;
+            border-radius: 1rem;
+            box-shadow: 0 0 5px 0 rgba(51, 51, 51, 0.459);
+            height: 1.25rem;
+        }
+        .progress-bar {
+            background-color: $secondary-color;
+        }
+    }
 }

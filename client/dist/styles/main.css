@@ -25,8 +25,9 @@ h6 {
   padding-bottom: 1.4rem; }
 
 .big-card {
-  border: solid #6396b3 2px;
+  border: solid #6396b3 1px;
   border-radius: 1.25rem;
+  box-shadow: 7px 1px 5px 0px rgba(0, 0, 0, 0.14);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -215,5 +216,23 @@ footer .footer-end-wrapper {
 /*
   DOSE PAGES
 */
-.progress-bar {
-  background-color: #6396b3; }
+.tracker-parent {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 2rem; }
+  .tracker-parent h2 {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif; }
+  .tracker-parent .progressbar-wrapper {
+    text-align: left; }
+    .tracker-parent .progressbar-wrapper h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0; }
+    .tracker-parent .progressbar-wrapper .progress {
+      border: solid #fff 4px;
+      border-radius: 1rem;
+      box-shadow: 0 0 5px 0 rgba(51, 51, 51, 0.459);
+      height: 1.25rem; }
+    .tracker-parent .progressbar-wrapper .progress-bar {
+      background-color: #6396b3; }
