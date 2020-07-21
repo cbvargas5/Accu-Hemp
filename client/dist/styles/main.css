@@ -236,3 +236,14 @@ footer .footer-end-wrapper {
       height: 1.25rem; }
     .tracker-parent .progressbar-wrapper .progress-bar {
       background-color: #6396b3; }
+
+.tabNav-btns button {
+  margin: 0 .5rem;
+  border-radius: 1rem;
+  border: solid #6396b3 2px;
+  background-color: #fff;
+  color: #63b380;
+  padding: .25rem .6rem; }
+  .tabNav-btns button:hover, .tabNav-btns button:active, .tabNav-btns button:focus {
+    border: solid #6396b3 2px;
+    background-color: #6396b3; }

@@ -277,6 +277,7 @@ footer {
 /////////////////
 /// ESTIMATOR ///
 /////////////////
+// Progress \\
 .tracker-parent {
     width: 80%;
     text-align: center;
@@ -299,6 +300,24 @@ footer {
             height: 1.25rem;
         }
         .progress-bar {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+// Next/Back Btns \\
+.tabNav-btns {
+    button {
+        margin: 0 .5rem;
+        border-radius: 1rem;
+        border: solid $secondary-color 2px;
+        background-color: #fff;
+        color: $primary-color;
+        padding: .25rem .6rem;
+        &:hover,
+        &:active,
+        &:focus {
+            border: solid $secondary-color 2px;
             background-color: $secondary-color;
         }
     }
