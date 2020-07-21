@@ -33,6 +33,10 @@ p {
     color: $secondary-color;
 }
 
+input {
+    border-style: solid;
+}
+
 //////////////
 /// HEADER ///
 //////////////
@@ -301,6 +305,7 @@ footer {
         }
         .progress-bar {
             background-color: $secondary-color;
+            border-radius: 1rem;
         }
     }
 }
@@ -322,3 +327,5 @@ footer {
         }
     }
 }
+
+// Condition Tab \\

@@ -16,7 +16,7 @@ export class TabCondition extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="tab condition-tab">
         <ul>
           {this.props.estimator.conditions
             .map(({ condition }, index) => (
@@ -32,9 +32,5 @@ export class TabCondition extends Component {
 
 const mapStateToProps = (state) => ({ ...state })
 
-
-const mapDispatchToProps = {
-  
-}
 
 export default connect(mapStateToProps, { getConditions, selectCondition })(TabCondition)

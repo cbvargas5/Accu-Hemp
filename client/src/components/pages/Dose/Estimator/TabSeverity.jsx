@@ -8,7 +8,7 @@ export class TabSeverity extends Component {
     super(props)
   }
   componentDidMount() {
-    this.props.getSeverities()
+    this.props.getSeverities().then(() => console.log('state-->', this.props.estimator))
   }
   handleSelection = (e) => {
     this.props.selectSeverity({severityId: e.target.name})
