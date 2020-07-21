@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-// import {  } from '../../../../actions/dose'
+import { getDose } from '../../../../actions/dose'
 
 
 export class TabResults extends Component {
@@ -9,20 +9,27 @@ export class TabResults extends Component {
     super(props)
   }
   componentDidMount() {
-      //brb
+      this.props.getDose()
   }
   render() {
-    console.log('Results props ->', this.props)
-    return (
-      <div>
-        <h2>Results section</h2>
-        <p>Your estimated dose is blank to blank+ mg of CBD</p>
-      </div>
-    )
+    const { dose } = this.props.estimator
+    if (dose[0]) {
+      const { lowerdose, upperdose } = dose[0]
+      return (
+        <div>
+          <h2>Results section</h2>
+          <p>Your estimated dose is {lowerdose} to {upperdose}+ mg of CBD</p>
+        </div>
+      )
+    } else {
+      return (
+        <p>loading...</p>
+      )
+    }
   }
 }
 
 const mapStateToProps = (state) => ({...state})
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(TabResults)
+export default connect(mapStateToProps, { getDose })(TabResults)
