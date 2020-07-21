@@ -11,7 +11,7 @@ export class TabSeverity extends Component {
     this.props.getSeverities()
   }
   handleSelection = (e) => {
-    this.props.selectSeverity({selectedSeverity: e.target.name})
+    this.props.selectSeverity({severityId: e.target.name})
   }
   render() {
     console.log('Severity props ->', this.props)

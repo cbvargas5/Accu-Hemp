@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getConditions } from '../../../../actions/dose'
+// import {  } from '../../../../actions/dose'
 
 
 export class TabResults extends Component {
@@ -9,27 +9,20 @@ export class TabResults extends Component {
     super(props)
   }
   componentDidMount() {
-    // this.props.getConditions()
-    //   .then(data => {
-    //     console.log('after action -->', this.props)
-    //   })
+      //brb
   }
   render() {
     console.log('Results props ->', this.props)
     return (
       <div>
         <h2>Results section</h2>
+        <p>Your estimated dose is blank to blank+ mg of CBD</p>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
+const mapStateToProps = (state) => ({...state})
 
-const mapDispatchToProps = {
-  
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TabResults)
