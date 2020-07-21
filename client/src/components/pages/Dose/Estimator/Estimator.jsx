@@ -52,8 +52,10 @@ class Estimator extends Component {
           <Route path={`${URL}/2`} exact render={props => <TabSeverity {...this.props}/>} />
           <Route path={`${URL}/3`} exact render={props => <TabResults {...this.props}/>} />
         </Switch>
-        <Button onClick={this.onPrevious}>Previous</Button>
-        <Button onClick={this.onNext}>Next</Button>
+        <div className="tabNav-btns">
+          <Button onClick={this.onPrevious}>Previous</Button>
+          <Button onClick={this.onNext}>Next</Button>
+        </div>
       </section>
     )
   }

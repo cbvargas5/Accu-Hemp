@@ -27,6 +27,9 @@ h6 {
 .big-card {
   border: solid #6396b3 2px;
   border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 2.5rem 3.5rem;
   padding: 1.5rem; }
 
