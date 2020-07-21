@@ -16,7 +16,7 @@ export class TabResults extends Component {
     if (dose[0]) {
       const { lowerdose, upperdose } = dose[0]
       return (
-        <div>
+        <div className="tab results-tab">
           <h2>Results section</h2>
           <p>Your estimated dose is {lowerdose} to {upperdose}+ mg of CBD</p>
         </div>

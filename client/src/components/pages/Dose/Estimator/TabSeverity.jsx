@@ -15,7 +15,7 @@ export class TabSeverity extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="tab severity-tab">
         <ul>
           {this.props.estimator.severities.map(({ severity, id }) => (
             <li key={id}>
