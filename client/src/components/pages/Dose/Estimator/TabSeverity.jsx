@@ -10,6 +10,9 @@ export class TabSeverity extends Component {
   componentDidMount() {
     this.props.getSeverities()
   }
+  handleSelection = (e) => {
+    this.props.selectSeverity({selectedSeverity: e.target.name})
+  }
   render() {
     console.log('Severity props ->', this.props)
     return (
@@ -17,7 +20,7 @@ export class TabSeverity extends Component {
         <ul>
           {this.props.estimator.severities.map(({ severity, id }) => (
             <li key={id}>
-              <input type="button" value={severity}/>
+              <input onClick={this.handleSelection} name={id} type="button" value={severity}/>
             </li>
           ))}
         </ul>
