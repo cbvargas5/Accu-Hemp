@@ -45,7 +45,7 @@ class Estimator extends Component {
     const { url: URL } = this.props.match
     const { estimator } = this.props 
     return (
-      <section className="estimator-wrapper">
+      <section className="estimator-wrapper big-card">
         <ProgressTracker title="Dose Estimator" currStep={estimator.step} lastStep={3}/>
         <Switch>
           <Route path={`${URL}/1`} exact render={props => <TabCondition {...this.props}/>} />

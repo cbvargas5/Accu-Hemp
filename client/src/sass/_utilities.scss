@@ -9,4 +9,9 @@
     padding-bottom: 1.4rem;
 }
 
-.big-card {}
+.big-card {
+    border: solid $secondary-color 2px;
+    border-radius: 1.25rem;
+    margin: 2.5rem 3.5rem;
+    padding: 1.5rem;
+}
