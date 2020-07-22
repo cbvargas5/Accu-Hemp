@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { getDose } from '../../../../actions/dose'
 
@@ -24,8 +25,15 @@ export class TabResults extends Component {
             <br/>
             <p className="result-note"><strong>Please note:</strong> Your optimal dose or doctor recommended dose may be different from the dose that we calculated. <strong>We advise you to speak with a healthcare professional regarding your use of CBD hemp oil, the dosing of CBD hemp oil, and the interactions CBD hemp oil may have on your other medications.</strong> This calculator is only meant to be a general guide, and should not be considered medical advice. The information from this Dose Estimator is from crowd-sourced and research data obtained from cbddosagecalculator.com. These statements have not been evaluated by the Food and Drug Administration (FDA) and are not intended to diagnose, treat, cure or prevent any disease. Please consult with a medical professional for any medical advice.</p>
           </section>
-          <section className="redirect">
-
+          <section className="redirect-section">
+            <div className="redirect">
+              <h4>Now that you have estimated your dose, take our product finder quiz.</h4>
+              <Link to="/">Product Finder Quiz</Link>
+            </div>
+            <div className="redirect">
+              <h4>Already have a product? Go to the Measure page so you can estimate the measurement for this dose.</h4>
+              <Link to="/">Measure my Product</Link>
+            </div>
           </section>
           <section className="email-results">
 
