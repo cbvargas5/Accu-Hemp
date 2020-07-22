@@ -35,8 +35,12 @@ export class TabResults extends Component {
               <Link to="/">Measure my Product</Link>
             </div>
           </section>
-          <section className="email-results">
-
+          <section className="email-results-section">
+            <form action="" className="email-results">
+              <label>Do you want your results emailed to you?</label>
+              <label>Please enter your email below to have your results emailed to you.</label>
+              <input type="email" name="email" id="email"/>
+            </form>
           </section>
         </div>
       )
