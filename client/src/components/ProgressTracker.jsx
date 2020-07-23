@@ -8,7 +8,7 @@ export default function ProgressTracker(props) {
       <h2>{props.title}</h2>
       <div className="progressbar-wrapper">
         <h5>Step {props.currStep} of {props.lastStep}</h5>
-        <ProgressBar now={props.currStep / props.lastStep * 100}/>
+        <ProgressBar animated now={props.currStep / props.lastStep * 100}/>
       </div>
     </div>
   )

@@ -28,11 +28,11 @@ export class TabResults extends Component {
           <section className="redirect-section">
             <div className="redirect">
               <h4>Now that you have estimated your dose, take our product finder quiz.</h4>
-              <Link to="/">Product Finder Quiz</Link>
+              <Link to="/products">Product Finder Quiz</Link>
             </div>
             <div className="redirect">
               <h4>Already have a product? Go to the Measure page so you can estimate the measurement for this dose.</h4>
-              <Link to="/">Measure my Product</Link>
+              <Link to="/measure">Measure my Product</Link>
             </div>
           </section>
           <section className="email-results-section">
