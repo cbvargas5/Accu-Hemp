@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { updateSteps } from '../../../../actions/dose'
 
 
@@ -21,7 +21,6 @@ class Estimator extends Component {
   }
   onNext = () => {
     const { step } = this.props.estimator
-    console.log('Estimator step -->', step)
     if (step < 3) {
       this.props.updateSteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
@@ -62,9 +61,5 @@ class Estimator extends Component {
 }
 
 const mapStateToProps = (state) => ({ ...state })
-
-const mapDispatchToProps = {
-  
-}
 
 export default connect(mapStateToProps, { updateSteps })(Estimator)
