@@ -19,7 +19,7 @@ export class TabSeverity extends Component {
         <ul>
           {this.props.estimator.severities.map(({ severity, id }) => (
             <li key={id}>
-              <input onClick={this.handleSelection} name={id} type="button" value={severity}/>
+              <button className="severity-btn"onClick={this.handleSelection} name={id}><img src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt="severity face"/>{severity}</button>
             </li>
           ))}
         </ul>

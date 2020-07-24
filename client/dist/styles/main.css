@@ -47,17 +47,21 @@ h6 {
     flex-wrap: wrap; }
     .tab ul li {
       margin: .25rem .7rem; }
-      .tab ul li input {
+      .tab ul li input,
+      .tab ul li button {
         background-color: #fff;
         border-color: #ccc;
         border-radius: 1rem;
         color: #6396b3;
+        outline: none;
         text-overflow: ellipsis;
         font-size: 1rem;
         width: 12rem;
         height: 4.5rem;
         transition: .45s; }
-        .tab ul li input:active, .tab ul li input:focus {
+        .tab ul li input:active, .tab ul li input:focus,
+        .tab ul li button:active,
+        .tab ul li button:focus {
           outline: none;
           background-color: #96ccaa;
           color: #fff;
@@ -280,3 +284,25 @@ footer .footer-end-wrapper {
   .tabNav-btns button:hover, .tabNav-btns button:active, .tabNav-btns button:focus {
     border: solid #6396b3 2px;
     background-color: #6396b3; }
+  .tabNav-btns button:focus {
+    background-color: #fff;
+    color: #63b380; }
+
+.severity-tab img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1.25rem; }
+
+.severity-tab li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .severity-tab li .severity-btn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 12.5;
+    padding: 1rem;
+    border-style: solid; }

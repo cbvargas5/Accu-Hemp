@@ -34,11 +34,13 @@
         flex-wrap: wrap;
         li {
             margin: .25rem .7rem;
-            input {
+            input,
+            button {
                 background-color: #fff;
                 border-color: $dim-color;
                 border-radius: 1rem;
                 color: $secondary-color;
+                outline: none;
                 text-overflow: ellipsis;
                 font-size: 1rem;
                 width: 12rem;
