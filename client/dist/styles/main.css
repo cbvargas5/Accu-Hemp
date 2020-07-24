@@ -306,3 +306,25 @@ footer .footer-end-wrapper {
     width: 12.5;
     padding: 1rem;
     border-style: solid; }
+
+.results-tab {
+  padding: 0 6.5rem; }
+  .results-tab .result {
+    text-align: left; }
+    .results-tab .result h2 {
+      border: solid #ccc 3px;
+      border-radius: 1.5rem;
+      padding: 1rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      width: 75%;
+      margin: auto;
+      text-align: center; }
+    .results-tab .result p {
+      color: #63b380;
+      font-size: 1.15rem; }
+    .results-tab .result .result-note {
+      font-size: .75rem;
+      color: rgba(99, 150, 179, 0.6); }
+    .results-tab .result strong {
+      color: #6396b3; }

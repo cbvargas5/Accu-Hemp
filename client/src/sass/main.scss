@@ -357,3 +357,32 @@ footer {
         }
     }
 }
+
+// Results Tab \\
+.results-tab {
+    padding: 0 6.5rem;
+    .result {
+        text-align: left;
+        h2 {
+            border: solid $dim-color 3px;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            width: 75%;
+            margin: auto;
+            text-align: center;
+        }
+        p {
+            color: $primary-color;
+            font-size: 1.15rem;
+        }
+        .result-note {
+            font-size: .75rem;
+            color: rgba(99, 150, 179, 0.6);
+        }
+        strong {
+            color: $secondary-color;
+        }
+    }
+}
