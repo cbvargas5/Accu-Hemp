@@ -360,7 +360,7 @@ footer {
 
 // Results Tab \\
 .results-tab {
-    padding: 0 6.5rem;
+    padding: 0 5rem;
     .result {
         text-align: left;
         h2 {
@@ -389,6 +389,10 @@ footer {
         h4 {
             font-weight: 500;
             font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .redirect {
+            margin-bottom: 1.5rem;
         }
     }
 }

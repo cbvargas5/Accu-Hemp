@@ -323,7 +323,7 @@ footer .footer-end-wrapper {
     border-style: solid; }
 
 .results-tab {
-  padding: 0 6.5rem; }
+  padding: 0 5rem; }
   .results-tab .result {
     text-align: left; }
     .results-tab .result h2 {
@@ -345,4 +345,7 @@ footer .footer-end-wrapper {
       color: #6396b3; }
   .results-tab .redirect-section h4 {
     font-weight: 500;
-    font-size: 1rem; }
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+  .results-tab .redirect-section .redirect {
+    margin-bottom: 1.5rem; }
