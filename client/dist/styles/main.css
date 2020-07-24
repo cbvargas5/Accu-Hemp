@@ -21,8 +21,23 @@ h6 {
   padding-bottom: 1.4rem; }
 
 .mini-underline-sec {
-  border-bottom: #6396b3 solid 0.15rem;
-  padding-bottom: 1.4rem; }
+  border-bottom: #ccc solid 1px;
+  margin-bottom: 1rem; }
+
+.link-btn {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border: solid #ccc 1px;
+  border-radius: 1rem;
+  color: #63b380;
+  font-size: .9rem;
+  padding: .3rem .5rem;
+  font-weight: 700;
+  transition: .2s ease-in-out; }
+  .link-btn:hover {
+    background-color: #63b380;
+    color: #fff;
+    border: none; }
 
 .big-card {
   border: solid #6396b3 1px;
@@ -328,3 +343,6 @@ footer .footer-end-wrapper {
       color: rgba(99, 150, 179, 0.6); }
     .results-tab .result strong {
       color: #6396b3; }
+  .results-tab .redirect-section h4 {
+    font-weight: 500;
+    font-size: 1rem; }
