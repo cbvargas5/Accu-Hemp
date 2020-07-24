@@ -16,7 +16,8 @@ export class TabCondition extends Component {
   }
   render() {
     return (
-      <div className="tab condition-tab">
+      <section className="tab condition-tab">
+        <p className="instructions">Select a Condition:*</p>
         <ul>
           {this.props.estimator.conditions
             .map(({ condition }, index) => (
@@ -25,7 +26,7 @@ export class TabCondition extends Component {
               </li>
             ))}
         </ul>
-      </div>
+      </section>
     )
   }
 }
