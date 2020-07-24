@@ -30,8 +30,10 @@
     }
     ul {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         li {
+            margin: .25rem .7rem;
             input {
                 background-color: #fff;
                 border-color: $dim-color;
