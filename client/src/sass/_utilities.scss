@@ -9,6 +9,11 @@
     margin-bottom: 1rem;
 }
 
+.dotted-underline {
+    border-bottom: $dim-color dotted 1px;
+    margin-bottom: 1rem;
+}
+
 .link-btn {
     background-color: #fff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
@@ -72,5 +77,24 @@
                 }
             }
         }
+    }
+}
+
+.tab-btn {
+    margin: 0 .5rem;
+    border-radius: 1rem;
+    border: solid $secondary-color 2px;
+    background-color: #fff;
+    color: $primary-color;
+    padding: .25rem .6rem;
+    &:hover,
+    &:active,
+    &:focus {
+        border: solid $secondary-color 2px;
+        background-color: $secondary-color;
+    }
+    &:focus {
+        background-color: #fff;
+        color: $primary-color;
     }
 }

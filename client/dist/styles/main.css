@@ -24,6 +24,10 @@ h6 {
   border-bottom: #ccc solid 1px;
   margin-bottom: 1rem; }
 
+.dotted-underline {
+  border-bottom: #ccc dotted 1px;
+  margin-bottom: 1rem; }
+
 .link-btn {
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
@@ -81,6 +85,20 @@ h6 {
           background-color: #96ccaa;
           color: #fff;
           border: none; }
+
+.tab-btn {
+  margin: 0 .5rem;
+  border-radius: 1rem;
+  border: solid #6396b3 2px;
+  background-color: #fff;
+  color: #63b380;
+  padding: .25rem .6rem; }
+  .tab-btn:hover, .tab-btn:active, .tab-btn:focus {
+    border: solid #6396b3 2px;
+    background-color: #6396b3; }
+  .tab-btn:focus {
+    background-color: #fff;
+    color: #63b380; }
 
 * {
   margin: 0;
@@ -289,20 +307,6 @@ footer .footer-end-wrapper {
       background-color: #6396b3;
       border-radius: 1rem; }
 
-.tabNav-btns button {
-  margin: 0 .5rem;
-  border-radius: 1rem;
-  border: solid #6396b3 2px;
-  background-color: #fff;
-  color: #63b380;
-  padding: .25rem .6rem; }
-  .tabNav-btns button:hover, .tabNav-btns button:active, .tabNav-btns button:focus {
-    border: solid #6396b3 2px;
-    background-color: #6396b3; }
-  .tabNav-btns button:focus {
-    background-color: #fff;
-    color: #63b380; }
-
 .severity-tab img {
   width: 6rem;
   height: 6rem;
@@ -352,9 +356,9 @@ footer .footer-end-wrapper {
   .results-tab .email-results-section .email-results .question {
     display: block;
     color: #6396b3;
-    margin: 2rem 0;
-    font-size: 1.15rem; }
+    margin: 1rem 0;
+    font-size: 1.25rem; }
   .results-tab .email-results-section .email-results .pls-enter {
     display: block;
-    color: #ccc;
-    font-size: .75rem; }
+    color: #aaa;
+    font-size: .8rem; }

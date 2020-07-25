@@ -312,24 +312,9 @@ footer {
 
 // Next/Back Btns \\
 .tabNav-btns {
-    button {
-        margin: 0 .5rem;
-        border-radius: 1rem;
-        border: solid $secondary-color 2px;
-        background-color: #fff;
-        color: $primary-color;
-        padding: .25rem .6rem;
-        &:hover,
-        &:active,
-        &:focus {
-            border: solid $secondary-color 2px;
-            background-color: $secondary-color;
-        }
-        &:focus {
-            background-color: #fff;
-            color: $primary-color;
-        }
-    }
+    // margin-top: 1rem;
+    // border-top: dotted $dim-color 1px;
+    // // width: 100%;
 }
 
 // Condition Tab \\
@@ -402,13 +387,13 @@ footer {
             .question {
                 display: block;
                 color: $secondary-color;
-                margin: 2rem 0;
-                font-size: 1.15rem;
+                margin: 1rem 0;
+                font-size: 1.25rem;
             }
             .pls-enter {
                 display: block;
-                color: $dim-color;
-                font-size: .75rem;
+                color: #aaa;
+                font-size: .8rem;
             }
             // input,
             // button {
