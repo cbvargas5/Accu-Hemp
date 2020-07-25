@@ -37,9 +37,10 @@ export class TabResults extends Component {
           </section>
           <section className="email-results-section">
             <form action="" className="email-results">
-              <label>Do you want your results emailed to you?</label>
-              <label>Please enter your email below to have your results emailed to you.</label>
+              <label className="question">Do you want your results emailed to you?</label>
+              <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
               <input type="email" name="email" id="email"/>
+              <button type="submit">Email my Results!</button>
             </form>
           </section>
         </section>

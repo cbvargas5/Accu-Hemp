@@ -345,7 +345,16 @@ footer .footer-end-wrapper {
       color: #6396b3; }
   .results-tab .redirect-section h4 {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem; }
   .results-tab .redirect-section .redirect {
     margin-bottom: 1.5rem; }
+  .results-tab .email-results-section .email-results .question {
+    display: block;
+    color: #6396b3;
+    margin: 2rem 0;
+    font-size: 1.15rem; }
+  .results-tab .email-results-section .email-results .pls-enter {
+    display: block;
+    color: #ccc;
+    font-size: .75rem; }

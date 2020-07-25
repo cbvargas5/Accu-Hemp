@@ -388,11 +388,32 @@ footer {
     .redirect-section {
         h4 {
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
         }
         .redirect {
             margin-bottom: 1.5rem;
+        }
+    }
+    .email-results-section {
+        .email-results {
+            // display: flex;
+            // flex-direction: column;
+            .question {
+                display: block;
+                color: $secondary-color;
+                margin: 2rem 0;
+                font-size: 1.15rem;
+            }
+            .pls-enter {
+                display: block;
+                color: $dim-color;
+                font-size: .75rem;
+            }
+            // input,
+            // button {
+            //     display: block;
+            // }
         }
     }
 }
