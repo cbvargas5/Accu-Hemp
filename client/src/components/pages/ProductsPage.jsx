@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
-import ButtonCard from '../cards/ButtonCard.jsx'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { getProducts } from '../../actions/products'
 
+import ButtonCard from '../cards/ButtonCard.jsx'
 
-
-export default class ProductsPage extends Component {
+class ProductsPage extends Component {
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+    this.props.getProducts()
+  }
   render() {
     return (
       <div>
@@ -17,10 +24,15 @@ export default class ProductsPage extends Component {
           <p><strong>Please note:</strong> We may earn a small commission if you purchase products through the links on our website.</p>
         </section>
         <section className="product-list">
-
+          <ul>
+            {this.props.products.products.map(({ id, brand, description }) => <li key={id}>{brand}: {description}</li>)}
+          </ul>
         </section>
       </div>
     )
   }
 }
 
+const mapStateToProps = (state) => ({ ...state })
+
+export default connect(mapStateToProps, { getProducts })(ProductsPage)
