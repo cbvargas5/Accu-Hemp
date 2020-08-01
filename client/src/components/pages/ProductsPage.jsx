@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getProducts } from '../../actions/products'
 
 import ButtonCard from '../cards/ButtonCard.jsx'
+import ProductCard from '../cards/ProductCard'
 
 class ProductsPage extends Component {
   constructor(props) {
