@@ -3,7 +3,7 @@ import React from 'react'
 function ProductCard() {
   return (
     <div>
-      <a href={props.link} target="_blank"></a>
+      <a href={props.link} target="_blank">{brand}: {description}</a>
     </div>
   )
 }

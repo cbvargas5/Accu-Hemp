@@ -26,7 +26,7 @@ class ProductsPage extends Component {
         </section>
         <section className="product-list">
           <ul>
-            {this.props.products.products.map(({ id, brand, description }) => <li key={id}>{brand}: {description}</li>)}
+            {this.props.products.products.map(({ id, brand, description }) => <li key={id}><ProductCard /></li>)}
           </ul>
         </section>
       </div>
