@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ProductCard() {
+function ProductCard({ link, brand, description }) {
   return (
     <div>
-      <a href={props.link} target="_blank">{brand}: {description}</a>
+      <a href={link} target="_blank">{brand}: {description}</a>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { getProducts } from '../../actions/products'
 
 import ButtonCard from '../cards/ButtonCard.jsx'
-import ProductCard from '../cards/ProductCard'
+import ProductCard from '../cards/ProductCard.jsx'
 
 class ProductsPage extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class ProductsPage extends Component {
         </section>
         <section className="product-list">
           <ul>
-            {this.props.products.products.map(({ id, brand, description }) => <li key={id}><ProductCard /></li>)}
+            {this.props.products.products.map(({ id, brand, description }) => <li key={id}><ProductCard link="https://www.youtube.com/watch?v=dQw4w9WgXcQ" brand={brand} description={description}/></li>)}
           </ul>
         </section>
       </div>
