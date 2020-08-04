@@ -8,6 +8,7 @@ import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Estimator from './pages/Dose/Estimator/Estimator.jsx';
+import Quiz from './pages/Products/Quiz/Quiz.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends React.Component {
               <Route path="/dose" exact component={DosePage} />
               <Route path="/dose/estimator" component={Estimator} />
               <Route path="/products" exact component={ProductsPage} />
+              <Route path="/products/finder-quiz" exact component={Quiz} />
               <Route path="/measure" exact component={MeasurePage} />
             </Switch>
           </section>
