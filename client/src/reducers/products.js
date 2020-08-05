@@ -3,9 +3,9 @@ import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, SELECT_DOSE } from '../constants/actio
 const initialState = {
     products: [],
     step: 1,
-    dose: '',
-    importance: '',
-    qualities: '',
+    selectedDose: '',
+    selectedImportance: '',
+    selectedQualities: '',
     results: []
 }
 
