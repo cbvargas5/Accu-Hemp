@@ -28,7 +28,7 @@ class Estimator extends Component {
 
   }
   onPrevious = () => {
-    console.log(this.props.estimator)
+    // console.log(this.props.estimator)
     const { step } = this.props.estimator
     if (step <= 0) {
       this.props.updateSteps({step: 1})
