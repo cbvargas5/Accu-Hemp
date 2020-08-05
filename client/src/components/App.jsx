@@ -27,7 +27,7 @@ class App extends React.Component {
               <Route path="/dose" exact component={DosePage} />
               <Route path="/dose/estimator" component={Estimator} />
               <Route path="/products" exact component={ProductsPage} />
-              <Route path="/products/finder-quiz" exact component={Quiz} />
+              <Route path="/products/finder-quiz" component={Quiz} />
               <Route path="/measure" exact component={MeasurePage} />
             </Switch>
           </section>

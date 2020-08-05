@@ -40,6 +40,7 @@ class Estimator extends Component {
       this.props.history.push(`${this.props.match.url}/${step - 1}`)
     }
   }
+  
   render() {
     const { url: URL } = this.props.match
     const { estimator } = this.props 
