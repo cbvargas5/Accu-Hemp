@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, SELECT_DOSE, SELECT_IMPORTANCE } from '../constants/action-types'
+import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, SELECT_DOSE, SELECT_IMPORTANCE, SELECT_QUALITY } from '../constants/action-types'
 import axios from 'axios'
 
 export const getProducts = () => (dispatch, getState) => {
@@ -19,5 +19,10 @@ export const selectDose = (payload) => ({
 
 export const selectImportance = (payload) => ({
     type: SELECT_IMPORTANCE,
+    payload
+})
+
+export const selectQuality = (payload) => ({
+    type: SELECT_QUALITY,
     payload
 })
