@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, UPDATE_QUIZ_STEPS } from '../constants/action-types'
+import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, SELECT_DOSE } from '../constants/action-types'
 
 const initialState = {
     products: [],
@@ -16,6 +16,9 @@ export default (state = initialState, { type, payload }) => {
             return {...state, products: [...payload] }
 
         case UPDATE_QUIZ_STEPS:
+            return {...state, ...payload }
+
+        case SELECT_DOSE:
             return {...state, ...payload }
 
         default:
