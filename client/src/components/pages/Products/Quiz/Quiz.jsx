@@ -21,7 +21,7 @@ export class Quiz extends Component {
     console.log('Quiz props ->', this.props)
     console.log('URL ->', URL)
     return (
-      <section>
+      <section className="quiz-wrapper big-card">
         <Link to={`${URL}/1`}>Dose</Link>
         <Link to={`${URL}/2`}>Importance</Link>
         <Link to={`${URL}/3`}>Qualities</Link>
