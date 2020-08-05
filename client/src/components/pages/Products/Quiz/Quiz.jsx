@@ -9,6 +9,7 @@ import TabDose from './TabDose.jsx'
 import TabImportance from './TabImportance.jsx'
 import TabQualities from './TabQualities.jsx'
 import TabQuizResults from './TabQuizResults.jsx'
+import ProgressTracker from '../../../ProgressTracker.jsx';
 
 export class Quiz extends Component {
   constructor(props) {
@@ -42,13 +43,9 @@ export class Quiz extends Component {
     const { url: URL } = this.props.match
 
     console.log('Quiz props ->', this.props)
-    // console.log('URL ->', URL)
     return (
       <section className="quiz-wrapper big-card">
-        <Link to={`${URL}/1`}>Dose</Link>
-        <Link to={`${URL}/2`}>Importance</Link>
-        <Link to={`${URL}/3`}>Qualities</Link>
-        <Link to={`${URL}/4`}>Results</Link>
+        <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/>
         <Switch>
           <Route path={`${URL}/1`} exact component={TabDose}/>
           <Route path={`${URL}/2`} exact component={TabImportance}/>
