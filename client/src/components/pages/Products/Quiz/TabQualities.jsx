@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { selectImportance } from '../../../../actions/products'
+
 
 import Option from './Option.jsx'
 
 
 class TabQualities extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleSelection = (e) => {
+    this.props.selectImportance({selectedImportance: e.target.value})
+  }
   render() {
   const OPTIONS = ['Sleep Aid (CBD + Melatonin)', 'Full/Broad Spectrum products', 'Zero THC products', 'From organically grown hemp', 'Different flavor options available', 'Any of these']
   return (
@@ -23,12 +31,7 @@ class TabQualities extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
+const mapStateToProps = (state) => ({...state.products})
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(TabQualities)
+export default connect(mapStateToProps, { selectImportance })(TabQualities)
