@@ -13,8 +13,6 @@ class TabDose extends Component {
   }
   handleSelection = (e) => {
     this.props.selectDose({selectedDose: e.target.value})
-    console.log('Dose Tab props ->', this.props)
-
   }
   render() {
     const OPTIONS = ['Less than 10 mg of CBD', '10 to 20 mg of CBD', '20 to 30 mg of CBD', '30 to 50 mg of CBD', '50 to 75 mg of CBD', '75 to 100 mg of CBD', '100 to 200 mg of CBD', 'More than 200 mg of CBD']
