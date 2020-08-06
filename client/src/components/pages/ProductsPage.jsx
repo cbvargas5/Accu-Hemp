@@ -26,7 +26,7 @@ class ProductsPage extends Component {
         </section>
         <section className="product-list">
           <ul>
-            {this.props.products.map(({ id, brand, description }) => <li key={id}><ProductCard link="https://www.youtube.com/watch?v=dQw4w9WgXcQ" brand={brand} description={description}/></li>)}
+            {this.props.products.map(({ id, brand, description }) => <ProductCard key={id} thumbnail={'https://source.unsplash.com/random'} price={29.99} link="https://www.youtube.com/watch?v=dQw4w9WgXcQ" brand={brand} description={description}/>)}
           </ul>
         </section>
       </div>
