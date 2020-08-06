@@ -68,7 +68,7 @@
                 width: 12rem;
                 height: 4.5rem;
                 transition: .45s;
-                &:active,
+                &:active, // Might include on hover
                 &:focus {
                     outline: none;
                     background-color: $primary-light;

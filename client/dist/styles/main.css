@@ -365,3 +365,12 @@ footer .footer-end-wrapper {
     display: block;
     color: #aaa;
     font-size: .8rem; }
+
+.quiz-wrapper .tab ul {
+  flex-wrap: nowrap;
+  flex-direction: column; }
+  .quiz-wrapper .tab ul li {
+    width: 100%; }
+    .quiz-wrapper .tab ul li input {
+      height: 3rem;
+      width: 100%; }

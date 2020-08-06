@@ -388,3 +388,28 @@ footer {
         }
     }
 }
+
+////////////////////
+/// PRODUCT QUIZ ///
+////////////////////
+// Inner Tab \\
+.quiz-wrapper {
+    .tab {
+        ul {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            li {
+                width: 100%;
+                input {
+                    height: 3rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Dose Tab \\
+// Importance Tab \\
+// Quality Tab \\
+// Results Tab \\
