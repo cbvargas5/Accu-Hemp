@@ -26,7 +26,7 @@ class ProductsPage extends Component {
         </section>
         <section className="product-list">
           <ul>
-            {this.props.products.products.map(({ id, brand, description }) => <li key={id}><ProductCard link="https://www.youtube.com/watch?v=dQw4w9WgXcQ" brand={brand} description={description}/></li>)}
+            {this.props.products.map(({ id, brand, description }) => <li key={id}><ProductCard link="https://www.youtube.com/watch?v=dQw4w9WgXcQ" brand={brand} description={description}/></li>)}
           </ul>
         </section>
       </div>
@@ -34,6 +34,6 @@ class ProductsPage extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ ...state })
+const mapStateToProps = (state) => ({ ...state.products })
 
 export default connect(mapStateToProps, { getProducts })(ProductsPage)
