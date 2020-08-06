@@ -100,6 +100,21 @@ h6 {
     background-color: #fff;
     color: #63b380; }
 
+.product-card {
+  text-align: center; }
+  .product-card .product-card-link {
+    border: solid #6396b3 2px;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .product-card .product-card-link img {
+      display: block;
+      max-height: 10rem;
+      max-width: 10rem; }
+
 * {
   margin: 0;
   padding: 0;

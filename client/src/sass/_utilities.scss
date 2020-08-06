@@ -99,4 +99,20 @@
     }
 }
 
-.product-card {}
+.product-card {
+    text-align: center;
+    .product-card-link {
+        border: solid $secondary-color 2px;
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+            max-height: 10rem;
+            max-width: 10rem;
+        }
+    }
+}
