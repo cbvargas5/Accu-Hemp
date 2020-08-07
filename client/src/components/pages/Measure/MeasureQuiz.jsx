@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Switch, Route, Link } from 'react-router-dom';
+import { updateMeasureSteps } from '../../../actions/measure'
 
 import TabDevice from './TabDevice.jsx'
 import TabBrand from './TabBrand.jsx'
@@ -40,12 +41,6 @@ export class MeasureQuiz extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
+const mapStateToProps = (state) => ({...state.measure})
 
-const mapDispatchToProps = {
-  
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MeasureQuiz)
+export default connect(mapStateToProps, { updateMeasureSteps })(MeasureQuiz)
