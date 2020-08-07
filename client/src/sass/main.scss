@@ -389,6 +389,21 @@ footer {
     }
 }
 
+
+/*
+  PRODUCT PAGES
+*/
+
+////////////////////
+/// PRODUCT PAGE ///
+////////////////////
+.product-list {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 ////////////////////
 /// PRODUCT QUIZ ///
 ////////////////////
