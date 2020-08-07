@@ -11,7 +11,7 @@ export default class DosePage extends Component {
     return (
       <div>
         <section className="mini-header">
-          <h2>Dose</h2>
+          <h1>Dose</h1>
         </section>
         <section className="estimator-wrapper">
           <div>

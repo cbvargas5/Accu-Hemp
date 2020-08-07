@@ -17,7 +17,7 @@ class ProductsPage extends Component {
     return (
       <div>
         <section className="mini-header">
-          <h2>Products</h2>
+          <h1>Products</h1>
         </section>
         <section className="quiz-nav">
           <ButtonCard link="/products/finder-quiz" icon="fas fa-search-dollar">Product Finder Quiz</ButtonCard>
