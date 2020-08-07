@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom'
 import { updateMeasureSteps } from '../../../actions/measure'
+
+import { Button } from 'react-bootstrap'
+
 
 import TabDevice from './TabDevice.jsx'
 import TabBrand from './TabBrand.jsx'
 import TabProduct from './TabProduct.jsx'
 import TabDoseInput from './TabDoseInput.jsx'
 import TabMeasureResults from './TabMeasureResults.jsx'
+import ProgressTracker from '../../ProgressTracker.jsx'
 
 
 export class MeasureQuiz extends Component {
@@ -15,16 +19,33 @@ export class MeasureQuiz extends Component {
     super(props)
 
   }  
+  componentDidMount() {
+    this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+  }
+  onNext = () => {
+    const { step } = this.props
+    if (step < 5) {
+      this.props.updateMeasureSteps({step: step + 1})
+      this.props.history.push(`${this.props.match.url}/${step + 1}`)
+    }
+  }
+  onPrevious = () => {
+    const { step } = this.props
+    if (step <= 0) {
+      this.props.updateMeasureSteps({step: 1})
+      this.props.history.push(`${this.props.match.url}/${1}`)
+    } else if (step === 1) {
+      this.props.history.push('/measure')
+    } else {
+      this.props.updateMeasureSteps({step: step - 1})
+      this.props.history.push(`${this.props.match.url}/${step - 1}`)
+    }
+  }
   render() {
     const { url: URL } = this.props.match
     return (
       <section className="quiz-wrapper big-card">
-        <Link to={`${URL}/1`}>Device</Link>
-        <Link to={`${URL}/2`}>Brand</Link>
-        <Link to={`${URL}/3`}>Product</Link>
-        <Link to={`${URL}/4`}>Dose</Link>
-        <Link to={`${URL}/5`}>Results</Link>
-        {/* <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/> */}
+        <ProgressTracker title="Measurement Quiz" currStep={this.props.step} lastStep={5}/>
         <Switch>
           <Route path={`${URL}/1`} exact component={TabDevice}/>
           <Route path={`${URL}/2`} exact component={TabBrand}/>
@@ -36,6 +57,10 @@ export class MeasureQuiz extends Component {
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
           <Button onClick={this.onNext} className="tab-btn">Next</Button>
         </div> */}
+        <div className="tabNav-btns">
+          <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
+          <Button onClick={this.onNext} className="tab-btn">Next</Button>
+        </div>
       </section>
     )
   }

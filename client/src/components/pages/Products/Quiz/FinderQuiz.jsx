@@ -17,7 +17,6 @@ export class FinderQuiz extends Component {
 
   }  
   componentDidMount() {
-    
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
   }
   onNext = () => {
