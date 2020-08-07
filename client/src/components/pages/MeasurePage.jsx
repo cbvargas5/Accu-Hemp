@@ -20,7 +20,8 @@ class MeasurePage extends Component {
           <p><strong>Warning:</strong> this quiz is meant only for CBD hemp oil in liquid form. It only works for CBD products that are measured by mL, not by grams.</p>
         </section>
         <section className="big-card">
-      </section>
+          <Link to="/measure/measure-quiz">Quiz</Link>
+        </section>
       </div>
     )
   }

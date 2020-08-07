@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Switch, Route, Link } from 'react-router-dom';
 
+import TabDevice from './TabDevice.jsx'
+import TabBrand from './TabBrand.jsx'
+import TabProduct from './TabProduct.jsx'
+import TabDoseInput from './TabDoseInput.jsx'
+import TabMeasureResults from './TabMeasureResults.jsx'
+
+
 export class MeasureQuiz extends Component {
   constructor(props) {
     super(props)
@@ -18,11 +25,11 @@ export class MeasureQuiz extends Component {
         <Link to={`${URL}/5`}>Results</Link>
         {/* <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/> */}
         <Switch>
-          <Route path={`${URL}/1`} exact component={TabDose}/>
-          <Route path={`${URL}/2`} exact component={TabImportance}/>
-          <Route path={`${URL}/3`} exact component={TabQualities}/>
-          <Route path={`${URL}/4`} exact component={TabQuizResults}/>
-          <Route path={`${URL}/5`} exact component={TabQuizResults}/>
+          <Route path={`${URL}/1`} exact component={TabDevice}/>
+          <Route path={`${URL}/2`} exact component={TabBrand}/>
+          <Route path={`${URL}/3`} exact component={TabProduct}/>
+          <Route path={`${URL}/4`} exact component={TabDoseInput}/>
+          <Route path={`${URL}/5`} exact component={TabMeasureResults}/>
         </Switch>
         {/* <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
