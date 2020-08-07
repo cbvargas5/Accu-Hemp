@@ -53,10 +53,6 @@ export class MeasureQuiz extends Component {
           <Route path={`${URL}/4`} exact component={TabDoseInput}/>
           <Route path={`${URL}/5`} exact component={TabMeasureResults}/>
         </Switch>
-        {/* <div className="tabNav-btns">
-          <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
-          <Button onClick={this.onNext} className="tab-btn">Next</Button>
-        </div> */}
         <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
           <Button onClick={this.onNext} className="tab-btn">Next</Button>
