@@ -10,7 +10,6 @@ class MeasurePage extends Component {
 
   }  
   render() {
-    const { url: URL } = this.props.match
     return (
       <div>
         <section className="mini-header">
@@ -20,19 +19,7 @@ class MeasurePage extends Component {
           <h2>Measure Your Dose of CBD:</h2>
           <p><strong>Warning:</strong> this quiz is meant only for CBD hemp oil in liquid form. It only works for CBD products that are measured by mL, not by grams.</p>
         </section>
-        <section className="quiz-wrapper big-card">
-        {/* <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/> */}
-        {/* <Switch>
-          <Route path={`${URL}/1`} exact component={TabDose}/>
-          <Route path={`${URL}/2`} exact component={TabImportance}/>
-          <Route path={`${URL}/3`} exact component={TabQualities}/>
-          <Route path={`${URL}/4`} exact component={TabQuizResults}/>
-          <Route path={`${URL}/5`} exact component={TabQuizResults}/>
-        </Switch> */}
-        {/* <div className="tabNav-btns">
-          <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
-          <Button onClick={this.onNext} className="tab-btn">Next</Button>
-        </div> */}
+        <section className="big-card">
       </section>
       </div>
     )

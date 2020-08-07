@@ -8,7 +8,7 @@ import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Estimator from './pages/Dose/Estimator/Estimator.jsx';
-import Quiz from './pages/Products/Quiz/Quiz.jsx';
+import FinderQuiz from './pages/Products/Quiz/FinderQuiz.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class App extends React.Component {
               <Route path="/products" exact component={ProductsPage} />
               <Route path="/products/finder-quiz" component={Quiz} />
               <Route path="/measure" exact component={MeasurePage} />
+              <Route path="/measure/measure-quiz" component={MeasurePage} />
             </Switch>
           </section>
       </main>

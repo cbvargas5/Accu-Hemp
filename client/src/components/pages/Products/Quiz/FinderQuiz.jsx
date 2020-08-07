@@ -11,7 +11,7 @@ import TabQualities from './TabQualities.jsx'
 import TabQuizResults from './TabQuizResults.jsx'
 import ProgressTracker from '../../../ProgressTracker.jsx';
 
-export class Quiz extends Component {
+export class FinderQuiz extends Component {
   constructor(props) {
     super(props)
 
@@ -42,7 +42,7 @@ export class Quiz extends Component {
   render() {
     const { url: URL } = this.props.match
 
-    console.log('Quiz props ->', this.props)
+    console.log('FinderQuiz props ->', this.props)
     return (
       <section className="quiz-wrapper big-card">
         <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/>
@@ -64,4 +64,4 @@ export class Quiz extends Component {
 const mapStateToProps = (state) => ({...state.products})
 
 
-export default connect(mapStateToProps, { updateQuizSteps })(Quiz)
+export default connect(mapStateToProps, { updateQuizSteps })(FinderQuiz)
