@@ -1,4 +1,4 @@
-import { UPDATE_MEASURE_STEPS } from '../constants/action-types'
+import { UPDATE_MEASURE_STEPS, GET_PRODUCTS } from '../constants/action-types'
 
 
 const initialState = {
@@ -16,6 +16,9 @@ export default (state = initialState, { type, payload }) => {
 
         case UPDATE_MEASURE_STEPS:
             return {...state, ...payload }
+
+        case GET_PRODUCTS:
+            return {...state, products: [...payload] }
 
         default:
             return state

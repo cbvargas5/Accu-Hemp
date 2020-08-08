@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Switch, Route, Link } from 'react-router-dom'
-import { updateMeasureSteps } from '../../../actions/measure'
+import { updateMeasureSteps, getProductsForMeasure } from '../../../actions/measure'
 
 import { Button } from 'react-bootstrap'
 
@@ -21,6 +21,7 @@ export class MeasureQuiz extends Component {
   }  
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+    this.props.getProductsForMeasure()
   }
   onNext = () => {
     const { step } = this.props
@@ -65,4 +66,4 @@ export class MeasureQuiz extends Component {
 
 const mapStateToProps = (state) => ({...state.measure})
 
-export default connect(mapStateToProps, { updateMeasureSteps })(MeasureQuiz)
+export default connect(mapStateToProps, { updateMeasureSteps, getProductsForMeasure })(MeasureQuiz)
