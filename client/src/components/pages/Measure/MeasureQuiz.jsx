@@ -36,6 +36,7 @@ export class MeasureQuiz extends Component {
       this.props.history.push(`${this.props.match.url}/${1}`)
     } else if (step === 1) {
       this.props.history.push('/measure')
+      //redirect somewhere else
     } else {
       this.props.updateMeasureSteps({step: step - 1})
       this.props.history.push(`${this.props.match.url}/${step - 1}`)
