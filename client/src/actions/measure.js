@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const getProductsForMeasure = () => (dispatch, getState) => {
     const { products } = getState().products
-    products
+    products.length 
         ?
         dispatch({ type: GET_PRODUCTS, payload: products }) 
         :

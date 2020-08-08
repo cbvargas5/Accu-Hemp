@@ -45,6 +45,7 @@ export class MeasureQuiz extends Component {
   }
   render() {
     const { url: URL } = this.props.match
+    // console.log('measure state ->', this.props)
     return (
       <section className="quiz-wrapper big-card">
         <ProgressTracker title="Measurement Quiz" currStep={this.props.step} lastStep={5}/>
