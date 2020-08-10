@@ -50,7 +50,7 @@ export class MeasureQuiz extends Component {
       <section className="quiz-wrapper big-card">
         <ProgressTracker title="Measurement Quiz" currStep={this.props.step} lastStep={5}/>
         <Switch>
-          <Route path={`${URL}/1`} exact component={TabDevice}/>
+          <Route path={`${URL}/1`} exact render={() => <TabDevice onNext={this.onNext} />}/>
           <Route path={`${URL}/2`} exact component={TabBrand}/>
           <Route path={`${URL}/3`} exact component={TabProduct}/>
           <Route path={`${URL}/4`} exact component={TabDoseInput}/>
