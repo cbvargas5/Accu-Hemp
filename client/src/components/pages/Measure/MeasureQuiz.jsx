@@ -51,7 +51,7 @@ export class MeasureQuiz extends Component {
         <ProgressTracker title="Measurement Quiz" currStep={this.props.step} lastStep={5}/>
         <Switch>
           <Route path={`${URL}/1`} exact render={() => <TabDevice onNext={this.onNext} />}/>
-          <Route path={`${URL}/2`} exact component={TabBrand}/>
+          <Route path={`${URL}/2`} exact render={() => <TabBrand onNext={this.onNext} />}/>
           <Route path={`${URL}/3`} exact component={TabProduct}/>
           <Route path={`${URL}/4`} exact component={TabDoseInput}/>
           <Route path={`${URL}/5`} exact component={TabMeasureResults}/>

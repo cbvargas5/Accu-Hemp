@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import Option from '../Products/Quiz/Option.jsx'
 import { selectDevice } from '../../../actions/measure'
 
 import { Button } from 'react-bootstrap'
