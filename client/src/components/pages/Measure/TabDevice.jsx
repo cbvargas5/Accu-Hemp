@@ -13,8 +13,7 @@ class TabDevice extends Component {
 
   }  
   handleSelection = (e) => {
-    this.props.selectDose({selectDevice: e.target.value})
-    // console.log(e.target.value)
+    this.props.selectDevice({selectedDevice: e.target.value})
   }
   render() {
     return (
