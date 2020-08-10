@@ -21,8 +21,14 @@ class TabDevice extends Component {
           <p>If you are using a syringe to measure CBD hemp oil from a dropper bottle, please click 'syringe' (not 'dropper')</p>
         </div>
         <div className="device-wrapper">
-          <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="dropper" className="tab-btn">Dropper <i className="fas fa-eye-dropper"></i></Button>
-          <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="syringe" className="tab-btn">Syringe <i className="fas fa-syringe"></i></Button>
+          <ul>
+            <li>
+              <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="dropper" className="tab-btn">Dropper <i className="fas fa-eye-dropper"></i></Button>
+            </li>
+            <li>
+              <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="syringe" className="tab-btn">Syringe <i className="fas fa-syringe"></i></Button>
+            </li>
+          </ul>
         </div>
       </div>
     )

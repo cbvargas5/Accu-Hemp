@@ -31,11 +31,13 @@ class TabBrand extends Component {
           <h4>Select Brand:*</h4>
         </div>
         <div className="device-wrapper">
-          {
-            this.props.products.filter(this.filterBrands, {}).map(() => <li>brand</li>)
-          }
-          <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="dropper" className="tab-btn">Dropper <i className="fas fa-eye-dropper"></i></Button>
-          <Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value="syringe" className="tab-btn">Syringe <i className="fas fa-syringe"></i></Button>
+          <ul>
+            {
+              this.props.products
+                .filter(this.filterBrands, {})
+                .map(( { id, brand } ) => <li key={id}><Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value={brand} className="tab-btn">{brand}</Button></li>)
+            }
+          </ul>
         </div>
       </div>
     )
