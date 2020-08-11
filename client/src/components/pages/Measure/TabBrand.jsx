@@ -24,7 +24,6 @@ class TabBrand extends Component {
     this.props.selectBrand({selectedBrand: e.target.value})
   }
   render() {
-    console.log('brand props ->', this.props)
     return (
       <div className="tab">
         <div className="question-line">

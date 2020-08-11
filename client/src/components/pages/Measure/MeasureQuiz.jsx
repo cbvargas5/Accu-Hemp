@@ -52,8 +52,8 @@ export class MeasureQuiz extends Component {
         <Switch>
           <Route path={`${URL}/1`} exact render={() => <TabDevice onNext={this.onNext} />}/>
           <Route path={`${URL}/2`} exact render={() => <TabBrand onNext={this.onNext} />}/>
-          <Route path={`${URL}/3`} exact component={TabProduct}/>
-          <Route path={`${URL}/4`} exact component={TabDoseInput}/>
+          <Route path={`${URL}/3`} exact render={() => <TabProduct onNext={this.onNext} />}/>
+          <Route path={`${URL}/4`} exact render={() => <TabDoseInput onNext={this.onNext} />}/>
           <Route path={`${URL}/5`} exact component={TabMeasureResults}/>
         </Switch>
         <div className="tabNav-btns">
