@@ -1,4 +1,4 @@
-import { UPDATE_MEASURE_STEPS, SELECT_DOSE, SELECT_DEVICE, SELECT_BRAND, SELECT_PRODUCT, GET_PRODUCTS, SELECT_SIZE } from '../constants/action-types'
+import { UPDATE_MEASURE_STEPS, SELECT_DOSE, SELECT_DEVICE, SELECT_BRAND, SELECT_PRODUCT, GET_PRODUCTS, SELECT_SIZE, SELECT_PRODUCT_MG } from '../constants/action-types'
 import axios from 'axios'
 
 
@@ -38,5 +38,10 @@ export const selectProduct = (payload) => ({
 
 export const selectSize = (payload) => ({
     type: SELECT_SIZE,
+    payload
+})
+
+export const selectProductMg = (payload) => ({
+    type: SELECT_PRODUCT_MG,
     payload
 })
