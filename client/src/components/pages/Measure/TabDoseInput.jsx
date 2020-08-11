@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { Button } from 'react-bootstrap'
-
 import { selectDose } from '../../../actions/measure'
 
 
@@ -17,7 +15,6 @@ class TabDoseInput extends Component {
     this.props.selectDose({selectedDose: e.target.value})
   }
   render() {
-    console.log('dose input props: ', this.props)
     return (
       <div className="tab">
         <div className="question-line">
