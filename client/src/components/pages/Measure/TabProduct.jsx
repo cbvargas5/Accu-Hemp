@@ -12,7 +12,7 @@ class TabProduct extends Component {
 
   }
   handleSelection = (e) => {
-    this.props.selectProduct({selectedProduct: e.target.value})
+    this.props.selectProduct({selectedProduct: e.target.value[0]})
   }
   render() {
     return (
@@ -25,7 +25,7 @@ class TabProduct extends Component {
             {
               this.props.products
                 .filter(({ brand }) => this.props.selectedBrand === brand)
-                .map(({ id, description }) => <li key={id}><Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value={description} className="tab-btn">{description}</Button></li>)
+                .map(({ id, description, size }) => <li key={id}><Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value={[description, size]} className="tab-btn">{description}</Button></li>)
             }
           </ul>
         </div>

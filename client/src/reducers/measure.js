@@ -1,4 +1,4 @@
-import { UPDATE_MEASURE_STEPS, GET_PRODUCTS, SELECT_DOSE, SELECT_DEVICE, SELECT_BRAND, SELECT_PRODUCT } from '../constants/action-types'
+import { UPDATE_MEASURE_STEPS, GET_PRODUCTS, SELECT_DOSE, SELECT_DEVICE, SELECT_BRAND, SELECT_PRODUCT, SELECT_SIZE } from '../constants/action-types'
 
 
 const initialState = {
@@ -7,8 +7,8 @@ const initialState = {
     selectedDevice: '',
     selectedBrand: '',
     selectedProduct: '',
-    selectedDose: '',
-    results: [],
+    selectedDose: 0,
+    selectedSize: 0,
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -30,6 +30,9 @@ export default (state = initialState, { type, payload }) => {
             return {...state, ...payload }
 
         case SELECT_PRODUCT:
+            return {...state, ...payload }
+
+        case SELECT_SIZE:
             return {...state, ...payload }
 
         default:

@@ -13,7 +13,7 @@ class TabDoseInput extends Component {
 
   }
   handleChange = (e) => {
-    //convert string to number && round to nearest mg
+    //convert string to number && round to nearest mg && remove negative input
     this.props.selectDose({selectedDose: e.target.value})
   }
   render() {
