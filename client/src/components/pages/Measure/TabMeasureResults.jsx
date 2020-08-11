@@ -6,6 +6,9 @@ class TabMeasureResults extends Component {
     super(props)
 
   }
+  calculateMeasurement = (selectedDose, productMg, selectedSize) => {
+
+  }
   render() {
     console.log('results: ', this.props)
     return (

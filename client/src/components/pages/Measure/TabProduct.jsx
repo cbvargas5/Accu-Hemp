@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { Button } from 'react-bootstrap'
 
-import { selectProduct, selectSize } from '../../../actions/measure'
+import { selectProduct, selectSize, selectProductMg } from '../../../actions/measure'
 
 
 class TabProduct extends Component {
@@ -12,10 +12,11 @@ class TabProduct extends Component {
 
   }
   handleSelection = (e) => {
-    const [description, size] = e.target.value.split('--split--')
+    const [description, size, milligrams] = e.target.value.split('--split--')
 
     this.props.selectProduct({selectedProduct: description})
     this.props.selectSize({selectedSize: size})
+    this.props.selectProductMg({selectedProductMg: milligrams})
   }
   render() {
     return (
@@ -28,7 +29,7 @@ class TabProduct extends Component {
             {
               this.props.products
                 .filter(({ brand }) => this.props.selectedBrand === brand)
-                .map(({ id, description, size }) => <li key={id}><Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value={`${description}--split--${size}`} className="tab-btn">{description}</Button></li>)
+                .map(({ id, description, size, milligrams }) => <li key={id}><Button onClick={(e) => { this.props.onNext(); this.handleSelection(e); }} value={`${description}--split--${size}--split--${milligrams}`} className="tab-btn">{description}</Button></li>)
             }
           </ul>
         </div>
@@ -40,4 +41,4 @@ class TabProduct extends Component {
 const mapStateToProps = (state) => ({...state.measure})
 
 
-export default connect(mapStateToProps, { selectProduct, selectSize })(TabProduct)
+export default connect(mapStateToProps, { selectProduct, selectSize, selectProductMg })(TabProduct)
