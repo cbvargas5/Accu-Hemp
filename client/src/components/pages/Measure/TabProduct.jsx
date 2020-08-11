@@ -11,18 +11,16 @@ class TabProduct extends Component {
     super(props)
 
   }
-
   handleSelection = (e) => {
     this.props.selectProduct({selectedProduct: e.target.value})
   }
   render() {
-    console.log('product props ->', this.props)
     return (
       <div className="tab">
         <div className="question-line">
           <h4>Select Product:*</h4>
         </div>
-        <div className="device-wrapper">
+        <div className="tab-product-wrapper">
           <ul>
             {
               this.props.products

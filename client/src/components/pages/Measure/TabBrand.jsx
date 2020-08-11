@@ -29,7 +29,7 @@ class TabBrand extends Component {
         <div className="question-line">
           <h4>Select Brand:*</h4>
         </div>
-        <div className="device-wrapper">
+        <div className="brand-wrapper">
           <ul>
             {
               this.props.products
