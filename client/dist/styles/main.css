@@ -150,22 +150,24 @@ header {
   min-height: 12.5rem; }
   header .header-logo-wrapper .image-wrapper {
     width: 100%; }
-  header .main-nav-wrapper {
+  header .main-nav {
     padding: 0 3rem; }
   header img {
     max-width: 18rem; }
 
 .main-nav ul {
   display: flex; }
-  .main-nav ul li a {
-    color: #63b380;
+  .main-nav ul li {
     font-weight: 500;
     padding: 0 .5rem;
     transition: .4s; }
+    .main-nav ul li a {
+      color: #63b380; }
+    .main-nav ul li:hover,
     .main-nav ul li a:hover {
-      transform: translateY(0.5rem);
+      transform: translateY(0.25rem);
       color: #6396b3; }
-    .main-nav ul li a:active {
+    .main-nav ul li:active {
       color: #6396b3; }
 
 .steps-nav {

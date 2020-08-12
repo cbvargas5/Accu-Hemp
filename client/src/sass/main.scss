@@ -1,430 +1,426 @@
-@import 'variables';
-@import 'functions';
-@import 'utilities';
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.5rem;
-}
-
-body {
-    font-family: $main-font;
-}
-
-#root {
-    max-width: 75rem;
-    margin: 0 auto;
-}
-
-ul {
-    list-style: none;
-}
-
-// footer {
-//     display: flex;
-// }
-a,
-a:hover {
-    text-decoration: none;
-}
-
-p {
-    color: $secondary-color;
-}
-
-input {
-    border-style: solid;
-}
-
-//////////////
-/// HEADER ///
-//////////////
-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    min-height: 12.5rem;
-    .header-logo-wrapper {
-        .image-wrapper {
-            width: 100%;
+        @import 'variables';
+        @import 'functions';
+        @import 'utilities';
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.5rem;
         }
-    }
-    .main-nav-wrapper {
-        padding: 0 3rem;
-    }
-    img {
-        max-width: 18rem;
-    }
-}
-
-// Navs \\
-.main-nav {
-    ul {
-        display: flex;
-        li {
-            // Will need to fix later
-            a {
-                color: $primary-color;
-                font-weight: 500;
-                padding: 0 .5rem;
-                transition: .4s;
-                &:hover {
-                    transform: translateY(.5rem);
-                    color: $secondary-color;
-                }
-                &:active {
-                    color: $secondary-color;
+        
+        body {
+            font-family: $main-font;
+        }
+        
+        #root {
+            max-width: 75rem;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        // footer {
+        //     display: flex;
+        // }
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+        
+        p {
+            color: $secondary-color;
+        }
+        
+        input {
+            border-style: solid;
+        }
+        
+        //////////////
+        /// HEADER ///
+        //////////////
+        header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            min-height: 12.5rem;
+            .header-logo-wrapper {
+                .image-wrapper {
+                    width: 100%;
                 }
             }
+            .main-nav {
+                padding: 0 3rem;
+            }
+            img {
+                max-width: 18rem;
+            }
         }
-    }
-}
-
-.steps-nav {
-    font-size: .8rem;
-    // font-weight: 700;
-    // display: none;
-    // text-decoration: underline;
-    color: $secondary-color;
-    // transition: .5s;
-}
-
-.feature-nav-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .feature-nav {
-        ul {
-            display: flex;
-            font-size: 1.6rem;
-            li {
-                text-align: center;
-                margin: 0 1.2rem;
-                transition: .6s;
-                a {
-                    color: $primary-color;
+        
+        // Navs \\
+        .main-nav {
+            ul {
+                display: flex;
+                li {
+                    font-weight: 500;
+                    padding: 0 .5rem;
+                    a {
+                        color: $primary-color;
+                    }
+                    transition: .4s;
+                    &:hover,
+                    a:hover {
+                        transform: translateY(.25rem);
+                        color: $secondary-color;
+                    }
                     &:active {
                         color: $secondary-color;
                     }
                 }
-                &:hover,
-                & a:hover {
-                    transform: translateY(-.5rem);
-                    color: $secondary-color;
-                    .steps-nav {
-                        display: none;
+            }
+        }
+        
+        .steps-nav {
+            font-size: .8rem;
+            // font-weight: 700;
+            // display: none;
+            // text-decoration: underline;
+            color: $secondary-color;
+            // transition: .5s;
+        }
+        
+        .feature-nav-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .feature-nav {
+                ul {
+                    display: flex;
+                    font-size: 1.6rem;
+                    li {
+                        text-align: center;
+                        margin: 0 1.2rem;
+                        transition: .6s;
+                        a {
+                            color: $primary-color;
+                            &:active {
+                                color: $secondary-color;
+                            }
+                        }
+                        &:hover,
+                        & a:hover {
+                            transform: translateY(-.5rem);
+                            color: $secondary-color;
+                            .steps-nav {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-////////////////////////////
-/// HomePage mid section ///
-////////////////////////////
-// Title Section \\
-.opening-msgs {
-    line-height: 5rem;
-    margin-top: 3.5rem;
-    text-align: center;
-    h3 {
-        color: $secondary-color;
-        font-size: 2.7rem;
-        font-weight: 500;
-    }
-    h2 {
-        font-size: 2.5rem;
-        font-weight: 500;
-    }
-}
-
-// Step Section \\
-.homepage-steps {
-    display: flex;
-    margin-top: 2rem;
-    line-height: 1.5rem;
-    .icon-card {
-        text-align: center;
-        a {
-            color: $primary-color;
-            font-size: 6.25rem;
-        }
-        h3 {
-            font-size: 2.25rem;
-            font-family: $secondary-font;
-            font-weight: 600;
-        }
-        h4 {
-            padding: 1.5rem 0 .75rem 0;
-            a {
-                font-size: 2rem;
+        
+        ////////////////////////////
+        /// HomePage mid section ///
+        ////////////////////////////
+        // Title Section \\
+        .opening-msgs {
+            line-height: 5rem;
+            margin-top: 3.5rem;
+            text-align: center;
+            h3 {
+                color: $secondary-color;
+                font-size: 2.7rem;
+                font-weight: 500;
+            }
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 500;
             }
         }
-        p {
-            font-family: $secondary-font;
-        }
-        .icon-card-container {
-            border: $secondary-color solid 1px;
-            border-radius: 1.25rem;
-            margin: 1rem;
-            padding: 1.5rem;
-        }
-    }
-}
-
-// Carousel \\
-.brand-carousel-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 2.5rem 0;
-    h3 {
-        font-size: 2.5rem;
-        font-family: $secondary-font;
-    }
-    img {
-        width: 16rem;
-        height: 16rem;
-        margin-bottom: 3rem;
-    }
-}
-
-.carousel-indicators {
-    li {
-        background-color: darkgray;
-    }
-}
-
-//////////////
-/// FOOTER ///
-//////////////
-footer {
-    .disclaimer-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5rem 0;
-        border-bottom: #9b9b9b dotted 1px;
-        .main-nav {
-            flex: 1;
-            padding: .6rem;
-            li {
-                font-weight: 700;
-                padding: 0 .75rem;
-                transition: .4s;
-                &:hover {
-                    transform: translateY(-.25rem);
-                    color: $secondary-color;
-                }
-                &:active {
-                    color: $secondary-color;
-                }
-            }
-        }
-        .disclaimer-wrapper {
-            flex: 1;
-            padding: .6rem;
-            p {
-                color: $primary-color;
-            }
-        }
-    }
-    .footer-end-wrapper {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        padding: 3rem .25rem;
-        .copyright {
-            font-weight: 400;
-        }
-        .social-wrapper {
+        
+        // Step Section \\
+        .homepage-steps {
             display: flex;
-            .social-btn {
-                background-color: $primary-light;
-                margin-right: 1.25rem;
-                overflow: visible;
-                padding: .5rem .7rem;
-                border: $secondary-color solid 2px;
-                border-radius: 1rem;
-                transition: .3s;
-                .fa-facebook-f {
-                    margin: 0 .25rem;
+            margin-top: 2rem;
+            line-height: 1.5rem;
+            .icon-card {
+                text-align: center;
+                a {
+                    color: $primary-color;
+                    font-size: 6.25rem;
                 }
-                .fab {
-                    color: $secondary-color;
-                    font-size: 2rem;
+                h3 {
+                    font-size: 2.25rem;
+                    font-family: $secondary-font;
+                    font-weight: 600;
                 }
-                &:hover {
-                    background-color: #fff;
-                    .fab {
+                h4 {
+                    padding: 1.5rem 0 .75rem 0;
+                    a {
+                        font-size: 2rem;
+                    }
+                }
+                p {
+                    font-family: $secondary-font;
+                }
+                .icon-card-container {
+                    border: $secondary-color solid 1px;
+                    border-radius: 1.25rem;
+                    margin: 1rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+        
+        // Carousel \\
+        .brand-carousel-section {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 2.5rem 0;
+            h3 {
+                font-size: 2.5rem;
+                font-family: $secondary-font;
+            }
+            img {
+                width: 16rem;
+                height: 16rem;
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .carousel-indicators {
+            li {
+                background-color: darkgray;
+            }
+        }
+        
+        //////////////
+        /// FOOTER ///
+        //////////////
+        footer {
+            .disclaimer-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2.5rem 0;
+                border-bottom: #9b9b9b dotted 1px;
+                .main-nav {
+                    flex: 1;
+                    padding: .6rem;
+                    li {
+                        font-weight: 700;
+                        padding: 0 .75rem;
+                        transition: .4s;
+                        &:hover {
+                            transform: translateY(-.25rem);
+                            color: $secondary-color;
+                        }
+                        &:active {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+                .disclaimer-wrapper {
+                    flex: 1;
+                    padding: .6rem;
+                    p {
                         color: $primary-color;
                     }
                 }
             }
-        }
-    }
-}
-
-
-/*
-  DOSE PAGES
-*/
-
-/////////////////
-/// ESTIMATOR ///
-/////////////////
-// Progress \\
-.tracker-parent {
-    width: 80%;
-    text-align: center;
-    margin-bottom: 2rem;
-    h2 {
-        font-weight: 600;
-        font-family: $secondary-font;
-    }
-    .progressbar-wrapper {
-        text-align: left;
-        h5 {
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 0;
-        }
-        .progress {
-            border: solid #fff 4px;
-            border-radius: 1rem;
-            box-shadow: 0 0 5px 0 rgba(51, 51, 51, 0.459);
-            height: 1.25rem;
-        }
-        .progress-bar {
-            background-color: $secondary-color;
-            border-radius: 1rem;
-        }
-    }
-}
-
-// Next/Back Btns \\
-.tabNav-btns {
-    margin-top: 1rem;
-}
-
-// Condition Tab \\
-// Severity Tab \\
-.severity-tab {
-    img {
-        width: 6rem;
-        height: 6rem;
-        margin-bottom: 1.25rem;
-    }
-    li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .severity-btn {
-            // width: ;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 12.5;
-            padding: 1rem;
-            border-style: solid;
-        }
-    }
-}
-
-// Results Tab \\
-.results-tab {
-    padding: 0 5rem;
-    .result {
-        text-align: left;
-        h2 {
-            border: solid $dim-color 3px;
-            border-radius: 1.5rem;
-            padding: 1rem;
-            font-size: 1.75rem;
-            font-weight: 700;
-            width: 75%;
-            margin: auto;
-            text-align: center;
-        }
-        p {
-            color: $primary-color;
-            font-size: 1.15rem;
-        }
-        .result-note {
-            font-size: .75rem;
-            color: rgba(99, 150, 179, 0.6);
-        }
-        strong {
-            color: $secondary-color;
-        }
-    }
-    .redirect-section {
-        h4 {
-            font-weight: 500;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .redirect {
-            margin-bottom: 1.5rem;
-        }
-    }
-    .email-results-section {
-        .email-results {
-            .question {
-                display: block;
-                color: $secondary-color;
-                margin: 1rem 0;
-                font-size: 1.25rem;
-            }
-            .pls-enter {
-                display: block;
-                color: #aaa;
-                font-size: .8rem;
-            }
-        }
-    }
-}
-
-
-/*
-  PRODUCT PAGES
-*/
-
-////////////////////
-/// PRODUCT PAGE ///
-////////////////////
-.product-list {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-////////////////////
-/// PRODUCT QUIZ ///
-////////////////////
-// Inner Tab \\
-.quiz-wrapper {
-    .tab {
-        ul {
-            flex-wrap: nowrap;
-            flex-direction: column;
-            li {
-                width: 100%;
-                input {
-                    height: 3rem;
-                    width: 100%;
+            .footer-end-wrapper {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding: 3rem .25rem;
+                .copyright {
+                    font-weight: 400;
+                }
+                .social-wrapper {
+                    display: flex;
+                    .social-btn {
+                        background-color: $primary-light;
+                        margin-right: 1.25rem;
+                        overflow: visible;
+                        padding: .5rem .7rem;
+                        border: $secondary-color solid 2px;
+                        border-radius: 1rem;
+                        transition: .3s;
+                        .fa-facebook-f {
+                            margin: 0 .25rem;
+                        }
+                        .fab {
+                            color: $secondary-color;
+                            font-size: 2rem;
+                        }
+                        &:hover {
+                            background-color: #fff;
+                            .fab {
+                                color: $primary-color;
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-// Dose Tab \\
-// Importance Tab \\
-// Quality Tab \\
-// Results Tab \\
+        /*
+  DOSE PAGES
+*/
+        
+        /////////////////
+        /// ESTIMATOR ///
+        /////////////////
+        // Progress \\
+        .tracker-parent {
+            width: 80%;
+            text-align: center;
+            margin-bottom: 2rem;
+            h2 {
+                font-weight: 600;
+                font-family: $secondary-font;
+            }
+            .progressbar-wrapper {
+                text-align: left;
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+                .progress {
+                    border: solid #fff 4px;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 5px 0 rgba(51, 51, 51, 0.459);
+                    height: 1.25rem;
+                }
+                .progress-bar {
+                    background-color: $secondary-color;
+                    border-radius: 1rem;
+                }
+            }
+        }
+        
+        // Next/Back Btns \\
+        .tabNav-btns {
+            margin-top: 1rem;
+        }
+        
+        // Condition Tab \\
+        // Severity Tab \\
+        .severity-tab {
+            img {
+                width: 6rem;
+                height: 6rem;
+                margin-bottom: 1.25rem;
+            }
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .severity-btn {
+                    // width: ;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    width: 12.5;
+                    padding: 1rem;
+                    border-style: solid;
+                }
+            }
+        }
+        
+        // Results Tab \\
+        .results-tab {
+            padding: 0 5rem;
+            .result {
+                text-align: left;
+                h2 {
+                    border: solid $dim-color 3px;
+                    border-radius: 1.5rem;
+                    padding: 1rem;
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                    width: 75%;
+                    margin: auto;
+                    text-align: center;
+                }
+                p {
+                    color: $primary-color;
+                    font-size: 1.15rem;
+                }
+                .result-note {
+                    font-size: .75rem;
+                    color: rgba(99, 150, 179, 0.6);
+                }
+                strong {
+                    color: $secondary-color;
+                }
+            }
+            .redirect-section {
+                h4 {
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+                .redirect {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .email-results-section {
+                .email-results {
+                    .question {
+                        display: block;
+                        color: $secondary-color;
+                        margin: 1rem 0;
+                        font-size: 1.25rem;
+                    }
+                    .pls-enter {
+                        display: block;
+                        color: #aaa;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+        /*
+  PRODUCT PAGES
+*/
+        
+        ////////////////////
+        /// PRODUCT PAGE ///
+        ////////////////////
+        .product-list {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        
+        ////////////////////
+        /// PRODUCT QUIZ ///
+        ////////////////////
+        // Inner Tab \\
+        .quiz-wrapper {
+            .tab {
+                ul {
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    li {
+                        width: 100%;
+                        input {
+                            height: 3rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Dose Tab \\
+        // Importance Tab \\
+        // Quality Tab \\
+        // Results Tab \\

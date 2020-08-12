@@ -9,9 +9,7 @@ const Header = (props) => (
         <Link to="/"><img src="./images/main-logo.png" alt="Accu-Hemp Main Logo"/></Link>
       </div>
     </div>
-    <div className="main-nav-wrapper">
-      <Navbar />
-    </div>
+    <Navbar />
   </header>
 );
 
