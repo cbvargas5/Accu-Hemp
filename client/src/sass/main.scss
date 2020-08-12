@@ -194,6 +194,9 @@
         .carousel-indicators {
             li {
                 background-color: darkgray;
+                &.active {
+                    background-color: $primary-color;
+                }
             }
         }
         

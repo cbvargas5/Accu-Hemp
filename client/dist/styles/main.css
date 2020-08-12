@@ -249,6 +249,8 @@ header {
 
 .carousel-indicators li {
   background-color: darkgray; }
+  .carousel-indicators li.active {
+    background-color: #63b380; }
 
 footer .disclaimer-section {
   display: flex;
