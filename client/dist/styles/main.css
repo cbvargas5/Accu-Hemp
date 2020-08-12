@@ -248,7 +248,11 @@ header {
     margin-bottom: 3rem; }
 
 .carousel-indicators li {
-  background-color: darkgray; }
+  background-color: darkgray;
+  height: .625rem;
+  width: .625rem;
+  margin: 0 .4rem;
+  border-radius: 50%; }
   .carousel-indicators li.active {
     background-color: #63b380; }
 

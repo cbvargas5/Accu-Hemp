@@ -194,6 +194,10 @@
         .carousel-indicators {
             li {
                 background-color: darkgray;
+                height: .625rem;
+                width: .625rem;
+                margin: 0 .4rem;
+                border-radius: 50%;
                 &.active {
                     background-color: $primary-color;
                 }
