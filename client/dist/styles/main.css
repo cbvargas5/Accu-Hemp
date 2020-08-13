@@ -123,6 +123,9 @@ h6 {
   box-sizing: border-box;
   line-height: 1.5rem; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Josefin Sans", sans-serif; }
 

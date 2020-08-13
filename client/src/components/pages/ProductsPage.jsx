@@ -12,6 +12,7 @@ class ProductsPage extends Component {
   }
   componentDidMount() {
     this.props.getProducts()
+    window.scrollTo(0, 0)
   }
   render() {
     return (

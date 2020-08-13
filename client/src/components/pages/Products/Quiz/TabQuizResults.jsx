@@ -7,8 +7,10 @@ class TabQuizResults extends Component {
   constructor(props) {
     super(props)
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
-    console.log('quiz result:', this.props)
     return (
       <div className="tab quiz-results">
         <p>Recommended Products:</p>

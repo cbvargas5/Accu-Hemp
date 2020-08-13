@@ -41,7 +41,7 @@ export class FinderQuiz extends Component {
   render() {
     const { url: URL } = this.props.match
 
-    console.log('FinderQuiz props ->', this.props)
+    // console.log('FinderQuiz props ->', this.props)
     return (
       <section className="quiz-wrapper big-card">
         <ProgressTracker title="Product Quiz" currStep={this.props.step} lastStep={4}/>
