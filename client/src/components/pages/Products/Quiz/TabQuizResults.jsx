@@ -8,6 +8,7 @@ class TabQuizResults extends Component {
     super(props)
   }
   render() {
+    console.log('quiz result:', this.props)
     return (
       <div className="tab quiz-results">
         <p>Recommended Products:</p>
