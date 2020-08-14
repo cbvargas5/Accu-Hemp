@@ -4,6 +4,7 @@ import DosePage from './pages/DosePage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
 import MeasurePage from './pages/MeasurePage.jsx';
 import HelpPage from './pages/HelpPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
@@ -35,6 +36,7 @@ class App extends React.Component {
               <Route path="/measure" exact component={MeasurePage} />
               <Route path="/measure/measure-quiz" component={MeasureQuiz} />
               <Route path="/help" exact component={HelpPage} />
+              <Route path="/contact" exact component={ContactPage} />
             </Switch>
           </section>
       </main>
