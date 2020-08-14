@@ -7,7 +7,13 @@ import { Accordion, Card } from 'react-bootstrap'
 export default function HelpPage() {
   return (
     <section className="help-page">
+        <section className="mini-header">
+          <h1>Help</h1>
+        </section>
       <section className="accordion-sec">
+        <div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
         <Accordion>
           <Card>
             <Accordion.Toggle as={Card.Header} eventKey="0">
