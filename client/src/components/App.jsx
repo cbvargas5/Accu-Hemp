@@ -18,6 +18,7 @@ class App extends React.Component {
   render() {
    return (
     <>
+    {/* React dnd for Drag and Drop */}
     {/* Might change */}
       <BrowserRouter>
       <Header />
