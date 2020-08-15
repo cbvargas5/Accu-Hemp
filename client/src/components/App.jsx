@@ -5,6 +5,8 @@ import ProductsPage from './pages/ProductsPage.jsx';
 import MeasurePage from './pages/MeasurePage.jsx';
 import HelpPage from './pages/HelpPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import CompaniesPage from './pages/CompaniesPage.jsx';
+import LegalPage from './pages/LegalPage.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
@@ -37,6 +39,8 @@ class App extends React.Component {
               <Route path="/measure/measure-quiz" component={MeasureQuiz} />
               <Route path="/help" exact component={HelpPage} />
               <Route path="/contact" exact component={ContactPage} />
+              <Route path="/companies" exact component={CompaniesPage} />
+              <Route path="/legal" exact component={LegalPage} />
             </Switch>
           </section>
       </main>
