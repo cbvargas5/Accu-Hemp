@@ -57,6 +57,13 @@
             .main-nav {
                 padding: 0 3rem;
             }
+            .image-wrapper {
+                transition: .35s;
+                &:hover {
+                    transform: scale(.9);
+                    color: $secondary-color;
+                }
+            }
             img {
                 max-width: 18rem;
             }
