@@ -16,9 +16,13 @@ h5 {
 h6 {
   color: #63b380; }
 
-.underline-sec {
+.underline-sec,
+.mini-header {
   border-bottom: #6396b3 solid 0.15rem;
-  padding-bottom: 1.4rem; }
+  padding: 1.4rem 0; }
+
+.mini-header h1 {
+  font-size: 3.25rem; }
 
 .mini-underline-sec {
   border-bottom: #ccc solid 1px;
@@ -442,18 +446,19 @@ footer .footer-end-wrapper {
 /*
   OTHER PAGES
 */
-.help-page .accordion .card {
-  border: none;
-  border-bottom: solid #6396b3 1px; }
-
-.help-page .accordion .card-header {
-  cursor: pointer;
-  background-color: #fff; }
-  .help-page .accordion .card-header p {
-    color: #63b380; }
-
-.help-page .accordion .card-body {
-  background-color: rgba(239, 239, 239, 0.43); }
-
-.help-page .accordion p {
-  margin: 0; }
+.help-page {
+  text-align: center; }
+  .help-page .accordion {
+    text-align: left; }
+    .help-page .accordion .card {
+      border: none;
+      border-bottom: solid #6396b3 1px; }
+    .help-page .accordion .card-header {
+      cursor: pointer;
+      background-color: #fff; }
+      .help-page .accordion .card-header p {
+        color: #63b380; }
+    .help-page .accordion .card-body {
+      background-color: rgba(239, 239, 239, 0.43); }
+    .help-page .accordion p {
+      margin: 0; }

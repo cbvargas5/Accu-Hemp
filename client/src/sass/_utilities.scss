@@ -1,7 +1,14 @@
 @import 'variables';
-.underline-sec {
+.underline-sec,
+.mini-header {
     border-bottom: $secondary-color solid .15rem;
-    padding-bottom: 1.4rem;
+    padding: 1.4rem 0;
+}
+
+.mini-header {
+    h1 {
+        font-size: 3.25rem;
+    }
 }
 
 .mini-underline-sec {

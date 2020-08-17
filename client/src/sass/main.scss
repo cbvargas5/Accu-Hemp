@@ -465,7 +465,9 @@
         /// HELP PAGE ///
         /////////////////
         .help-page {
+            text-align: center;
             .accordion {
+                text-align: left;
                 .card {
                     border: none;
                     border-bottom: solid $secondary-color 1px;
