@@ -466,6 +466,12 @@
         /////////////////
         .help-page {
             .accordion {
+                .card-header {
+                    cursor: pointer;
+                    p {
+                        color: $primary-color;
+                    }
+                }
                 p {
                     margin: 0;
                 }

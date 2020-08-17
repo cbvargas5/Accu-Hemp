@@ -29,11 +29,11 @@ export default function HelpPage() {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="1">
               <Card.Body>
-                <p>Hemp Oil: Products with the name “Hemp Oil” are extracted from the hemp plant (seeds), but usually do not contain any CBD. If you are looking to purchase CBD be extra cautious when buying products that only use the term “Hemp”. Make sure that somewhere on the product it mentions CBD, phytocannabinoids, or cannabidiol. If it does not, it may just be oil from the Hemp plant, which may have its own benefits depending on what you’re looking for.</p>
+                <p><strong>Hemp Oil:</strong> Products with the name “Hemp Oil” are extracted from the hemp plant (seeds), but usually do not contain any CBD. If you are looking to purchase CBD be extra cautious when buying products that only use the term “Hemp”. Make sure that somewhere on the product it mentions CBD, phytocannabinoids, or cannabidiol. If it does not, it may just be oil from the Hemp plant, which may have its own benefits depending on what you’re looking for.</p>
                 <br/>
-                <p>CBD Hemp Oil: This means the product contains CBD extracted from the Hemp plant. With the name CBD Hemp oil, it specifies that the CBD oil is from the Hemp plant, not the marijuana plant. This is the legal/technical term of CBD oil that is federally legal in the U.S.</p>
+                <p><strong>CBD Hemp Oil:</strong> This means the product contains CBD extracted from the Hemp plant. With the name CBD Hemp oil, it specifies that the CBD oil is from the Hemp plant, not the marijuana plant. This is the legal/technical term of CBD oil that is federally legal in the U.S.</p>
                 <br/>
-                <p>CBD Oil: Using the name “CBD oil” is ambiguous. CBD oil can refer to CBD extracted from either the Hemp plant or the Marijuana plant. Some CBD oil products are restricted to state lines because it is sourced from Marijuana with over 0.3% psychoactive material (THC). However, most of the time when people talk about CBD oil they are referring to CBD Hemp oil that is extracted from legal Hemp.</p>
+                <p><strong>CBD Oil:</strong> Using the name “CBD oil” is ambiguous. CBD oil can refer to CBD extracted from either the Hemp plant or the Marijuana plant. Some CBD oil products are restricted to state lines because it is sourced from Marijuana with over 0.3% psychoactive material (THC). However, most of the time when people talk about CBD oil they are referring to CBD Hemp oil that is extracted from legal Hemp.</p>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -43,11 +43,11 @@ export default function HelpPage() {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="2">
               <Card.Body>
-                <p>Isolate is CBD oil that only contains CBD from the hemp plant. During the extraction process CBD is isolated from the rest of the cannabiniods and terpenes.</p>
+                <p><strong>Isolate</strong> is CBD oil that only contains CBD from the hemp plant. During the extraction process CBD is isolated from the rest of the cannabiniods and terpenes.</p>
                 <br/>
-                <p>Broad Spectrum is CBD oil that contains CBD and terpenes from the Hemp plant. Sometimes Hemp contains a small amount of the psychoactive cannabinoid THC (less than 0.3%). In Broad Spectrum products you will not find traces of THC, which is especially important when it comes to drug testing for work/sports.</p>
+                <p><strong>Broad Spectrum</strong> is CBD oil that contains CBD and terpenes from the Hemp plant. Sometimes Hemp contains a small amount of the psychoactive cannabinoid THC (less than 0.3%). In Broad Spectrum products you will not find traces of THC, which is especially important when it comes to drug testing for work/sports.</p>
                 <br/>
-                <p>Full Spectrum is CBD oil that contains CBD, terpenes, and possibly a small amount of THC from the Hemp plant. Hemp contains less than 0.3% of the psychoactive cannabinoid THC. In Full Spectrum products, it is possible that your product will contain small amounts of THC.</p>
+                <p><strong>Full Spectrum</strong> is CBD oil that contains CBD, terpenes, and possibly a small amount of THC from the Hemp plant. Hemp contains less than 0.3% of the psychoactive cannabinoid THC. In Full Spectrum products, it is possible that your product will contain small amounts of THC.</p>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -59,7 +59,7 @@ export default function HelpPage() {
               <Card.Body>
                 <p>Terpenes are compounds found in many plants, and they give plants their distinct aromas. Some perpenes are anti-microbial and research has shown that some may have health benefits. Terpenes can be found in essential oils, which can be medicinally used through aroma therapy, topical use, and ingestion.</p>
                 <br/>
-                <p>Terpenes in Cannabis/Hemp: There are over 200 terpenes in cannabis, including Limonene (also found in citrus and fruit peels) and Linalool (also found in lavender). Different strains of cannabis have different terpene profiles. Some research has shown that terpenes help to determine how  cannabinoids like CBD and THC effect our bodies. They can amplify or dampen their effects, and  it does this by binding to cannabinoid receptors. It is not the aroma from terpenes that cause this effect, it is their biochemical pathways with cannabiniods that cause this. This effect is called the “Entourage Effect”.</p>
+                <p><strong>Terpenes in Cannabis/Hemp:</strong> There are over 200 terpenes in cannabis, including Limonene (also found in citrus and fruit peels) and Linalool (also found in lavender). Different strains of cannabis have different terpene profiles. Some research has shown that terpenes help to determine how  cannabinoids like CBD and THC effect our bodies. They can amplify or dampen their effects, and  it does this by binding to cannabinoid receptors. It is not the aroma from terpenes that cause this effect, it is their biochemical pathways with cannabiniods that cause this. This effect is called the “Entourage Effect”.</p>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -92,7 +92,13 @@ export default function HelpPage() {
               <p>I sell CBD hemp oil products, how do I get my products added to the AccuHemp website?</p>
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="7">
-              <Card.Body><p>Currently there are two options: 1) We can add your products to our Measurement quiz. 2) We advertise/recommend your products in our Product Finder quiz and/or blog. Please go to the Companies page to learn more and apply.</p></Card.Body>
+              <Card.Body>
+                <p>Currently there are two options:</p>
+                <br/>
+                <p><strong>1)</strong> We can add your products to our Measurement quiz.</p>
+                <br/>
+                <p><strong>2)</strong> We advertise/recommend your products in our Product Finder quiz and/or blog. Please go to the Companies page to learn more and apply.</p>
+              </Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
