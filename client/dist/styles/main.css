@@ -442,10 +442,18 @@ footer .footer-end-wrapper {
 /*
   OTHER PAGES
 */
+.help-page .accordion .card {
+  border: none;
+  border-bottom: solid #6396b3 1px; }
+
 .help-page .accordion .card-header {
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #fff; }
   .help-page .accordion .card-header p {
     color: #63b380; }
+
+.help-page .accordion .card-body {
+  background-color: rgba(239, 239, 239, 0.43); }
 
 .help-page .accordion p {
   margin: 0; }

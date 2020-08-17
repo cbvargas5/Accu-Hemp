@@ -466,11 +466,19 @@
         /////////////////
         .help-page {
             .accordion {
+                .card {
+                    border: none;
+                    border-bottom: solid $secondary-color 1px;
+                }
                 .card-header {
                     cursor: pointer;
+                    background-color: #fff;
                     p {
                         color: $primary-color;
                     }
+                }
+                .card-body {
+                    background-color: rgba(239, 239, 239, 0.43);
                 }
                 p {
                     margin: 0;
