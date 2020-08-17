@@ -5,6 +5,9 @@ const path = require('path');
 require('dotenv').config();
 const DOSAGES = require('./routers/dosages')
 const PRODUCTS = require('./routers/products')
+const main = require('./testEmail')
+
+main().catch(console.error);
 
 
 app.use(express.json());

@@ -13,7 +13,7 @@ class TabImportance extends Component {
     this.props.selectImportance({selectedImportance: e.target.value})
   }
   render() {
-  const OPTIONS = ['Finding the lowest price product for my dose', 'Finding the best value product for my dose', 'Finding a product with a higher concentration or larger size']
+  const OPTIONS = ['Finding the best value product for my dose', 'Finding all products for my dose']
   return (
     <div className="tab">
       <div className="question-line">
