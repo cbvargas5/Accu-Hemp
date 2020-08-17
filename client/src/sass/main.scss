@@ -158,6 +158,13 @@
             line-height: 1.5rem;
             .icon-card {
                 text-align: center;
+                .fas {
+                    transition: .35s;
+                    &:hover {
+                        transform: scale(.9);
+                        // color: $secondary-color;
+                    }
+                }
                 a {
                     color: $primary-color;
                     font-size: 6.25rem;
