@@ -10,7 +10,7 @@ export default function HelpPage() {
       <section className="mini-header">
         <h1>Help</h1>
       </section>
-      <section className="accordion-sec">
+      <section className="accordion-sec underline-sec">
         <div>
           <h2>Frequently Asked Questions</h2>
         </div>
