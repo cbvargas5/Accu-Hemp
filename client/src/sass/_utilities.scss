@@ -118,3 +118,20 @@
         }
     }
 }
+
+.btn-card {
+    padding: 1rem 0;
+    a {
+        border: solid $secondary-color 2px;
+        border-radius: 1.25rem;
+        font-size: 1.25rem;
+        color: $primary-color;
+        line-height: 4rem;
+        padding: 2.5rem 2rem;
+        box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.3);
+    }
+    transition: .4s;
+    &:hover {
+        transform: scale(.95);
+    }
+}

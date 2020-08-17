@@ -117,6 +117,20 @@ h6 {
       max-height: 10rem;
       max-width: 10rem; }
 
+.btn-card {
+  padding: 1rem 0;
+  transition: .4s; }
+  .btn-card a {
+    border: solid #6396b3 2px;
+    border-radius: 1.25rem;
+    font-size: 1.25rem;
+    color: #63b380;
+    line-height: 4rem;
+    padding: 2.5rem 2rem;
+    box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.3); }
+  .btn-card:hover {
+    transform: scale(0.95); }
+
 * {
   margin: 0;
   padding: 0;
