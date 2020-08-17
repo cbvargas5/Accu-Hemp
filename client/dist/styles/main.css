@@ -438,3 +438,9 @@ footer .footer-end-wrapper {
     .quiz-wrapper .tab ul li input {
       height: 3rem;
       width: 100%; }
+
+/*
+  OTHER PAGES
+*/
+.help-page .accordion p {
+  margin: 0; }
