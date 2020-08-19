@@ -16,7 +16,7 @@ class TabQuizResults extends Component {
         <p>Recommended Products:</p>
         <ul>
           {/* Awaiting filter algorithm */}
-            {this.props.products.map( product => <ProductCard key={product.id} {...product}/> )}
+            {this.props.filteredProducts.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
       </div>
     )
