@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { selectDose } from '../../../../actions/products'
+import { selectDose, updateFilteredProducts } from '../../../../actions/products'
 
 import Option from './Option.jsx'
 
@@ -10,6 +10,9 @@ import Option from './Option.jsx'
 class TabDose extends Component {
   constructor(props) {
     super(props)
+  }
+  componentDidMount() {
+    this.props.updateFilteredProducts(this.props.products)
   }
   handleSelection = (e) => {
     this.props.selectDose({selectedDose: e.target.value})
@@ -36,4 +39,4 @@ class TabDose extends Component {
 const mapStateToProps = (state) => ({...state.products})
 
 
-export default connect(mapStateToProps, { selectDose })(TabDose)
+export default connect(mapStateToProps, { selectDose, updateFilteredProducts })(TabDose)
