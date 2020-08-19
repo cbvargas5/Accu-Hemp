@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectQuality } from '../../../../actions/products'
+import { selectQuality, updateFilteredProducts } from '../../../../actions/products'
 
 
 import Option from './Option.jsx'
@@ -9,6 +9,18 @@ import Option from './Option.jsx'
 class TabQualities extends Component {
   constructor(props) {
     super(props)
+  }
+  filterByImportance = (product) => {
+    const pricePerMg = product.price / product.milligrams
+    switch(this.props.selectedImportance) {
+      case 'Finding the best value product for my dose': 
+        return pricePerMg >= .05 && pricePerMg <= .09
+      case 'Finding all products for my dose': 
+        return true
+    }
+  }
+  componentDidMount() {
+    this.props.updateFilteredProducts(this.props.filteredProducts.filter(this.filterByImportance))
   }
   handleSelection = (e) => {
     this.props.selectQuality({selectedQualities: e.target.value})
@@ -34,4 +46,4 @@ class TabQualities extends Component {
 const mapStateToProps = (state) => ({...state.products})
 
 
-export default connect(mapStateToProps, { selectQuality })(TabQualities)
+export default connect(mapStateToProps, { selectQuality, updateFilteredProducts })(TabQualities)
