@@ -1,9 +1,30 @@
 import React from 'react'
 
+import { Button } from 'react-bootstrap'
+
 export default function ContactPage() {
   return (
     <section>
-      <h2>Hello from Contact Page</h2>
+        <div className="mini-header">
+          <h1>Contact Us</h1>
+        </div>
+        <div className="form-wrapper">
+          <form className="contact-form">
+            <div className="name-field-wrapper">
+              <label for="form-name">Name</label>
+              <input type="text" name="form-name" id="form-name"/>
+            </div>
+            <div className="email-field-wrapper">
+              <label for="form-email">Email</label>
+              <input type="email" required="required" name="form-email" id="form-email"/>
+            </div>
+            <div className="message-field-wrapper">
+              <label for="form-message">Message</label>
+              <textarea name="form-message" id="form-message" rows="4"></textarea>
+            </div>
+            <Button type="submit">Send</Button>
+          </form>
+        </div>
     </section>
   )
 }
