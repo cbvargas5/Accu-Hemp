@@ -29,7 +29,7 @@ export default function ContactPage() {
         </section>
         <section className="feedback-redirect">
           <h3>Give us feedback about AccuHemp</h3>
-          <ButtonCard link="/" icon="fas fa-comment-dots">Feedback</ButtonCard>
+          <ButtonCard link="/feedback" icon="fas fa-comment-dots">Feedback</ButtonCard>
         </section>
     </section>
   )
