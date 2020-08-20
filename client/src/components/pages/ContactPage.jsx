@@ -1,4 +1,6 @@
 import React from 'react'
+import ButtonCard from '../cards/ButtonCard.jsx'
+
 
 import { Button } from 'react-bootstrap'
 
@@ -8,7 +10,7 @@ export default function ContactPage() {
         <div className="mini-header">
           <h1>Contact Us</h1>
         </div>
-        <div className="form-wrapper">
+        <section className="form-wrapper">
           <form className="contact-form">
             <div className="name-field-wrapper">
               <label for="form-name">Name</label>
@@ -24,7 +26,11 @@ export default function ContactPage() {
             </div>
             <Button type="submit">Send</Button>
           </form>
-        </div>
+        </section>
+        <section className="feedback-redirect">
+          <h3>Give us feedback about AccuHemp</h3>
+          <ButtonCard link="/" icon="fas fa-comment-dots">Feedback</ButtonCard>
+        </section>
     </section>
   )
 }
