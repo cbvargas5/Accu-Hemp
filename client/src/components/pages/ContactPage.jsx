@@ -1,10 +1,12 @@
 import React from 'react'
+import ReCAPTCHA from "react-google-recaptcha";
 import ButtonCard from '../cards/ButtonCard.jsx'
 
 
 import { Button } from 'react-bootstrap'
 
 export default function ContactPage() {
+  console.log('env test->', process.env.REACT_APP_TEST)
   return (
     <section>
         <div className="mini-header">
