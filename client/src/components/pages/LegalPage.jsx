@@ -21,12 +21,13 @@ export default function LegalPage() {
       </section>
       <section className="legal-redirect">
         <ul>
-          <li><ButtonCard link="https://app.termly.io/document/disclaimer/57d4870b-9e3e-4dc1-a71b-969d1411d709" icon="fas fa-exclamation-triangle">Full Disclaimers</ButtonCard></li>
-          <li><ButtonCard link="https://app.termly.io/document/terms-of-use-for-website/296c10a3-c26e-4a2f-b8fb-fe713ffac331" icon="fas fa-clipboard-check">Terms of Use</ButtonCard></li>
-          <li><ButtonCard link="https://app.termly.io/document/privacy-policy/bcb4e723-f231-4c69-a153-30f8eb337d1a" icon="fas fa-address-card">Privacy Policy</ButtonCard></li>
-          <li><ButtonCard link="https://app.termly.io/document/cookie-policy/733f7539-e2fd-4876-8e35-b7010c2bd0c8" icon="fas fa-cookie-bite">Cookie Policy</ButtonCard></li>
+          <li><ButtonCard link="https://app.termly.io/document/disclaimer/57d4870b-9e3e-4dc1-a71b-969d1411d709" icon="fas fa-exclamation-triangle" externalLink={true}>Full Disclaimers</ButtonCard></li>
+          <li><ButtonCard link="https://app.termly.io/document/terms-of-use-for-website/296c10a3-c26e-4a2f-b8fb-fe713ffac331" icon="fas fa-clipboard-check" externalLink={true}>Terms of Use</ButtonCard></li>
+          <li><ButtonCard link="https://app.termly.io/document/privacy-policy/bcb4e723-f231-4c69-a153-30f8eb337d1a" icon="fas fa-address-card" externalLink={true}>Privacy Policy</ButtonCard></li>
+          <li><ButtonCard link="https://app.termly.io/document/cookie-policy/733f7539-e2fd-4876-8e35-b7010c2bd0c8" icon="fas fa-cookie-bite" externalLink={true}>Cookie Policy</ButtonCard></li>
         </ul>
       </section>
+      <p><strong>Note:</strong> The brands advertised on Accu-Hemp.com, their logos, and their products are not owned by Accugentix LLC, they are owned by their respective companies.</p>
     </section>
   )
 }
