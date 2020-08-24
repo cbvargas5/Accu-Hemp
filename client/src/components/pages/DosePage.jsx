@@ -9,7 +9,7 @@ export default class DosePage extends Component {
   }
   render() {
     return (
-      <div>
+      <section>
         <section className="mini-header">
           <h1>Dose</h1>
         </section>
@@ -28,7 +28,7 @@ export default class DosePage extends Component {
           {/* Will need to change link to sub routes home of dose survey */}
           <ButtonCard link="/" icon="fas fa-clipboard-list">CBD Dose Survery</ButtonCard>
         </section>
-      </div>
+      </section>
     )
   }
 }

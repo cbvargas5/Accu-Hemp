@@ -11,7 +11,7 @@ class MeasurePage extends Component {
   }  
   render() {
     return (
-      <div>
+      <section>
         <section className="mini-header">
           <h1>Measure</h1>
         </section>
@@ -22,7 +22,7 @@ class MeasurePage extends Component {
         <section className="big-card">
           <Link to="/measure/measure-quiz">Quiz</Link>
         </section>
-      </div>
+      </section>
     )
   }
 }

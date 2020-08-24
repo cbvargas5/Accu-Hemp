@@ -8,9 +8,8 @@ export default function ButtonCard({ link, children, icon, externalLink = false 
         <Link to={link}>{children}<i className={icon}></i></Link>
       </div>
     )
-
   } else {
-  return (
+   return (
       <div className="btn-card">
         <a href={link} target="_blank">{children}<i className={icon}></i></a>
       </div>

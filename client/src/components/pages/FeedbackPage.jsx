@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function FeedbackPage() {
   return (
-    <div>
+    <section>
       <h1>Hello from Feedback</h1>
-    </div>
+    </section>
   )
 }

@@ -16,7 +16,7 @@ class ProductsPage extends Component {
   }
   render() {
     return (
-      <div>
+      <section>
         <section className="mini-header">
           <h1>Products</h1>
         </section>
@@ -30,7 +30,7 @@ class ProductsPage extends Component {
             {this.props.products.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
         </section>
-      </div>
+      </section>
     )
   }
 }
