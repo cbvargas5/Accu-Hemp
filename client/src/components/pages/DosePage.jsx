@@ -26,7 +26,7 @@ export default class DosePage extends Component {
           <Link to="/products">Click here to skip to Step 2</Link>
           <p>Before you go to Step 2, please take our CBD Dose Survey so we can improve our Dose Estimator.</p>
           {/* Will need to change link to sub routes home of dose survey */}
-          <ButtonCard link="/" icon="fas fa-clipboard-list">CBD Dose Survery</ButtonCard>
+          <ButtonCard link="/dose/survey" icon="fas fa-clipboard-list">CBD Dose Survery</ButtonCard>
         </section>
       </section>
     )

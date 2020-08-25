@@ -4,7 +4,7 @@ export default class Survey extends Component {
   render() {
     return (
       <div>
-        hello from Survey
+        <h2>hello from Survey</h2>
       </div>
     )
   }
