@@ -13,6 +13,7 @@ import Footer from './Footer.jsx';
 import FeatureNav from './FeatureNav.jsx';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Estimator from './pages/Dose/Estimator/Estimator.jsx';
+import Survey from './pages/Dose/Survey/Survey.jsx';
 import FinderQuiz from './pages/Products/Quiz/FinderQuiz.jsx';
 import MeasureQuiz from './pages/Measure/MeasureQuiz.jsx';
 
@@ -34,6 +35,7 @@ class App extends React.Component {
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />
               <Route path="/dose/estimator" component={Estimator} />
+              <Route path="/dose/survey" component={Survey} />
               <Route path="/products" exact component={ProductsPage} />
               <Route path="/products/finder-quiz" component={FinderQuiz} />
               <Route path="/measure" exact component={MeasurePage} />
