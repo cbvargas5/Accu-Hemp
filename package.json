@@ -4,9 +4,12 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon server/index.js",
-        "build": "webpack -w",
-        "sass": "node-sass -w client/src/sass/ -o client/dist/styles --recursive"
+        "dev-start": "nodemon server/index.js",
+        "dev-build": "webpack -w",
+        "dev-sass": "node-sass -w client/src/sass/ -o client/dist/styles --recursive",
+        "start": "node server/index.js",
+        "build": "webpack",
+        "sass": "node-sass client/src/sass/ -o client/dist/styles"
     },
     "repository": {
         "type": "git",
