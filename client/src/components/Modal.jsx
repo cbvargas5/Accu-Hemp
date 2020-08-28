@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import { Modal } from 'react-bootstrap'
 
 
 export default class Modal extends Component {
@@ -7,6 +8,8 @@ export default class Modal extends Component {
     return (
       <div>
         <h2>Modal time!</h2>
+        
+        <p>Modal code</p>
       </div>
     )
   }
