@@ -5,14 +5,14 @@ export const GET_CONDITIONS = 'GET_CONDITIONS'
 export const GET_SEVERITIES = 'GET_SEVERITIES'
 export const GET_DOSE = 'GET_DOSE'
 export const UPDATE_STEPS = 'UPDATE_STEPS'
-export const SELECT_CONDITION = 'SELECT_CONDITION'
+export const SELECT_CONDITION = 'SELECT_CONDITION' // also used in: [Survey]
 export const SELECT_SEVERITY = 'SELECT_SEVERITY'
 
 //PRODUCTS
-export const GET_PRODUCTS = 'GET_PRODUCTS' // also in: [Measure]
+export const GET_PRODUCTS = 'GET_PRODUCTS' // also used in: [Measure]
 export const UPDATE_FILTERED_PRODUCTS = 'UPDATE_FILTERED_PRODUCTS'
 export const UPDATE_QUIZ_STEPS = 'UPDATE_QUIZ_STEPS'
-export const SELECT_DOSE = 'SELECT_DOSE' // also in: [Measure]
+export const SELECT_DOSE = 'SELECT_DOSE' // also used in: [Measure, Survey]
 export const SELECT_IMPORTANCE = 'SELECT_IMPORTANCE'
 export const SELECT_QUALITY = 'SELECT_QUALITY'
 
@@ -25,3 +25,10 @@ export const SELECT_SIZE = 'SELECT_SIZE'
 export const SELECT_PRODUCT_MG = 'SELECT_PRODUCT_MG'
 
 //SURVEY
+export const SELECT_WEIGHT = 'SELECT_WEIGHT'
+export const SELECT_PROFESSIONAL_HELP = 'SELECT_PROFESSIONAL_HELP'
+export const SELECT_OTHER_MEDICATION = 'SELECT_OTHER_MEDICATION'
+export const SELECT_DOSE_DURATION = 'SELECT_DOSE_DURATION'
+export const SELECT_IMPROVEMENT = 'SELECT_IMPROVEMENT'
+export const ELABORATE = 'ELABORATE'
+export const VERIFY_SURVEY = 'VERIFY_SURVEY'
