@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getSeveritiesForSurvey, inputWeight, selectSurveySeverity } from '../../../../actions/survey'
+import { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity } from '../../../../actions/survey'
 
 class TabWeightSeverity extends Component {
   componentDidMount() {
     this.props.getSeveritiesForSurvey()
+  }
+  handleChange = (e) => {
+    this.props.updateInputWeight({inputWeight: e.target.value})
   }
   handleSelection = (e) => {
     this.props.selectSurveySeverity({selectedSeverity: e.target.name})
@@ -13,6 +16,10 @@ class TabWeightSeverity extends Component {
   render() {
     return (
       <section className="tab severity-tab survey-severity">
+        <div>
+          <p className="instructions">What is your weight in lbs:*</p>
+          <input onChange={this.handleChange} type="number" name="weight" id="weight"/>
+        </div>
         <div>
           <p className="instructions">Select the severity of your condition:*</p>
           <ul>
@@ -30,4 +37,4 @@ class TabWeightSeverity extends Component {
 
 const mapStateToProps = (state) => ({...state.survey})
 
-export default connect(mapStateToProps, { getSeveritiesForSurvey, inputWeight, selectSurveySeverity })(TabWeightSeverity)
+export default connect(mapStateToProps, { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity })(TabWeightSeverity)

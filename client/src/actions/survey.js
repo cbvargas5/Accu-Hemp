@@ -32,7 +32,7 @@ export const selectSurveySeverity = (payload) => ({
     payload
 })
 
-export const inputWeight = (payload) => ({
+export const updateInputWeight = (payload) => ({
     type: INPUT_WEIGHT,
     payload
 })
