@@ -2,8 +2,8 @@ import { GET_CONDITIONS, UPDATE_SURVEY_STEPS, SELECT_CONDITION, INPUT_WEIGHT, SE
 import axios from 'axios'
 
 export const getConditionsForSurvey = () => (dispatch, getState) => {
-    const { conditions } = getState().dose
-    products.length ?
+    const { conditions } = getState().estimator
+    conditions.length ?
         dispatch({ type: GET_CONDITIONS, payload: conditions }) :
         axios.get('/dosages/conditions')
         .then(({ data }) => dispatch({ type: GET_CONDITIONS, payload: data }))
