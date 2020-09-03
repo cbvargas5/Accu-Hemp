@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, GET_SEVERITIES, UPDATE_SURVEY_STEPS, SELECT_CONDITION, INPUT_WEIGHT, SELECT_PROFESSIONAL_HELP, SELECT_DOSE, SELECT_OTHER_MEDICATION, SELECT_DOSE_DURATION, SELECT_IMPROVEMENT, INPUT_ELABORATE, VERIFY_SURVEY } from '../constants/action-types'
+import { GET_CONDITIONS, GET_SEVERITIES, UPDATE_SURVEY_STEPS, SELECT_CONDITION, SELECT_SEVERITY, INPUT_WEIGHT, SELECT_PROFESSIONAL_HELP, SELECT_DOSE, SELECT_OTHER_MEDICATION, SELECT_DOSE_DURATION, SELECT_IMPROVEMENT, INPUT_ELABORATE, VERIFY_SURVEY } from '../constants/action-types'
 
 
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
     inputWeight: '',
     selectedDose: '',
     selectedCondition: '',
+    selectedSeverity: '',
     selectedProfessionalHelp: '',
     selectedOtherMedicication: '',
     selectedDoseDuration: '',
@@ -34,6 +35,9 @@ export default (state = initialState, { type, payload }) => {
             return {...state, ...payload }
 
         case SELECT_CONDITION:
+            return {...state, ...payload }
+
+        case SELECT_SEVERITY:
             return {...state, ...payload }
 
         case SELECT_PROFESSIONAL_HELP:

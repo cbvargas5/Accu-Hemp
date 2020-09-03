@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, GET_SEVERITIES, UPDATE_SURVEY_STEPS, SELECT_CONDITION, INPUT_WEIGHT, SELECT_PROFESSIONAL_HELP, SELECT_DOSE, SELECT_OTHER_MEDICATION, SELECT_DOSE_DURATION, SELECT_IMPROVEMENT, INPUT_ELABORATE, VERIFY_SURVEY } from '../constants/action-types'
+import { GET_CONDITIONS, GET_SEVERITIES, UPDATE_SURVEY_STEPS, SELECT_CONDITION, SELECT_SEVERITY, INPUT_WEIGHT, SELECT_PROFESSIONAL_HELP, SELECT_DOSE, SELECT_OTHER_MEDICATION, SELECT_DOSE_DURATION, SELECT_IMPROVEMENT, INPUT_ELABORATE, VERIFY_SURVEY } from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditionsForSurvey = () => (dispatch, getState) => {
@@ -24,6 +24,11 @@ export const updateSurveySteps = (payload) => ({
 
 export const selectSurveyCondition = (payload) => ({
     type: SELECT_CONDITION,
+    payload
+})
+
+export const selectSurveySeverity = (payload) => ({
+    type: SELECT_SEVERITY,
     payload
 })
 
