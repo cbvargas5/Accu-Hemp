@@ -13,8 +13,17 @@ class TabExtras extends Component {
   }
   handleSelection = (e) => {
     const { name,value } = e.target
-    // this.props.selectSurveySeverity({selectedDose: e.target.name})
-    console.log(name, value)
+    switch(name) {
+      case 'professional':
+        this.props.selectProfessionalHelp({selectedProfessionalHelp: value})
+        return
+      case 'other medications':
+        this.props.selectOtherMedication({selectedOtherMedication: value})
+        return
+      default:
+        return
+    }
+
   }
   render() {
     return (
