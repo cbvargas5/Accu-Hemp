@@ -12,8 +12,9 @@ class TabExtras extends Component {
     console.log(name, value)
   }
   handleSelection = (e) => {
-    const { value } = e.target
-    console.log(value)
+    const { name,value } = e.target
+    // this.props.selectSurveySeverity({selectedDose: e.target.name})
+    console.log(name, value)
   }
   render() {
     return (
@@ -26,13 +27,13 @@ class TabExtras extends Component {
           <p className="instructions">Did a licensed medical professional help you figure out your dose of CBD?*</p>
           <ul>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'Yes'}/>
+              <input onClick={this.handleSelection} name="professional" type="button" value={'Yes'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'No'}/>
+              <input onClick={this.handleSelection} name="professional" type="button" value={'No'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'I would prefer not to answer'}/>
+              <input onClick={this.handleSelection} name="professional" type="button" value={'I would prefer not to answer'}/>
             </li>
           </ul>
         </div>
@@ -41,19 +42,19 @@ class TabExtras extends Component {
           <span>i.e. pharmaceuticals, over the counter medications</span>
           <ul>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'Yes'}/>
+              <input onClick={this.handleSelection} name="other medications" type="button" value={'Yes'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'No'}/>
+              <input onClick={this.handleSelection} name="other medications" type="button" value={'No'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} type="button" value={'I would prefer not to answer'}/>
+              <input onClick={this.handleSelection} name="other medications" type="button" value={'I would prefer not to answer'}/>
             </li>
           </ul>
         </div>
         <div>
           <p className="instructions">Other than CBD hemp oil, what else are you taking for your condition?</p>
-          <textarea onChange={this.handleChange} name="other-medications" id="other-medications" cols="50" rows="5"></textarea>
+          <textarea onChange={this.handleChange} name="other medications explanation" id="other-medications" cols="50" rows="5"></textarea>
         </div>
       </section>
     )
