@@ -15,11 +15,12 @@ export class TabCondition extends Component {
     this.props.selectCondition({selectedCondition: e.target.value})
   }
   render() {
+    console.log(this.props)
     return (
       <section className="tab condition-tab">
         <p className="instructions">Select a Condition:*</p>
         <ul>
-          {this.props.estimator.conditions
+          {this.props.conditions
             .map(({ condition }, index) => (
               <li key={index}>
                 <input onClick={this.handleSelection} type="button" value={condition}/>
@@ -31,7 +32,7 @@ export class TabCondition extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ ...state })
+const mapStateToProps = (state) => ({ ...state.estimator })
 
 
 export default connect(mapStateToProps, { getConditions, selectCondition })(TabCondition)

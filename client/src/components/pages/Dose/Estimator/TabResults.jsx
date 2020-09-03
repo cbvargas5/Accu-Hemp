@@ -13,7 +13,7 @@ export class TabResults extends Component {
       this.props.getDose()
   }
   render() {
-    const { dose } = this.props.estimator
+    const { dose } = this.props
     if (dose[0]) {
       const { lowerdose, upperdose } = dose[0]
       return (
@@ -53,7 +53,7 @@ export class TabResults extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({...state})
+const mapStateToProps = (state) => ({...state.estimator})
 
 
 export default connect(mapStateToProps, { getDose })(TabResults)

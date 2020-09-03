@@ -12,13 +12,12 @@ export class TabSeverity extends Component {
   }
   handleSelection = (e) => {
     this.props.selectSeverity({severityId: e.target.name})
-    console.log(e.target.name)
   }
   render() {
     return (
       <section className="tab severity-tab">
         <ul>
-          {this.props.estimator.severities.map(({ severity, id }) => (
+          {this.props.severities.map(({ severity, id }) => (
             <li key={id}>
               <button className="severity-btn" onClick={this.handleSelection} name={id}><img name={id} src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt={`${severity} severity`}/>{severity}</button>
             </li>
@@ -29,9 +28,7 @@ export class TabSeverity extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  
-})
+const mapStateToProps = (state) => ({...state.estimator})
 
 
 export default connect(mapStateToProps, { getSeverities, selectSeverity })(TabSeverity)

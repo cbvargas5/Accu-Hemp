@@ -17,10 +17,10 @@ class Estimator extends Component {
 
   }
   componentDidMount() {
-    this.props.history.push(`${this.props.match.url}/${this.props.estimator.step}`)
+    this.props.history.push(`${this.props.match.url}/${this.props.step}`)
   }
   onNext = () => {
-    const { step } = this.props.estimator
+    const { step } = this.props
     if (step < 3) {
       this.props.updateSteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
@@ -28,8 +28,7 @@ class Estimator extends Component {
 
   }
   onPrevious = () => {
-    // console.log(this.props.estimator)
-    const { step } = this.props.estimator
+    const { step } = this.props
     if (step <= 0) {
       this.props.updateSteps({step: 1})
       this.props.history.push(`${this.props.match.url}/${1}`)
@@ -43,14 +42,14 @@ class Estimator extends Component {
   
   render() {
     const { url: URL } = this.props.match
-    const { estimator } = this.props 
+    const { step } = this.props 
     return (
       <section className="estimator-wrapper big-card">
-        <ProgressTracker title="Dose Estimator" currStep={estimator.step} lastStep={3}/>
+        <ProgressTracker title="Dose Estimator" currStep={step} lastStep={3}/>
         <Switch>
-          <Route path={`${URL}/1`} exact render={props => <TabCondition {...this.props}/>} />
-          <Route path={`${URL}/2`} exact render={props => <TabSeverity {...this.props}/>} />
-          <Route path={`${URL}/3`} exact render={props => <TabResults {...this.props}/>} />
+          <Route path={`${URL}/1`} exact component={TabCondition} />
+          <Route path={`${URL}/2`} exact component={TabSeverity} />
+          <Route path={`${URL}/3`} exact component={TabResults} />
         </Switch>
         <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
@@ -61,6 +60,6 @@ class Estimator extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ ...state })
+const mapStateToProps = (state) => ({ ...state.estimator })
 
 export default connect(mapStateToProps, { updateSteps })(Estimator)
