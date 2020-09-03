@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getSeveritiesForSurvey, inputWeight } from '../../../../actions/survey'
+import { getSeveritiesForSurvey, inputWeight, selectSurveySeverity } from '../../../../actions/survey'
 
 class TabWeightSeverity extends Component {
   componentDidMount() {
     this.props.getSeveritiesForSurvey()
   }
   handleSelection = (e) => {
-    console.log(e.target.name)
-    // this.props.selectSeverity({severityId: e.target.name})
+    this.props.selectSurveySeverity({selectedSeverity: e.target.name})
   }
   render() {
     return (
@@ -31,4 +30,4 @@ class TabWeightSeverity extends Component {
 
 const mapStateToProps = (state) => ({...state.survey})
 
-export default connect(mapStateToProps, { getSeveritiesForSurvey, inputWeight })(TabWeightSeverity)
+export default connect(mapStateToProps, { getSeveritiesForSurvey, inputWeight, selectSurveySeverity })(TabWeightSeverity)
