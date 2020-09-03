@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication } from '../../../../actions/survey'
 
-export default class TabExtras extends Component {
+
+// selectedDose, selectedProfessionalHelp, selectedOtherMedication
+
+
+class TabExtras extends Component {
   render() {
     return (
       <div>
@@ -9,3 +15,8 @@ export default class TabExtras extends Component {
     )
   }
 }
+
+
+const mapStateToProps = (state) => ({...state.survey})
+
+export default connect(mapStateToProps, { selectSurveyDose, selectProfessionalHelp, selectOtherMedication })(TabExtras)
