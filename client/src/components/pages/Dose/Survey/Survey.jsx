@@ -19,26 +19,25 @@ class Survey extends Component {
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
   }
-  // onNext = () => {
-  //   const { step } = this.props.estimator
-  //   if (step < 3) {
-  //     this.props.updateSteps({step: step + 1})
-  //     this.props.history.push(`${this.props.match.url}/${step + 1}`)
-  //   }
-
-  // }
-  // onPrevious = () => {
-  //   const { step } = this.props.estimator
-  //   if (step <= 0) {
-  //     this.props.updateSteps({step: 1})
-  //     this.props.history.push(`${this.props.match.url}/${1}`)
-  //   } else if (step === 1) {
-  //     this.props.history.push(`/Dose`)
-  //   } else {
-  //     this.props.updateSteps({step: step - 1})
-  //     this.props.history.push(`${this.props.match.url}/${step - 1}`)
-  //   }
-  // }
+  onNext = () => {
+    const { step } = this.props
+    if (step < 3) {
+      this.props.updateSurveySteps({step: step + 1})
+      this.props.history.push(`${this.props.match.url}/${step + 1}`)
+    }
+  }
+  onPrevious = () => {
+    const { step } = this.props
+    if (step <= 0) {
+      this.props.updateSurveySteps({step: 1})
+      this.props.history.push(`${this.props.match.url}/${1}`)
+    } else if (step === 1) {
+      this.props.history.push(`/Dose`)
+    } else {
+      this.props.updateSurveySteps({step: step - 1})
+      this.props.history.push(`${this.props.match.url}/${step - 1}`)
+    }
+  }
   render() {
     return (
       <div>
