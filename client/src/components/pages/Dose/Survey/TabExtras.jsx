@@ -7,11 +7,55 @@ import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication } from 
 
 
 class TabExtras extends Component {
+  handleChange = (e) => {
+    const { name,value } = e.target
+    console.log(name, value)
+  }
+  handleSelection = (e) => {
+    const { value } = e.target
+    console.log(value)
+  }
   render() {
     return (
-      <div>
-        
-      </div>
+      <section className="tab extras-tab">
+        <div>
+          <p className="instructions">How many milligrams of CBD do you take for your condition?*</p>
+          <input onChange={this.handleChange} type="number" name="dose" id="dose"/>
+        </div>
+        <div>
+          <p className="instructions">Did a licensed medical professional help you figure out your dose of CBD?*</p>
+          <ul>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'Yes'}/>
+            </li>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'No'}/>
+            </li>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'I would prefer not to answer'}/>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="instructions">Is there anything else you are taking for your condition?*</p>
+          <span>i.e. pharmaceuticals, over the counter medications</span>
+          <ul>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'Yes'}/>
+            </li>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'No'}/>
+            </li>
+            <li>
+              <input onClick={this.handleSelection} type="button" value={'I would prefer not to answer'}/>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="instructions">Other than CBD hemp oil, what else are you taking for your condition?</p>
+          <textarea onChange={this.handleChange} name="other-medications" id="other-medications" cols="50" rows="5"></textarea>
+        </div>
+      </section>
     )
   }
 }
