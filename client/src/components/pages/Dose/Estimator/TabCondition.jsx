@@ -15,7 +15,6 @@ export class TabCondition extends Component {
     this.props.selectCondition({selectedCondition: e.target.value})
   }
   render() {
-    console.log(this.props)
     return (
       <section className="tab condition-tab">
         <p className="instructions">Select a Condition:*</p>

@@ -39,6 +39,7 @@ class Survey extends Component {
     }
   }
   render() {
+    const { url: URL } = this.props.match
     return (
       <section className="survey-wrapper big-card">
         <ProgressTracker title="CBD Dose Survey" currStep={this.props.step} lastStep={5}/>
