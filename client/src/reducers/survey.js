@@ -10,7 +10,7 @@ const initialState = {
     selectedCondition: '',
     selectedSeverity: '',
     selectedProfessionalHelp: '',
-    selectedOtherMedicication: '',
+    selectedOtherMedication: '',
     selectedDoseDuration: '',
     selectedImprovement: '',
     inputElaborate: '',
