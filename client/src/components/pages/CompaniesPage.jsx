@@ -27,7 +27,7 @@ export default function CompaniesPage() {
       <section className="option-1 underline-sec">
         <h2><strong>Option 1:</strong> Add Products to our Measurement Quiz</h2>
         <p>Currently it is free to add your products to our Measurement quiz! Just fill out this form and attach a document or excel sheet with the product information.</p>
-        <ButtonCard link="/dose/survey" icon="fas fa-clipboard-list">CBD Dose Survery</ButtonCard>
+        <ButtonCard link="/add-products" icon="fas fa-plus">Advertise Products</ButtonCard>
       </section>
       <section className="option-2 underline-sec">
         <h2><strong>Option 2:</strong> We Recommend Your Products</h2>
@@ -54,7 +54,7 @@ export default function CompaniesPage() {
             <span>Fill out a quick application describing your brand and products.</span>
           </li>
         </ul>
-        <ButtonCard link="/dose/survey" icon="fas fa-clipboard-list">CBD Dose Survery</ButtonCard>
+        <ButtonCard link="/advertise-products" icon="fas fa-bullhorn">Advertise Products</ButtonCard>
       </section>
       <section className="right-to-deny underline-sec">
         <h3>We have the right to deny or remove a brand from our website if:</h3>
