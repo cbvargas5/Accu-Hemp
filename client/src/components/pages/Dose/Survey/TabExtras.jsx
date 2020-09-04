@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication } from '../../../../actions/survey'
+import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication, updateOtherMedicationInput } from '../../../../actions/survey'
 
 
 class TabExtras extends Component {
@@ -11,7 +11,7 @@ class TabExtras extends Component {
         this.props.selectSurveyDose({selectedDose: value})
         return
       case 'other medications explanation':
-        this.props.selectOtherMedication({selectedOtherMedication: value})
+        this.props.updateOtherMedicationInput({otherMedicationInput: value})
         return
       default:
         return
@@ -32,6 +32,7 @@ class TabExtras extends Component {
 
   }
   render() {
+    console.log(this.props)
     return (
       <section className="tab extras-tab">
         <div>
@@ -80,4 +81,4 @@ class TabExtras extends Component {
 
 const mapStateToProps = (state) => ({...state.survey})
 
-export default connect(mapStateToProps, { selectSurveyDose, selectProfessionalHelp, selectOtherMedication })(TabExtras)
+export default connect(mapStateToProps, { selectSurveyDose, selectProfessionalHelp, selectOtherMedication, updateOtherMedicationInput })(TabExtras)
