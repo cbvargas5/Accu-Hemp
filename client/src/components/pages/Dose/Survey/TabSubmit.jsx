@@ -26,7 +26,7 @@ class TabSubmit extends Component {
             </li>
           </ul>
         </div>
-        <div>
+        <div style={this.props.selectedVerification === 'No' ? {display: "block"} : {display: "none"}}>
           <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
           <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
         </div>
