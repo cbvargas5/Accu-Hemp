@@ -4,7 +4,7 @@ export default class AdvertiseProducts extends Component {
   render() {
     return (
       <div>
-        
+        AdvertiseProducts!
       </div>
     )
   }

@@ -56,7 +56,7 @@ export default function CompaniesPage() {
         </ul>
         <ButtonCard link="/advertise-products" icon="fas fa-bullhorn">Advertise Products</ButtonCard>
       </section>
-      <section className="right-to-deny underline-sec">
+      <section className="right-to-deny">
         <h3>We have the right to deny or remove a brand from our website if:</h3>
         <ul>
           <li>1) Requirements are not met.</li>
