@@ -32,7 +32,6 @@ class TabExtras extends Component {
 
   }
   render() {
-    console.log(this.props)
     return (
       <section className="tab extras-tab">
         <div>
