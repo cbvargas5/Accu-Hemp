@@ -67,7 +67,7 @@ export const selectImprovement = (payload) => ({
     payload
 })
 
-export const inputElaborate = (payload) => ({
+export const updateInputElaborate = (payload) => ({
     type: INPUT_ELABORATE,
     payload
 })
