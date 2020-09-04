@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity } from '../../../../actions/survey'
 
 class TabWeightSeverity extends Component {
+  constructor(props) {
+    super(props)
+  }
   componentDidMount() {
     this.props.getSeveritiesForSurvey()
   }

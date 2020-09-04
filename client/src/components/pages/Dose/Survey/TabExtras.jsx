@@ -4,6 +4,9 @@ import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication, update
 
 
 class TabExtras extends Component {
+  constructor(props) {
+    super(props)
+  }
   handleChange = (e) => {
     const { name,value } = e.target
     switch(name) {
