@@ -3,13 +3,19 @@ import { connect } from 'react-redux'
 import { selectSurveyDose, selectProfessionalHelp, selectOtherMedication } from '../../../../actions/survey'
 
 
-// selectedDose, selectedProfessionalHelp, selectedOtherMedication
-
-
 class TabExtras extends Component {
   handleChange = (e) => {
     const { name,value } = e.target
-    console.log(name, value)
+    switch(name) {
+      case 'dose':
+        this.props.selectSurveyDose({selectedDose: value})
+        return
+      case 'other medications explanation':
+        this.props.selectOtherMedication({selectedOtherMedication: value})
+        return
+      default:
+        return
+    }
   }
   handleSelection = (e) => {
     const { name,value } = e.target
