@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { verifySurvey } from '../../../../actions/survey'
 
-export default class TabSubmit extends Component {
+class TabSubmit extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleSelection = (e) => {
+    // const { value } = e.target
+    // this.props.verifySurvey({selectedVerification: value})
+  }
   render() {
     return (
-      <div>
+      <section className="tab survey-submit-tab">
         
-      </div>
+      </section>
     )
   }
 }
+
+const mapStateToProps = (state) => ({ ...state.survey })
+
+export default connect(mapStateToProps, { verifySurvey })(TabSubmit)
