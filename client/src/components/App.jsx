@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage.jsx';
 import FeedbackPage from './pages/FeedbackPage.jsx';
 import CompaniesPage from './pages/CompaniesPage.jsx';
 import AddProducts from './pages/AddProducts/AddProducts.jsx';
+import AdvertiseProducts from './pages/AdvertiseProducts/AdvertiseProducts.jsx';
 import LegalPage from './pages/LegalPage.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
@@ -46,7 +47,7 @@ class App extends React.Component {
               <Route path="/feedback" exact component={FeedbackPage} />
               <Route path="/companies" exact component={CompaniesPage} />
               <Route path="/add-products" component={AddProducts} />
-              {/* <Route path="/companies" exact component={CompaniesPage} /> */}
+              <Route path="/advertise-products" component={AdvertiseProducts} />
               <Route path="/legal" exact component={LegalPage} />
               <Route path="/feedback" exact component={LegalPage} />
             </Switch>
