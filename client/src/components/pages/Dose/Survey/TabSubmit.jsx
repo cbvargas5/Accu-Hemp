@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { verifySurvey } from '../../../../actions/survey'
-
-import { Button } from 'react-bootstrap'
+import ButtonCard from '../../../cards/ButtonCard.jsx'
 
 
 class TabSubmit extends Component {
@@ -29,9 +28,8 @@ class TabSubmit extends Component {
         </div>
         <div>
           <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
-          {/* <Button onClick={this.onPrevious} className="tab-btn">Back</Button> */}
+          <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
         </div>
-        {/* add a navigate to dose page  */}
       </section>
     )
   }
