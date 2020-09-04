@@ -7,7 +7,7 @@ export default function CompaniesPage() {
       <section className="mini-header">
         <h1>Company Partnerships</h1>
       </section>
-      <section className="option-1  underline-sec">
+      <section className="basic-requirements  underline-sec">
         <h3>Basic Requirements:</h3>
         <ul>
           <li>
@@ -23,6 +23,9 @@ export default function CompaniesPage() {
             <span>Have products in dropper bottles or syringes</span>
           </li>
         </ul>
+      </section>
+      <section className="option-1  underline-sec">
+
       </section>
       <section className="option-2 underline-sec">
 
