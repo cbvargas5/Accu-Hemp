@@ -8,17 +8,22 @@ class TabHowMuch extends Component {
   constructor(props) {
     super(props)
   }
-  componentDidMount() {
-    console.log('works')
-    // this.props.getConditionsForSurvey()
-  }
   handleChange = (e) => {
-    console.log('works')
-    // this.props.selectSurveyCondition({selectedCondition: e.target.value})
+    const { name,value } = e.target
+    switch(name) {
+      case 'duration':
+        this.props.selectDoseDuration({selectedDoseDuration: value})
+        return
+      case 'elaborate':
+        this.props.updateInputElaborate({inputElaborate: value})
+        return
+      default:
+        return
+    }
   }
   handleSelection = (e) => {
-    console.log('works')
-    // this.props.selectSurveyCondition({selectedCondition: e.target.value})
+    const { value } = e.target
+    this.props.selectImprovement({selectedImprovement: value})
   }
   render() {
     return (
