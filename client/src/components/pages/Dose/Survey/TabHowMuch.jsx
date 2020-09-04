@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getConditionsForSurvey, selectSurveyCondition } from '../../../../actions/survey'
+import { selectDoseDuration, selectImprovement, updateInputElaborate } from '../../../../actions/survey'
 
 // selectedDoseDuration, selectedImprovement, inputElaborate
 
-export default class TabHowMuch extends Component {
+class TabHowMuch extends Component {
   render() {
     return (
-      <div>
+      <section>
         
-      </div>
+      </section>
     )
   }
 }
+
+
+const mapStateToProps = (state) => ({ ...state.survey })
+
+export default connect(mapStateToProps, { selectDoseDuration, selectImprovement, updateInputElaborate })(TabSurveyCondition)
+
