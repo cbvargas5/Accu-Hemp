@@ -50,7 +50,10 @@
             justify-content: space-between;
             min-height: 12.5rem;
             .header-logo-wrapper {
+                position: relative;
+                padding: 0 7rem;
                 .image-wrapper {
+                    display: flex;
                     width: 100%;
                 }
             }
