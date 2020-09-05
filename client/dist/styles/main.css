@@ -470,3 +470,40 @@ footer .footer-end-wrapper {
       background-color: rgba(239, 239, 239, 0.43); }
     .help-page .accordion p {
       margin: 0; }
+
+.write-rating-container-jr {
+  line-height: normal;
+  box-sizing: content-box;
+  display: grid;
+  grid-template-columns: 283px auto;
+  margin: 50px 0px 0px 0px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #F1F1F1; }
+
+.write-red-asterix-jr {
+  line-height: normal;
+  box-sizing: content-box;
+  color: red; }
+
+.write-star-jr {
+  line-height: normal;
+  box-sizing: content-box;
+  display: inline-block; }
+
+.star-black-filled-jr {
+  line-height: normal;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: gold; }
+
+.star-grey-filled-jr {
+  line-height: normal;
+  box-sizing: content-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: lightgrey; }

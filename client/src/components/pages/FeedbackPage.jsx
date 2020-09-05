@@ -1,10 +1,55 @@
 import React, { Component } from 'react'
 
 export default class FeedbackPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      stars: '',
+      starsSubmitted: '',
+    }
+  }
+
+  submitStars(num) {
+    this.setState({
+      starsSubmitted: num
+    })
+  }
+  handleStars(num) {
+    this.setState({
+      stars: num
+    })
+  }
   render() {
     return (
     <section className="big-card">
-      <h1>Hello from Feedback</h1>
+            <div className="write-rating-container-jr">
+              <div>
+                <span>Overall rating:</span>
+                <span className="write-red-asterix-jr"> *</span>
+              </div>
+              <div className='write-stars-container'>
+                <div className='write-star-jr' onClick={(() => this.submitStars(1))} onMouseEnter={(() => this.handleStars(1))} onMouseLeave={(() => this.handleStars(0))}>
+                  {(this.state.stars || this.state.starsSubmitted) >= 1 ? <div className="star-black-filled-jr"> </div > : <div className="star-grey-filled-jr" />}
+                </div>
+
+                <div className='write-star-jr' onClick={(() => this.submitStars(2))} onMouseEnter={(() => this.handleStars(2))} onMouseLeave={(() => this.handleStars(0))}>
+                  {(this.state.stars || this.state.starsSubmitted) >= 2 ? <div className="star-black-filled-jr"> </div > : <div className="star-grey-filled-jr" />}
+                </div>
+
+                <div className='write-star-jr' onClick={(() => this.submitStars(3))} onMouseEnter={(() => this.handleStars(3))} onMouseLeave={(() => this.handleStars(0))}>
+                  {(this.state.stars || this.state.starsSubmitted) >= 3 ? <div className="star-black-filled-jr"> </div > : <div className="star-grey-filled-jr" />}
+                </div>
+
+                <div className='write-star-jr' onClick={(() => this.submitStars(4))} onMouseEnter={(() => this.handleStars(4))} onMouseLeave={(() => this.handleStars(0))}>
+                  {(this.state.stars || this.state.starsSubmitted) >= 4 ? <div className="star-black-filled-jr"> </div > : <div className="star-grey-filled-jr" />}
+                </div>
+
+                <div className='write-star-jr' onClick={(() => this.submitStars(5))} onMouseEnter={(() => this.handleStars(5))} onMouseLeave={(() => this.handleStars(0))}>
+                  {(this.state.stars || this.state.starsSubmitted) >= 5 ? <div className="star-black-filled-jr"> </div > : <div className="star-grey-filled-jr" />}
+                </div>
+              </div>
+            </div>
+
     </section>
     )
   }
