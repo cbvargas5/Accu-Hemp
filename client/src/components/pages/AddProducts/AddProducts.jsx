@@ -15,26 +15,26 @@ class AddProducts extends Component {
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
   }
-  // onNext = () => {
-  //   const { step } = this.props
-  //   if (step < 3) {
-  //     this.props.updateSteps({step: step + 1})
-  //     this.props.history.push(`${this.props.match.url}/${step + 1}`)
-  //   }
+  onNext = () => {
+    const { step } = this.props
+    if (step < 2) {
+      this.props.updateAddingProductsSteps({step: step + 1})
+      this.props.history.push(`${this.props.match.url}/${step + 1}`)
+    }
 
-  // }
-  // onPrevious = () => {
-  //   const { step } = this.props
-  //   if (step <= 0) {
-  //     this.props.updateSteps({step: 1})
-  //     this.props.history.push(`${this.props.match.url}/${1}`)
-  //   } else if (step === 1) {
-  //     this.props.history.push(`/Dose`)
-  //   } else {
-  //     this.props.updateSteps({step: step - 1})
-  //     this.props.history.push(`${this.props.match.url}/${step - 1}`)
-  //   }
-  // }
+  }
+  onPrevious = () => {
+    const { step } = this.props
+    if (step <= 0) {
+      this.props.updateAddingProductsSteps({step: 1})
+      this.props.history.push(`${this.props.match.url}/${1}`)
+    } else if (step === 1) {
+      this.props.history.push(`/companies`)
+    } else {
+      this.props.updateAddingProductsSteps({step: step - 1})
+      this.props.history.push(`${this.props.match.url}/${step - 1}`)
+    }
+  }
   
   render() {
     const { url: URL } = this.props.match
