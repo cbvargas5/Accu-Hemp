@@ -8,12 +8,24 @@ class TabCompanyInfo extends Component {
   }
   handleChange = (e) => {
     const { name,value } = e.target
-    console.log(name, value)
+    switch(name) {
+      case 'company-name':
+        this.props.updateInputCompanyName({inputCompanyName: value})
+        return
+      case 'company-email':
+        this.props.updateInputEmail({inputEmail: value})
+        return
+      case 'company-website':
+        this.props.updateInputWebsite({inputWebsite: value})
+        return
+      default:
+        return
+    }
   }
   handleSelection = (e) => {
-    const { name,value } = e.target
-    console.log(name, value)
-    }
+    const { value } = e.target
+    this.props.selectInvolvement({selectedInvolvement: value})
+  }
   render() {
     return (
       <section className="tab company-input-tab">
