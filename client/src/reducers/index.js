@@ -4,6 +4,7 @@ import estimator from './estimator'
 import survey from './survey'
 import products from './products'
 import measure from './measure'
+import addingProducts from './addingProducts'
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     estimator,
     survey,
     products,
-    measure
+    measure,
+    addingProducts
 });
 
 export default rootReducer
