@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateInputCompanyName, selectInvolvement, updateInputEmail, updateInputWebsite } from '../../../actions/addingProducts'
 
-export default class TabCompanyInfo extends Component {
+class TabCompanyInfo extends Component {
   constructor(props) {
     super(props)
   }
@@ -47,3 +49,7 @@ export default class TabCompanyInfo extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({...state.addingProducts})
+
+export default connect(mapStateToProps, { updateInputCompanyName, selectInvolvement, updateInputEmail, updateInputWebsite })(TabCompanyInfo)
