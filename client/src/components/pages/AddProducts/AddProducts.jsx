@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom';
+import ProgressTracker from '../../ProgressTracker.jsx'
+import { updateAddingProductsSteps } from '../../../actions/addingProducts'
 
 class AddProducts extends Component {
   constructor(props) {
@@ -33,12 +35,12 @@ class AddProducts extends Component {
   // }
   
   render() {
-    // const { url: URL } = this.props.match
-    // const { step } = this.props 
+    const { url: URL } = this.props.match
+    const { step } = this.props 
     return (
       <section className="add-products-wrapper big-card">
-        {/* <ProgressTracker title="Dose Estimator" currStep={step} lastStep={3}/>
-        <Switch>
+        <ProgressTracker title="Add Products to AccuHemp Measurement Quiz" currStep={step} lastStep={2}/>
+        {/* <Switch>
           <Route path={`${URL}/1`} exact component={TabCondition} />
           <Route path={`${URL}/2`} exact component={TabSeverity} />
           <Route path={`${URL}/3`} exact component={TabResults} />
@@ -53,7 +55,7 @@ class AddProducts extends Component {
 }
 
 
-const mapStateToProps = (state) => ({ ...state })
+const mapStateToProps = (state) => ({ ...state.addingProducts })
 
-export default connect(mapStateToProps)(AddProducts)
+export default connect(mapStateToProps, { updateAddingProductsSteps })(AddProducts)
 
