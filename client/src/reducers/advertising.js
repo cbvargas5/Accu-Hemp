@@ -2,7 +2,18 @@ import { UPDATE_ADVERTISING_STEPS, UPDATE_INPUT_COMPANY_NAME_ADVERTISING, SELECT
 
 
 const initialState = {
-    step: 1
+    step: 1,
+    inputCompanyName: '',
+    selectedInvolvement: '',
+    inputFirstName: '',
+    inputLastName: '',
+    inputEmail: '',
+    inputPhone: '',
+    inputShopWebsite: '',
+    inputQualityLink: '',
+    selectAffiliateStatus: '',
+    inputAffiliateAppLink: '',
+    inputBrandDesc: ''
 }
 
 export default (state = initialState, { type, payload }) => {
