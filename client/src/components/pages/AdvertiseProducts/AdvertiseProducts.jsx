@@ -11,7 +11,33 @@ import TabSubmitAdvertise from './TabSubmitAdvertise.jsx'
 import TabUserInfo from './TabUserInfo.jsx'
 
 class AdvertiseProducts extends Component {
-  
+  constructor(props) {
+    super(props)
+
+  }
+  componentDidMount() {
+    this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+  }
+  onNext = () => {
+    const { step } = this.props
+    if (step < 3) {
+      this.props.updateAdvertisingSteps({step: step + 1})
+      this.props.history.push(`${this.props.match.url}/${step + 1}`)
+    }
+
+  }
+  onPrevious = () => {
+    const { step } = this.props
+    if (step <= 0) {
+      this.props.updateAdvertisingSteps({step: 1})
+      this.props.history.push(`${this.props.match.url}/${1}`)
+    } else if (step === 1) {
+      this.props.history.push(`/companies`)
+    } else {
+      this.props.updateAdvertisingSteps({step: step - 1})
+      this.props.history.push(`${this.props.match.url}/${step - 1}`)
+    }
+  }
   render() {
     const { url: URL } = this.props.match
     const { step } = this.props 
