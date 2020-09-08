@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateInputCompanyName, selectInvolvement, updateInputFirstName, updateInputLastName, updateInputEmail, updateInputPhone } from '../../../actions/advertising'
 
-export default class TabUserInfo extends Component {
+class TabUserInfo extends Component {
   render() {
     return (
-      <div>
+      <section className="tab user-info-tab">
         User Info:
-      </div>
+      </section>
     )
   }
 }
+
+const mapStateToProps = (state) => ({...state.advertising})
+
+export default connect(mapStateToProps, { updateInputCompanyName, selectInvolvement, updateInputFirstName, updateInputLastName, updateInputEmail, updateInputPhone })(TabUserInfo)
