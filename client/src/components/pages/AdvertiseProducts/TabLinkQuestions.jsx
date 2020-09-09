@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateInputShopWebsite, updateInputQualityLink, selectAffiliateStatus } from '../../../actions/advertising'
 
-export default class TabLinkQuestions extends Component {
+class TabLinkQuestions extends Component {
   render() {
     return (
-      <div>
+      <section>
         Link Qs
-      </div>
+      </section>
     )
   }
 }
+
+const mapStateToProps = (state) => ({...state.advertising})
+
+export default connect(mapStateToProps, { updateInputShopWebsite, updateInputQualityLink, selectAffiliateStatus })(TabLinkQuestions)
