@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateAffiliateLink, updateInputBrandDesc } from '../../../actions/advertising'
 
-export default class TabSubmitAdvertise extends Component {
+class TabSubmitAdvertise extends Component {
   render() {
     return (
-      <div>
+      <section>
         Submit!
-      </div>
+      </section>
     )
   }
 }
+
+const mapStateToProps = (state) => ({...state.advertising})
+
+export default connect(mapStateToProps, { updateAffiliateLink, updateInputBrandDesc })(TabSubmitAdvertise)
+
