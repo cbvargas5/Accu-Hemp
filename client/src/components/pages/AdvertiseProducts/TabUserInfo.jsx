@@ -6,32 +6,32 @@ class TabUserInfo extends Component {
   constructor(props) {
     super(props)
   }
-  // handleChange = (e) => {
-  //   const { name,value } = e.target
-  //   switch(name) {
-  //     case 'company-name':
-  //       this.props.selectSurveyDose({selectedDose: value})
-  //       return
-  //     case 'other medications explanation':
-  //       this.props.updateOtherMedicationInput({otherMedicationInput: value})
-  //       return
-  //     default:
-  //       return
-  //   }
-  // }
-  // handleSelection = (e) => {
-  //   const { name,value } = e.target
-  //   switch(name) {
-  //     case 'professional':
-  //       this.props.selectProfessionalHelp({selectedProfessionalHelp: value})
-  //       return
-  //     case 'other medications':
-  //       this.props.selectOtherMedication({selectedOtherMedication: value})
-  //       return
-  //     default:
-  //       return
-  //   }
-  // }
+  handleChange = (e) => {
+    const { name, value } = e.target
+    switch(name) {
+        case 'company-name':
+          this.props.updateInputCompanyName({inputCompanyName: value})
+        return
+      case 'first-name':
+        this.props.updateInputFirstName({inputFirstName: value})
+        return
+      case 'user-email':
+        this.props.updateInputEmail({inputEmail: value})
+        return
+      case 'other medications explanation':
+        this.props.updateOtherMedicationInput({otherMedicationInput: value})
+        return
+      case 'user-phone':
+        this.props.updateInputPhone({inputPhone: value})
+        return
+      default:
+        return
+    }
+  }
+  handleSelection = (e) => {
+    const { value } = e.target
+    this.props.selectInvolvement({selectedInvolvement: value})
+  }
   render() {
     return (
       <section className="tab user-info-tab">
@@ -55,19 +55,19 @@ class TabUserInfo extends Component {
           <div>
             <p className="instructions">Name*</p>
             <label htmlFor="first-name">
-              <input type="text" name="first-name" id="first-name"/>
+              <input onChange={this.handleChange} type="text" name="first-name" id="first-name"/>
             </label>
           </div>
           <div>
             <p className="instructions">Your email:*</p>
             <label htmlFor="user-email">
-              <input type="text" name="user-email" id="user-email"/>
+              <input onChange={this.handleChange} type="text" name="user-email" id="user-email"/>
             </label>
           </div>
           <div>
             <p className="instructions">Phone</p>
             <label htmlFor="user-phone">
-              <input type="tel" name="user-phone" id="user-phone"/>
+              <input onChange={this.handleChange} type="tel" name="user-phone" id="user-phone"/>
             </label>
           </div>
         </div>
