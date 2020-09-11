@@ -5,8 +5,27 @@ import { updateInputShopWebsite, updateInputQualityLink, selectAffiliateStatus }
 class TabLinkQuestions extends Component {
   render() {
     return (
-      <section>
-        Link Qs
+      <section className="tab link-questions-tab">
+        <div>
+          <p className="instructions">Website for Store/Shop:*</p>
+          <input onChange={this.handleChange} type="url" name="company-shop-url" id="company-shop-url"/>
+        </div>
+        <div>
+          <p className="instructions">Website:</p>
+          <span>Why do we require this? We believe that CBD Hemp companies should be transparent about what is really in their products. We would like to ensure that our users are using safe products and are not being scammed or misled.</span>
+          <input onChange={this.handleChange} type="url" name="quality-results-link" id="quality-results-link" placeholder="http://"/>
+        </div>
+        <div>
+          <p className="instructions">Do you have an Affiliate Program we can join?*</p>
+          <ul>
+            <li>
+              <input onClick={this.handleSelection} name="affiliate-status" type="button" value={'Yes'}/>
+            </li>
+            <li>
+              <input onClick={this.handleSelection} name="affiliate-status" type="button" value={'No, we would like to work out an advertising partnership.'}/>
+            </li>
+          </ul>
+        </div>
       </section>
     )
   }
