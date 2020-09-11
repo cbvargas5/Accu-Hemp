@@ -3,12 +3,32 @@ import { connect } from 'react-redux'
 import { updateInputShopWebsite, updateInputQualityLink, selectAffiliateStatus } from '../../../actions/advertising'
 
 class TabLinkQuestions extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleChange = (e) => {
+    const { name, value } = e.target
+    switch(name) {
+      case 'company-shop-url':
+          this.props.updateInputShopWebsite({inputShopWebsite: value})
+        return
+      case 'quality-results-link':
+        this.props.updateInputQualityLink({inputQualityLink: value})
+        return
+      default:
+        return
+    }
+  }
+  handleSelection = (e) => {
+    const { value } = e.target
+    this.props.selectAffiliateStatus({selectAffiliateStatus: value})
+  }
   render() {
     return (
       <section className="tab link-questions-tab">
         <div>
           <p className="instructions">Website for Store/Shop:*</p>
-          <input onChange={this.handleChange} type="url" name="company-shop-url" id="company-shop-url"/>
+          <input onChange={this.handleChange} type="url" name="company-shop-url" id="company-shop-url" placeholder="http://"/>
         </div>
         <div>
           <p className="instructions">Website:</p>
