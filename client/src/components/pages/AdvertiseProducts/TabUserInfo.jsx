@@ -67,7 +67,7 @@ class TabUserInfo extends Component {
           <div>
             <p className="instructions">Your email:*</p>
             <label htmlFor="user-email">
-              <input onChange={this.handleChange} type="text" name="user-email" id="user-email"/>
+              <input onChange={this.handleChange} type="email" name="user-email" id="user-email"/>
             </label>
           </div>
           <div>

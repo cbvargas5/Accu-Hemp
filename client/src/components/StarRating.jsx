@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-/**
- * Props: appropriate action, appropriate state key name for action, Section title, tection number
- * Ideas: tmp star can exist in it's own state;
- */
+
 export default class StarRating extends Component {
   constructor(props) {
     super(props)
