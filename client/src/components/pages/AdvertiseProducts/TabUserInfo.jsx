@@ -60,14 +60,14 @@ class TabUserInfo extends Component {
           </div>
           <div>
             <p className="instructions">Your email:*</p>
-            <label htmlFor="first-name">
-              <input type="text" name="first-name" id="first-name"/>
+            <label htmlFor="user-email">
+              <input type="text" name="user-email" id="user-email"/>
             </label>
           </div>
           <div>
             <p className="instructions">Phone</p>
-            <label htmlFor="first-name">
-              <input type="tel" name="first-name" id="first-name"/>
+            <label htmlFor="user-phone">
+              <input type="tel" name="user-phone" id="user-phone"/>
             </label>
           </div>
         </div>
