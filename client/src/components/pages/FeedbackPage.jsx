@@ -10,7 +10,22 @@ class FeedbackPage extends Component {
   }
   handleChange = (e) => {
     const { name, value } = e.target
-    console.log(name,value)
+    switch(name) {
+      case 'like-most':
+          this.props.updateInputMostLike({inputMostLike: value})
+        return
+      case 'like-least':
+        this.props.updateInputLeastLike({inputLeastLike: value})
+        return
+      case 'suggestions':
+          this.props.updateInputSuggestions({inputSuggestions: value})
+        return
+      case 'optional-email':
+        this.props.updateInputFeedbackEmail({inputFeedbackEmail: value})
+        return
+      default:
+        return
+    }
   }
   render() {
     return (
