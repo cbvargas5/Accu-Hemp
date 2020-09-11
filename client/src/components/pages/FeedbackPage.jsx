@@ -11,9 +11,9 @@ class FeedbackPage extends Component {
   render() {
     return (
     <section className="big-card">
-      <StarRating/>
-      <StarRating/>
-      <StarRating/>
+      <StarRating rxAction={updateOverallRating} starsSubmitted={this.props.overallRating} stateKey={'overallRating'}>1) Overall Rating:*</StarRating>
+      <StarRating rxAction={updateEaseOfUseRating} starsSubmitted={this.props.easeOfUseRating} stateKey={'easeOfUseRating'}>2) Ease of Use:*</StarRating>
+      <StarRating rxAction={updateHelpfulness} starsSubmitted={this.props.helpfulnessRating} stateKey={'helpfulnessRating'}>3) Helpfulness:*</StarRating>
     </section>
     )
   }
