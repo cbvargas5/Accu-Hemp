@@ -6,6 +6,7 @@ import products from './products'
 import measure from './measure'
 import addingProducts from './addingProducts'
 import advertising from './advertising'
+import feedback from './feedback'
 
 
 const rootReducer = combineReducers({
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     products,
     measure,
     addingProducts,
-    advertising
+    advertising,
+    feedback
 });
 
 export default rootReducer
