@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { updateOverallRating, updateEaseOfUseRating, updateHelpfulness, updateInputMostLike, updateInputLeastLike, updateInputSuggestions, updateInputFeedbackEmail } from '../../actions/feedback'
 
 import StarRating from '../StarRating.jsx'
+import { Button } from 'react-bootstrap'
 
 class FeedbackPage extends Component {
   constructor(props) {
@@ -50,6 +51,9 @@ class FeedbackPage extends Component {
         <span>Please provide us with your email if you would like to receive a response from us.</span>
         <input onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
+      <div className="tabNav-btns">
+          <Button className="tab-btn">Submit</Button>
+        </div>
     </section>
     )
   }
