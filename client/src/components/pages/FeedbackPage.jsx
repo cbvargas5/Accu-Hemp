@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateOverallRating, updateEaseOfUseRating, updateHelpfulness, updateInputMostLike, updateInputLeastLike, updateInputSuggestions, updateInputFeedbackEmail } from '../../actions/feedback'
+
 import StarRating from '../StarRating.jsx'
-export default class FeedbackPage extends Component {
+
+class FeedbackPage extends Component {
   constructor(props) {
     super(props)
   }
@@ -14,3 +18,7 @@ export default class FeedbackPage extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({...state.feedback})
+
+export default connect(mapStateToProps, { updateOverallRating, updateEaseOfUseRating, updateHelpfulness, updateInputMostLike, updateInputLeastLike, updateInputSuggestions, updateInputFeedbackEmail })(FeedbackPage)
