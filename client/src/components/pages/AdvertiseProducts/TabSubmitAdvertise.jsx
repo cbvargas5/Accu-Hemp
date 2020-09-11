@@ -3,6 +3,22 @@ import { connect } from 'react-redux'
 import { updateAffiliateLink, updateInputBrandDesc } from '../../../actions/advertising'
 
 class TabSubmitAdvertise extends Component {
+  constructor(props) {
+    super(props)
+  }
+  handleChange = (e) => {
+    const { name, value } = e.target
+    switch(name) {
+      case 'affiliate-program-app':
+          this.props.updateAffiliateLink({inputAffiliateAppLink: value})
+        return
+      case 'brand-description':
+        this.props.updateInputBrandDesc({inputBrandDesc: value})
+        return
+      default:
+        return
+    }
+  }
   render() {
     return (
       <section className="tab link-questions-tab">
