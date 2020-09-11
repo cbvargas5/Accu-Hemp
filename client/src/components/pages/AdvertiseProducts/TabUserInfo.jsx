@@ -15,6 +15,9 @@ class TabUserInfo extends Component {
       case 'first-name':
         this.props.updateInputFirstName({inputFirstName: value})
         return
+      case 'last-name':
+        this.props.updateInputLastName({inputLastName: value})
+        return
       case 'user-email':
         this.props.updateInputEmail({inputEmail: value})
         return
@@ -56,6 +59,9 @@ class TabUserInfo extends Component {
             <p className="instructions">Name*</p>
             <label htmlFor="first-name">
               <input onChange={this.handleChange} type="text" name="first-name" id="first-name"/>
+            </label>
+            <label htmlFor="last-name">
+              <input onChange={this.handleChange} type="text" name="last-name" id="last-name"/>
             </label>
           </div>
           <div>
