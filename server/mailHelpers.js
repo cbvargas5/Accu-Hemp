@@ -22,7 +22,7 @@ const getEmailData = (clientData, template) => {
 
 
 module.exports = {
-    sendEmailToClient: (to, name, type) => {
+    sendEmailToClient: (clientData, type) => {
         const smtpTransport = mailer.createTransport({
             host: 'smtp-mail.outlook.com',
             auth: {
@@ -31,7 +31,7 @@ module.exports = {
             }
         })
 
-        const mail = getEmailData(to, name, type)
+        const mail = getEmailData(clientData, type)
 
         return smtpTransport.sendMail(mail)
             .then(() => {
