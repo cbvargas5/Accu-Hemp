@@ -22,12 +22,23 @@ const getEmailData = (to, name, template) => {
 module.exports = {
     sendEMail: (to, name, type) => {
         const smtpTransport = mailer.createTransport({
-                auth: {
-                    user: process.env.EMAIL_USER,
-                    pass: process.env.EMAIL_PW,
-                }
+            host: 'smtp-mail.outlook.com',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PW,
+            }
+        })
+
+        const mail = getEmailData(to, name, type)
+
+        smtpTransport.sendMail(mail)
+            .then(() => {
+                console.log('Email Sent!')
+                smtpTransport.close()
             })
-            // smtpTransport.sendMail(mail)
-        return 'sup'
+            .catch((err) => {
+                console.error(err)
+                smtpTransport.close()
+            });
     },
 }
