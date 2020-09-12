@@ -6,6 +6,12 @@ module.exports = {
             .then(() => res.status(200).end())
             .catch(err => res.status(400).send(err))
     },
+
+    sendEstimatorResults: (req, res) => {
+        sendEmailToClient(req.body, 'estimator')
+            .then(() => res.status(200).end())
+            .catch(err => res.status(400).send(err))
+    },
 }
 
 /**
