@@ -1,3 +1,7 @@
-module.exports = {
+const mailHelper = require('../mailHelpers')
 
+module.exports = {
+    sendEmail: (req, res) => {
+        console.log(mailHelper.sendMail())
+    },
 }
