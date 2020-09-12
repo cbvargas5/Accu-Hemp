@@ -1,11 +1,11 @@
-const Test = data => {
+module.exports = data => {
 
     return `
       <!DOCTYPE html>
      <html style="margin: 0; padding: 0;">
      
          <head>
-             <title>Hello</title>
+             <title>Hello There</title>
          </head>
      
              <body style="margin: 0; padding: 0;">
@@ -19,5 +19,3 @@ const Test = data => {
        </html>
       `;
 };
-
-module.exports = { Test };

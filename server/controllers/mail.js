@@ -7,3 +7,8 @@ module.exports = {
             .catch(err => res.status(400).send(err))
     },
 }
+
+/**
+ * Fields for [Estimator]:
+ * lowerdose, upperdose
+ */
