@@ -1,9 +1,9 @@
-const mailHelper = require('../mailHelpers')
+const { sendEmailToClient } = require('../mailHelpers')
 
 module.exports = {
-    sendEmail: (req, res) => {
-        const { to, name, type } = req.body
-        console.log(to, name, type)
-        mailHelper.sendEMail(to, name, type)
+    sendTestEmail: (req, res) => {
+        sendEmailToClient(req.body, 'test')
+            .then(() => res.status(200).end())
+            .catch(err => res.status(400).send(err))
     },
 }

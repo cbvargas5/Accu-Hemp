@@ -1,14 +1,16 @@
 const mailer = require('nodemailer');
 const { Test } = require('./email_templates/test')
 
-const getEmailData = (to, name, template) => {
+const getEmailData = (clientData, template) => {
     let data = null;
     switch (template) {
         case "test":
+            const { to, name } = clientData
+            console.log(to, name)
             data = {
-                from: `Tester Man <${process.env.EMAIL_USER}>`,
+                from: `Test Person <${process.env.EMAIL_USER}>`,
                 to,
-                subject: `Hello ${name}.  This is a test`,
+                subject: `Howdy again ${name}.  This is a test`,
                 html: Test()
             }
             break;
@@ -20,7 +22,7 @@ const getEmailData = (to, name, template) => {
 
 
 module.exports = {
-    sendEMail: (to, name, type) => {
+    sendEmailToClient: (to, name, type) => {
         const smtpTransport = mailer.createTransport({
             host: 'smtp-mail.outlook.com',
             auth: {
@@ -31,7 +33,7 @@ module.exports = {
 
         const mail = getEmailData(to, name, type)
 
-        smtpTransport.sendMail(mail)
+        return smtpTransport.sendMail(mail)
             .then(() => {
                 console.log('Email Sent!')
                 smtpTransport.close()

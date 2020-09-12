@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { sendEmail } = require('../controllers/mail')
+const { sendTestEmail } = require('../controllers/mail')
 
 
 router
     .route('/')
-    .post(sendEmail);
+    .post(sendTestEmail);
 
 module.exports = router
