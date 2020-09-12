@@ -1,6 +1,5 @@
 const mailer = require('nodemailer');
-const mail = require('./controllers/mail');
-
+const { Test } = require('./email_templates/test')
 
 const getEmailData = (to, name, template) => {
     let data = null;
@@ -9,7 +8,8 @@ const getEmailData = (to, name, template) => {
             data = {
                 from: `Tester Man <${process.env.EMAIL_USER}>`,
                 to,
-                subject: `Hello ${name}.  This is a test`
+                subject: `Hello ${name}.  This is a test`,
+                html: Test()
             }
             break;
         default:
