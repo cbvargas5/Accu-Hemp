@@ -16,5 +16,5 @@ module.exports = {
 
 /**
  * Fields for [Estimator]:
- * lowerdose, upperdose
+ * lowerdose, upperdose, email
  */

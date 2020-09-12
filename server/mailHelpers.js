@@ -1,5 +1,6 @@
 const mailer = require('nodemailer');
 const test = require('./email_templates/test')
+const estimator = require('./email_templates/estimator')
 
 const getEmailData = (clientData, template) => {
     let data = null;
@@ -12,6 +13,15 @@ const getEmailData = (clientData, template) => {
                 to,
                 subject: `Howdy again ${name}.  This is a test`,
                 html: test()
+            }
+            break;
+
+        case "estimator":
+            data = {
+                from: `Test Person <${process.env.EMAIL_USER}>`,
+                to: clientData.to,
+                subject: 'AccuHemp Dose Estimator Results',
+                html: estimator(clientData)
             }
             break;
         default:
