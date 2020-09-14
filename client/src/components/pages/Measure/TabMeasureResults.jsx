@@ -17,7 +17,7 @@ class TabMeasureResults extends Component {
     console.log('results: ', this.props)
     const measurement = this.calculateMeasurement(this.props.selectedDevice, this.props.selectedDose, this.props.selectedProductMg, this.props.selectedSize)
     return (
-      <section className="tab results-tab">
+    <section className="tab results-tab">
       <section className="result mini-underline-sec">
       <h2>Your estimated measurement is {measurement}</h2>
         <br/>
