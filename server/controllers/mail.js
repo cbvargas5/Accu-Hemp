@@ -33,6 +33,6 @@ module.exports = {
 }
 
 /**
- * Fields for [Dropper/Syringe]:
- * lowerdose, upperdose, email
+ * Fields for [contact]:
+ * 
  */
