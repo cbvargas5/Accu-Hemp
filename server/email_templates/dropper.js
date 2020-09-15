@@ -1,9 +1,9 @@
 module.exports = ({ brand, product, measurement, dose }) => {
     return `
   <!DOCTYPE html>
-  <html style="margin: 0; padding: 0;">
+  <html>
     <head>
-        <title>Accu-Hemp Estimator Results</title>
+        <title>Accu-Hemp Measurement Results for Dropper</title>
     </head>
 
     <body style="margin: 0; padding: 0;">
