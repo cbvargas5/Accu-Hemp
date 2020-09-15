@@ -24,6 +24,12 @@ module.exports = {
             .then(() => res.status(200).end())
             .catch(err => res.status(400).send(err))
     },
+
+    sendContactFormToAH: (req, res) => {
+        sendEmail(req.body, 'contact')
+            .then(() => res.status(200).end())
+            .catch(err => res.status(400).send(err))
+    },
 }
 
 /**
