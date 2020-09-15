@@ -19,7 +19,7 @@ module.exports = ({ companyName, involvement, fullName, email, phone, linkForSto
   <br/>
   <p><strong>Contact Email:</strong> ${email}</p>
   <br/>
-  <p><strong>Contact Phone Number:</strong> ${phone}</p>
+  <p><strong>Contact Phone Number:</strong> ${phone ? phone : NO_ANSWER}</p>
   <br/>
   <p><strong>Website Link for Store/Shop:</strong> ${linkForStore}</p>
   <br/>
