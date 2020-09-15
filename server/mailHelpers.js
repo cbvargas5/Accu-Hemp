@@ -60,7 +60,7 @@ const getEmailData = (clientData, dataType) => {
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
                 to: ACCU_HEMP_EMAIL,
-                subject: `Feedback Form Submitted by: ${clientData.name}`,
+                subject: `Feedback Form Submitted`,
                 html: feedback(clientData)
             }
             break;
