@@ -7,27 +7,39 @@ import axios from 'axios'
 
 
 
-const handleChange = e => {
-  const { name, value } = e.target
-  console.log(name, value)
-}
-
-const handleSubmit = e => {
-  e.preventDefault()
-}
 
 export default function ContactPage() {
-  const [name, setName] = useState('')
+  const [clientName, setClientName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  console.log('env test->', process.env.REACT_APP_TEST)
+  
+  const handleChange = e => {
+    const { name, value } = e.target
+    switch(name) {
+      case 'form-name':
+        setClientName(value)
+        break;
+      case 'form-email':
+        setEmail(value)
+        break;
+      case 'form-message':
+        setMessage(value)
+        break;
+    }
+  }
+  
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(clientName, email, message)
+  }
+  // console.log('env test->', process.env.REACT_APP_TEST)
   return (
     <section>
         <div className="mini-header">
           <h1>Contact Us</h1>
         </div>
         <section className="form-wrapper">
-          <form className="contact-form">
+          <form onSubmit={handleSubmit}className="contact-form">
             <div className="name-field-wrapper">
               <label htmlFor="form-name">Name</label>
               <input onChange={handleChange} type="text" name="form-name" id="form-name"/>
