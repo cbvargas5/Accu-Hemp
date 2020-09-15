@@ -2,6 +2,7 @@ const mailer = require('nodemailer');
 const test = require('./email_templates/test')
 const estimator = require('./email_templates/estimator')
 const dropper = require('./email_templates/dropper')
+const syringe = require('./email_templates/syringe')
 
 const getEmailData = (clientData, template) => {
     let data = null;
@@ -32,6 +33,14 @@ const getEmailData = (clientData, template) => {
                 to: clientData.to,
                 subject: 'AccuHemp Dose Dropper Results',
                 html: dropper(clientData)
+            }
+            break;
+        case "syringe":
+            data = {
+                from: `Accu-Hemp.com <${process.env.EMAIL_USER}>`,
+                to: clientData.to,
+                subject: 'AccuHemp Dose Syringe Results',
+                html: syringe(clientData)
             }
             break;
         default:
