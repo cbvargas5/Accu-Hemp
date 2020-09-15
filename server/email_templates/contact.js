@@ -3,7 +3,7 @@ module.exports = ({ name, email, message }) => {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Accu-Hemp Measurement Results for Dropper Syringe</title>
+    <title>Accu-Hemp Contact Form</title>
 </head>
 
 <body style="margin: 0; padding: 0;">
