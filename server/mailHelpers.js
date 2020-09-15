@@ -16,7 +16,6 @@ const getEmailData = (clientData, dataType) => {
     const { to } = clientData
     switch (dataType) {
         case "test":
-            const { to, name } = clientData
             data = {
                 from: `Test Person <${ACCU_HEMP_EMAIL}>`,
                 to,
