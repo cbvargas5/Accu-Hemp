@@ -74,11 +74,13 @@ const getEmailData = (clientData, dataType) => {
             }
             break;
         case "addproducts":
+            const { uploadedLogo, uploadedProductInfo } = clientData
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
                 to: ACCU_HEMP_EMAIL,
                 subject: `Add Products Request Submitted by: ${clientData.companyName}`,
-                html: addProducts(clientData)
+                html: addProducts(clientData),
+                attachments: [uploadedLogo, uploadedProductInfo]
             }
             break;
         default:
