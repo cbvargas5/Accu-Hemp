@@ -12,6 +12,7 @@ export default function ContactPage() {
   const [clientName, setClientName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [wasFormSubmitted, setWasFormSubmitted] = useState(false)
   
   const handleChange = e => {
     const { name, value } = e.target
@@ -30,8 +31,18 @@ export default function ContactPage() {
   
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(clientName, email, message)
+    const dataToSend = {
+      name: clientName,
+      email,
+      message
+    }
+    axios.post('/mail/contact', dataToSend)
+      .then(() => {
+        setWasFormSubmitted(true)
+      })
+      .catch(console.error)
   }
+  //need to add div that renders when form is submitted
   // console.log('env test->', process.env.REACT_APP_TEST)
   return (
     <section>
