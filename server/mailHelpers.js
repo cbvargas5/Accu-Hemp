@@ -5,6 +5,7 @@ const dropper = require('./email_templates/dropper')
 const syringe = require('./email_templates/syringe')
 const contact = require('./email_templates/contact')
 const feedback = require('./email_templates/feedback')
+const survey = require('./email_templates/survey')
 
 const ACCU_HEMP_EMAIL = process.env.EMAIL_USER
 const ACCU_HEMP_PASSWORD = process.env.EMAIL_PW
@@ -62,6 +63,14 @@ const getEmailData = (clientData, dataType) => {
                 to: ACCU_HEMP_EMAIL,
                 subject: `Feedback Form Submitted`,
                 html: feedback(clientData)
+            }
+            break;
+        case "survey":
+            data = {
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
+                to: ACCU_HEMP_EMAIL,
+                subject: `Survey Submitted`,
+                html: survey(clientData)
             }
             break;
         default:
