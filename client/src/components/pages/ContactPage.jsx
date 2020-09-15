@@ -1,11 +1,25 @@
 import React from 'react'
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha"
 import ButtonCard from '../cards/ButtonCard.jsx'
-
-
+import { useState } from 'react'
 import { Button } from 'react-bootstrap'
+import axios from 'axios'
+
+
+
+const handleChange = e => {
+  const { name, value } = e.target
+  console.log(name, value)
+}
+
+const handleSubmit = e => {
+  e.preventDefault()
+}
 
 export default function ContactPage() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   console.log('env test->', process.env.REACT_APP_TEST)
   return (
     <section>
@@ -16,15 +30,15 @@ export default function ContactPage() {
           <form className="contact-form">
             <div className="name-field-wrapper">
               <label htmlFor="form-name">Name</label>
-              <input type="text" name="form-name" id="form-name"/>
+              <input onChange={handleChange} type="text" name="form-name" id="form-name"/>
             </div>
             <div className="email-field-wrapper">
               <label htmlFor="form-email">Email</label>
-              <input type="email" required="required" name="form-email" id="form-email"/>
+              <input onChange={handleChange} type="email" required="required" name="form-email" id="form-email"/>
             </div>
             <div className="message-field-wrapper">
               <label htmlFor="form-message">Message</label>
-              <textarea name="form-message" id="form-message" rows="4"></textarea>
+              <textarea onChange={handleChange} name="form-message" id="form-message" rows="4"></textarea>
             </div>
             <Button type="submit">Send</Button>
           </form>
