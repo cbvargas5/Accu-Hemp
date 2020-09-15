@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { sendTestEmail, sendEstimatorResults, sendDropperResults } = require('../controllers/mail')
+const { sendTestEmail, sendEstimatorResults, sendDropperResults, sendSyringeResults } = require('../controllers/mail')
 
 
 router
@@ -14,5 +14,9 @@ router
 router
     .route('/dropper')
     .post(sendDropperResults);
+
+router
+    .route('/syringe')
+    .post(sendSyringeResults);
 
 module.exports = router
