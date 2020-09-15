@@ -4,12 +4,12 @@ module.exports = ({ overall, easeOfUse, helpfulness, likeMost, likeLeast, sugges
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Accu-Hemp Contact Form</title>
+  <title>Accu-Hemp Feedback Form</title>
 </head>
 
 <body style="margin: 0; padding: 0;">
 <section class="contact">
-  <h2>An individual has submitted a contact form</h2>
+  <h2>An individual has submitted a feedback form</h2>
   <br/>
   <p><strong>Overall rating:</strong> ${overall}</p>
   <br/>
@@ -30,4 +30,3 @@ module.exports = ({ overall, easeOfUse, helpfulness, likeMost, likeLeast, sugges
 </html>
 `;
 };
-// brand, product, measurement, email, selected dose
