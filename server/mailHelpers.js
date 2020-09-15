@@ -6,6 +6,7 @@ const syringe = require('./email_templates/syringe')
 const contact = require('./email_templates/contact')
 const feedback = require('./email_templates/feedback')
 const survey = require('./email_templates/survey')
+const addProducts = require('./email_templates/addProducts')
 
 const ACCU_HEMP_EMAIL = process.env.EMAIL_USER
 const ACCU_HEMP_PASSWORD = process.env.EMAIL_PW
@@ -71,6 +72,14 @@ const getEmailData = (clientData, dataType) => {
                 to: ACCU_HEMP_EMAIL,
                 subject: `Survey Submitted`,
                 html: survey(clientData)
+            }
+            break;
+        case "addproducts":
+            data = {
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
+                to: ACCU_HEMP_EMAIL,
+                subject: `Add Products Request Submitted by: ${clientData.companyName}`,
+                html: addProducts(clientData)
             }
             break;
         default:
