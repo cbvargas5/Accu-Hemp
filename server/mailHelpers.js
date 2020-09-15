@@ -50,7 +50,7 @@ const getEmailData = (clientData, dataType) => {
         case "contact":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
-                to,
+                to: ACCU_HEMP_EMAIL,
                 subject: `Contact Form Submitted by: ${clientData.name}`,
                 html: contact(clientData)
             }
