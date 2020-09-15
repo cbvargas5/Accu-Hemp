@@ -3,16 +3,17 @@ const test = require('./email_templates/test')
 const estimator = require('./email_templates/estimator')
 const dropper = require('./email_templates/dropper')
 const syringe = require('./email_templates/syringe')
+const contact = require('./email_templates/contact')
 
 const ACCU_HEMP_EMAIL = process.env.EMAIL_USER
 const ACCU_HEMP_PASSWORD = process.env.EMAIL_PW
 
-const getEmailData = (clientData, template) => {
-    let data = null;
-    switch (template) {
+const getEmailData = (clientData, dataType) => {
+    let data = null
+    const { to } = clientData
+    switch (dataType) {
         case "test":
             const { to, name } = clientData
-            console.log(to, name)
             data = {
                 from: `Test Person <${ACCU_HEMP_EMAIL}>`,
                 to,
@@ -24,7 +25,7 @@ const getEmailData = (clientData, template) => {
         case "estimator":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
-                to: clientData.to,
+                to,
                 subject: 'AccuHemp Dose Estimator Results',
                 html: estimator(clientData)
             }
@@ -33,7 +34,7 @@ const getEmailData = (clientData, template) => {
         case "dropper":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
-                to: clientData.to,
+                to,
                 subject: 'AccuHemp Dose Dropper Results',
                 html: dropper(clientData)
             }
@@ -41,17 +42,17 @@ const getEmailData = (clientData, template) => {
         case "syringe":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
-                to: clientData.to,
+                to,
                 subject: 'AccuHemp Dose Syringe Results',
                 html: syringe(clientData)
             }
             break;
-        case "syringe":
+        case "contact":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
-                to: clientData.to,
-                subject: 'AccuHemp Dose Syringe Results',
-                html: syringe(clientData)
+                to,
+                subject: `Contact Form Submitted by: ${clientData.name}`,
+                html: contact(clientData)
             }
             break;
         default:
