@@ -42,9 +42,15 @@ module.exports = {
             .then(() => res.status(200).end())
             .catch(err => res.status(400).send(err))
     },
+
+    sendAddProductsRequestToAH: (req, res) => {
+        sendEmail(req.body, 'addproducts')
+            .then(() => res.status(200).end())
+            .catch(err => res.status(400).send(err))
+    },
 }
 
 /**
- * Fields for [feedback]:
- * 
+ * Fields for [survey]:
+ * condition, weight, severity, dose, professionalHelp, otherMedication, otherMedicationElaborate, DoseDuration, doseImprovement, elaborate,  
  */

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { sendTestEmail, sendEstimatorResults, sendDropperResults, sendSyringeResults, sendContactFormToAH, sendFeedbackFormToAH, sendSurveyToAH } = require('../controllers/mail')
+const { sendTestEmail, sendEstimatorResults, sendDropperResults, sendSyringeResults, sendContactFormToAH, sendFeedbackFormToAH, sendSurveyToAH, sendAddProductsRequestToAH } = require('../controllers/mail')
 
 
 router
@@ -30,5 +30,9 @@ router
 router
     .route('/survey')
     .post(sendSurveyToAH);
+
+router
+    .route('/addproducts')
+    .post(sendAddProductsRequestToAH);
 
 module.exports = router
