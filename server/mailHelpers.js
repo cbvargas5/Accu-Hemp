@@ -4,6 +4,9 @@ const estimator = require('./email_templates/estimator')
 const dropper = require('./email_templates/dropper')
 const syringe = require('./email_templates/syringe')
 
+const ACCU_HEMP_EMAIL = process.env.EMAIL_USER
+const ACCU_HEMP_PASSWORD = process.env.EMAIL_PW
+
 const getEmailData = (clientData, template) => {
     let data = null;
     switch (template) {
@@ -11,7 +14,7 @@ const getEmailData = (clientData, template) => {
             const { to, name } = clientData
             console.log(to, name)
             data = {
-                from: `Test Person <${process.env.EMAIL_USER}>`,
+                from: `Test Person <${ACCU_HEMP_EMAIL}>`,
                 to,
                 subject: `Howdy again ${name}.  This is a test`,
                 html: test()
@@ -20,7 +23,7 @@ const getEmailData = (clientData, template) => {
 
         case "estimator":
             data = {
-                from: `Accu-Hemp.com <${process.env.EMAIL_USER}>`,
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
                 to: clientData.to,
                 subject: 'AccuHemp Dose Estimator Results',
                 html: estimator(clientData)
@@ -29,7 +32,7 @@ const getEmailData = (clientData, template) => {
 
         case "dropper":
             data = {
-                from: `Accu-Hemp.com <${process.env.EMAIL_USER}>`,
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
                 to: clientData.to,
                 subject: 'AccuHemp Dose Dropper Results',
                 html: dropper(clientData)
@@ -37,7 +40,15 @@ const getEmailData = (clientData, template) => {
             break;
         case "syringe":
             data = {
-                from: `Accu-Hemp.com <${process.env.EMAIL_USER}>`,
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
+                to: clientData.to,
+                subject: 'AccuHemp Dose Syringe Results',
+                html: syringe(clientData)
+            }
+            break;
+        case "syringe":
+            data = {
+                from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
                 to: clientData.to,
                 subject: 'AccuHemp Dose Syringe Results',
                 html: syringe(clientData)
@@ -51,12 +62,12 @@ const getEmailData = (clientData, template) => {
 
 
 module.exports = {
-    sendEmailToClient: (clientData, type) => {
+    sendEmail: (clientData, type) => {
         const smtpTransport = mailer.createTransport({
             host: 'smtp-mail.outlook.com',
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PW,
+                user: ACCU_HEMP_EMAIL,
+                pass: ACCU_HEMP_PASSWORD,
             }
         })
 
