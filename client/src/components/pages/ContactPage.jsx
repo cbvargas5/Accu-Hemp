@@ -29,6 +29,12 @@ export default function ContactPage() {
     }
   }
   
+  useEffect(() => {
+    if (wasFormSubmitted) {
+      setWasFormSubmitted(false)
+    }
+  })
+
   const handleSubmit = e => {
     e.preventDefault()
     const dataToSend = {
