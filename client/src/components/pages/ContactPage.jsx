@@ -1,7 +1,7 @@
 import React from 'react'
 import ReCAPTCHA from "react-google-recaptcha"
 import ButtonCard from '../cards/ButtonCard.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
 
@@ -38,7 +38,9 @@ export default function ContactPage() {
     }
     axios.post('/mail/contact', dataToSend)
       .then(() => {
-        setWasFormSubmitted(true)
+        if (!wasFormSubmitted) {
+          setWasFormSubmitted(true)
+        }
       })
       .catch(console.error)
   }
