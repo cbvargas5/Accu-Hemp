@@ -29,11 +29,11 @@ export default function ContactPage() {
     }
   }
   
-  useEffect(() => {
-    if (wasFormSubmitted) {
-      setWasFormSubmitted(false)
-    }
-  })
+  // useEffect(() => {
+  //   if (wasFormSubmitted) {
+  //     setWasFormSubmitted(false)
+  //   }
+  // })
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -48,7 +48,7 @@ export default function ContactPage() {
           setWasFormSubmitted(true)
         }
       })
-      .catch(console.error)
+      .catch((err) => console.error(err))
   }
   //need to add div that renders when form is submitted
   // console.log('env test->', process.env.REACT_APP_TEST)
