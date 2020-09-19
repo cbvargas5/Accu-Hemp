@@ -40,11 +40,11 @@ class FeedbackPage extends Component {
       suggestions: this.props.inputSuggestions,
       email: this.props.inputFeedbackEmail
     }
-    // axios.post('/mail/feedback', dataToSend)
-    //   .then(() => {
-    //     // insert form submit boolean
-    //   })
-    //   .catch((err) => console.error(err))
+    axios.post('/mail/feedback', dataToSend)
+      .then(() => {
+        // insert form submit boolean
+      })
+      .catch((err) => console.error(err))
   }
   render() {
     return (
@@ -70,8 +70,15 @@ class FeedbackPage extends Component {
         <input onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
       <div className="tabNav-btns">
-          <Button className="tab-btn">Submit</Button>
+          <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
       </div>
+      {/* {
+        this.props.selectedVerification === "Yes"
+        ?
+        <Button onClick={this.handleSubmit} type="submit">Send</Button>
+        :
+        ""
+      } */}
     </section>
     )
   }
