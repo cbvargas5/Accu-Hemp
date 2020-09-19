@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { updateEmail } from '../../../actions/measure'
+
 
 class TabMeasureResults extends Component {
   constructor(props) {
     super(props)
 
+  }
+  handleChange = (e) => {
+    console.log(e.target.value)
+    this.props.updateEmail({userEmail: e.target.value})
   }
   calculateMeasurement = (device, userDose, productMg, productSize) => {
     if (device === 'syringe') {
@@ -29,7 +35,7 @@ class TabMeasureResults extends Component {
         <form action="" className="email-results">
           <label className="question">Do you want your results emailed to you?</label>
           <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
-          <input type="email" name="email" id="email"/>
+          <input onChange={this.handleChange} type="email" name="email" id="email"/>
           <button type="submit">Email my Results!</button>
         </form>
       </section>
@@ -41,4 +47,4 @@ class TabMeasureResults extends Component {
 const mapStateToProps = (state) => ({...state.measure})
 
 
-export default connect(mapStateToProps)(TabMeasureResults)
+export default connect(mapStateToProps, { updateEmail })(TabMeasureResults)
