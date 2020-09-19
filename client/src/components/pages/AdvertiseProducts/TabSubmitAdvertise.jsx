@@ -35,12 +35,11 @@ class TabSubmitAdvertise extends Component {
       linkToAffiliateProgram: this.props.inputAffiliateAppLink,
       brandDescription: this.props.inputBrandDesc
     }
-    console.log(dataToSend)
-    // axios.post('/mail/advertising', dataToSend)
-    //   .then(() => {
-    //     // insert form submit boolean
-    //   })
-    //   .catch((err) => console.error(err))
+    axios.post('/mail/advertising', dataToSend)
+      .then(() => {
+        // insert form submit boolean
+      })
+      .catch((err) => console.error(err))
   }
   render() {
     return (
@@ -53,6 +52,13 @@ class TabSubmitAdvertise extends Component {
           <p className="instructions">Pleae tell us a little about your brand and your products:*</p>
           <textarea onChange={this.handleChange} type="text" name="brand-description" id="brand-description" placeholder="For example: How long have you been in business? Where do you source your products? Any certifications? Special features? etc."/>
         </div>
+        {
+          true
+          ?
+          <Button onClick={this.handleSubmit} type="submit">Send</Button>
+          :
+          ""
+        }
       </section>
     )
   }
