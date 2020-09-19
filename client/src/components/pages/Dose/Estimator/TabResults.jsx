@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { getDose } from '../../../../actions/dose'
+import { getDose, updateEmail } from '../../../../actions/dose'
 
 
 export class TabResults extends Component {
