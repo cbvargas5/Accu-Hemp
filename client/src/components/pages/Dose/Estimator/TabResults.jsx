@@ -12,6 +12,20 @@ export class TabResults extends Component {
   componentDidMount() {
       this.props.getDose()
   }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const { lowerdose, upperdose } = this.props.dose[0]
+    const dataToSend = {
+      to: email,
+      lowerdose,
+      upperdose
+    }
+    // axios.post('/mail/estimator', dataToSend)
+    //   .then(() => {
+    //     // insert form submit boolean
+    //   })
+    //   .catch((err) => console.error(err))
+  }
   render() {
     const { dose } = this.props
     if (dose[0]) {
