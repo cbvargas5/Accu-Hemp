@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateOverallRating, updateEaseOfUseRating, updateHelpfulness, updateInputMostLike, updateInputLeastLike, updateInputSuggestions, updateInputFeedbackEmail } from '../../actions/feedback'
-
 import StarRating from '../StarRating.jsx'
 import { Button } from 'react-bootstrap'
+import axios from 'axios'
+
 
 class FeedbackPage extends Component {
   constructor(props) {
@@ -27,6 +28,23 @@ class FeedbackPage extends Component {
       default:
         return
     }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const dataToSend = {
+      overall: this.props.overallRating,
+      easeOfUse: this.props.easeOfUseRating,
+      helpfulness: this.props.helpfulnessRating,
+      likeMost: this.props.inputMostLike,
+      likeLeast: this.props.inputLeastLike,
+      suggestions: this.props.inputSuggestions,
+      email: this.props.inputFeedbackEmail
+    }
+    // axios.post('/mail/feedback', dataToSend)
+    //   .then(() => {
+    //     // insert form submit boolean
+    //   })
+    //   .catch((err) => console.error(err))
   }
   render() {
     return (
@@ -53,7 +71,7 @@ class FeedbackPage extends Component {
       </div>
       <div className="tabNav-btns">
           <Button className="tab-btn">Submit</Button>
-        </div>
+      </div>
     </section>
     )
   }
