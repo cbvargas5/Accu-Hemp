@@ -2,15 +2,39 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { verifySurvey } from '../../../../actions/survey'
 import ButtonCard from '../../../cards/ButtonCard.jsx'
-
+import axios from 'axios'
 
 class TabSubmit extends Component {
   constructor(props) {
     super(props)
   }
   handleSelection = (e) => {
-    const { name } = e.target
+    const { name } = e.target 
     this.props.verifySurvey({selectedVerification: name})
+  }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log()
+    const dateToSend = {
+      condition: this.props.selectedCondition,
+      weight: this.props.inputWeight,
+      severity: this.props.selectedSeverity,
+      dose: this.props.selectedDose,
+      professionalHelp: this.props.selectedProfessionalHelp,
+      otherMedication: this.props.selectedOtherMedication,
+      otherMedicationExplanation: this.props.otherMedicationInput,
+      doseDuration: this.props.selectedDoseDuration,
+      doseImprovement: this.props.selectedImprovement,
+      elaborate: this.props.inputElaborate
+    }
+
+    axios.post('/mail/survey', dataToSend)
+      .then(() => {
+        if (!wasFormSubmitted) {
+          setWasFormSubmitted(true)
+        }
+      })
+      .catch((err) => console.error(err))
   }
   render() {
     return (
