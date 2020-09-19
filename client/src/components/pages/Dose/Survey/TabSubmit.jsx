@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'react-bootstrap'
 import { verifySurvey } from '../../../../actions/survey'
 import ButtonCard from '../../../cards/ButtonCard.jsx'
 import axios from 'axios'
@@ -14,8 +15,7 @@ class TabSubmit extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log()
-    const dateToSend = {
+    const dataToSend = {
       condition: this.props.selectedCondition,
       weight: this.props.inputWeight,
       severity: this.props.selectedSeverity,
@@ -27,6 +27,7 @@ class TabSubmit extends Component {
       doseImprovement: this.props.selectedImprovement,
       elaborate: this.props.inputElaborate
     }
+    console.log("submitted", dataToSend)
 
     axios.post('/mail/survey', dataToSend)
       .then(() => {
@@ -54,6 +55,13 @@ class TabSubmit extends Component {
           <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
           <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
         </div>
+        {
+          this.props.selectedVerification === "Yes"
+          ?
+          <Button onClick={this.handleSubmit} type="submit">Send</Button>
+          :
+          ""
+        }
       </section>
     )
   }
