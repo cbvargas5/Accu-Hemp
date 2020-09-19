@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import axios from 'axios'
 import { getDose, updateEmail } from '../../../../actions/dose'
 
 
@@ -20,11 +20,11 @@ export class TabResults extends Component {
       lowerdose,
       upperdose
     }
-    // axios.post('/mail/estimator', dataToSend)
-    //   .then(() => {
-    //     // insert form submit boolean
-    //   })
-    //   .catch((err) => console.error(err))
+    axios.post('/mail/estimator', dataToSend)
+      .then(() => {
+        // insert form submit boolean
+      })
+      .catch((err) => console.error(err))
   }
   handleChange = (e) => {
     this.props.updateEmail({userEmail: e.target.value})
@@ -53,7 +53,7 @@ export class TabResults extends Component {
             </div>
           </section>
           <section className="email-results-section">
-            <form action="" className="email-results">
+            <form onSubmit={this.handleSubmit} className="email-results">
               <label className="question">Do you want your results emailed to you?</label>
               <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
               <input onChange={this.handleChange} type="email" name="email" id="email"/>
