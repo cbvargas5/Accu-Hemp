@@ -16,7 +16,7 @@ export class TabResults extends Component {
     e.preventDefault()
     const { lowerdose, upperdose } = this.props.dose[0]
     const dataToSend = {
-      to: email,
+      to: this.props.userEmail,
       lowerdose,
       upperdose
     }
@@ -25,6 +25,9 @@ export class TabResults extends Component {
     //     // insert form submit boolean
     //   })
     //   .catch((err) => console.error(err))
+  }
+  handleChange = (e) => {
+    this.props.updateEmail({userEmail: e.target.value})
   }
   render() {
     const { dose } = this.props
@@ -53,7 +56,7 @@ export class TabResults extends Component {
             <form action="" className="email-results">
               <label className="question">Do you want your results emailed to you?</label>
               <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
-              <input type="email" name="email" id="email"/>
+              <input onChange={this.handleChange} type="email" name="email" id="email"/>
               <button type="submit">Email my Results!</button>
             </form>
           </section>
@@ -70,4 +73,4 @@ export class TabResults extends Component {
 const mapStateToProps = (state) => ({...state.estimator})
 
 
-export default connect(mapStateToProps, { getDose })(TabResults)
+export default connect(mapStateToProps, { getDose, updateEmail })(TabResults)
