@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateAffiliateLink, updateInputBrandDesc } from '../../../actions/advertising'
+import { Button } from 'react-bootstrap'
+import axios from 'axios'
 
 class TabSubmitAdvertise extends Component {
   constructor(props) {
@@ -18,6 +20,27 @@ class TabSubmitAdvertise extends Component {
       default:
         return
     }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const dataToSend = {
+      companyName: this.props.inputCompanyName,
+      involvement: this.props.selectedInvolvement,
+      fullName: `${this.props.inputFirstName} ${this.props.inputLastName}`,
+      email: this.props.inputEmail,
+      phone: this.props.inputPhone,
+      linkForStore: this.props.inputShopWebsite,
+      qualityTestLink: this.props.inputQualityLink,
+      affiliateStatus: this.props.selectAffiliateStatus,
+      linkToAffiliateProgram: this.props.inputAffiliateAppLink,
+      brandDescription: this.props.inputBrandDesc
+    }
+    console.log(dataToSend)
+    // axios.post('/mail/advertising', dataToSend)
+    //   .then(() => {
+    //     // insert form submit boolean
+    //   })
+    //   .catch((err) => console.error(err))
   }
   render() {
     return (
