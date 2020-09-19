@@ -34,7 +34,7 @@ export default function ContactPage() {
       setWasFormSubmitted(false)
     }
   }, [])
-  
+
   console.log(wasFormSubmitted)
   const handleSubmit = e => {
     e.preventDefault()
@@ -72,7 +72,15 @@ export default function ContactPage() {
               <label htmlFor="form-message">Message</label>
               <textarea onChange={handleChange} name="form-message" id="form-message" rows="4"></textarea>
             </div>
-            <Button type="submit">Send</Button>
+            {
+              wasFormSubmitted
+              ?
+              <div className="success">
+                <p><span>Thank You!</span> Your form has been sent</p>
+              </div>
+              :
+              <Button type="submit">Send</Button>
+            }
           </form>
         </section>
         <section className="feedback-redirect">
