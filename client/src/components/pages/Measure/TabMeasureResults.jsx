@@ -1,15 +1,37 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateEmail } from '../../../actions/measure'
-
+import axios from 'axios'
 
 class TabMeasureResults extends Component {
   constructor(props) {
     super(props)
 
   }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const device = this.props.selectedDevice
+    const measurement = this.calculateMeasurement(this.props.selectedDevice, this.props.selectedDose, this.props.selectedProductMg, this.props.selectedSize)
+
+    const dataToSend = {
+      to: this.props.userEmail,
+      brand: this.props.selectedBrand,
+      product: this.props.selectedProduct,
+      measurement,
+      dose: this.props.selectedDose
+    }
+    if (device === 'syringe') {
+      axios.post('/mail/syringe', dataToSend)
+        .then(() => {
+          // insert form submit boolean
+        })
+        .catch((err) => console.error(err))
+      } else if (device === 'dropper') {
+        axios.post('/mail/dropper', dataToSend)
+          .catch((err) => console.error(err))
+    }
+  }
   handleChange = (e) => {
-    console.log(e.target.value)
     this.props.updateEmail({userEmail: e.target.value})
   }
   calculateMeasurement = (device, userDose, productMg, productSize) => {
@@ -20,7 +42,6 @@ class TabMeasureResults extends Component {
     }
   }
   render() {
-    console.log('results: ', this.props)
     const measurement = this.calculateMeasurement(this.props.selectedDevice, this.props.selectedDose, this.props.selectedProductMg, this.props.selectedSize)
     return (
     <section className="tab results-tab">
@@ -32,7 +53,7 @@ class TabMeasureResults extends Component {
         <p className="result-note"><strong>Please note:</strong> This measurement is just an approximation. The exact number of drops depends on the size of your dropper and how accurate the product's labeling is. We advise you to speak with a healthcare professional regarding your use of CBD hemp oil. This calculator is only meant to be a general guide, and should not be considered medical advice. These statements have not been evaluated by the Food and Drug Administration (FDA) and are not intended to diagnose, treat, cure or prevent any disease. Please consult with a medical professional for any medical advice.</p>
       </section>
       <section className="email-results-section">
-        <form action="" className="email-results">
+        <form onSubmit={this.handleSubmit} action="" className="email-results">
           <label className="question">Do you want your results emailed to you?</label>
           <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
           <input onChange={this.handleChange} type="email" name="email" id="email"/>
