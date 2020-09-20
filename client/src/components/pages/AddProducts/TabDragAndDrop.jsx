@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Axios from 'axios';
+import axios from 'axios';
 
 export default class TabDragAndDrop extends Component {
   constructor(props) {
@@ -9,13 +9,24 @@ export default class TabDragAndDrop extends Component {
     }
   }
   handleUpload = (e) => {
-    console.log(e.target.files[0])
-    this.setState({file:e.target.files[0]})
+    // const uploadedFile = URL.createObjectURL(e.target.files[0])
+    const uploadedFile = e.target.files[0]
+
+    console.log(uploadedFile)
+    this.setState({file:uploadedFile})
   }
   onFormSubmit = (e) => {
+    e.preventDefault()
+    const { file } = this.state
+
+    const uploadedLogo = {
+      filename: file.name,
+      content: '',
+      contentType: file.type
+    }
     const dataToSend = {
-      uploadedLogo: null,
-      uploadedProductInfo: null,
+      uploadedLogo: uploadedLogo,
+      uploadedProductInfo: file,
       companyName: '',
       involvement: '',
       email: '',
