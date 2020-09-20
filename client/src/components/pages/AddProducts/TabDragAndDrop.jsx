@@ -10,6 +10,18 @@ export default class TabDragAndDrop extends Component {
   }
   handleUpload = (e) => {
     console.log(e.target.files[0])
+    this.setState({file:e.target.files[0]})
+  }
+  onFormSubmit = (e) => {
+    const dataToSend = {
+      uploadedLogo: null,
+      uploadedProductInfo: null,
+      companyName: '',
+      involvement: '',
+      email: '',
+      website: ''
+    }
+    axios.post('/mail/addproducts', dataToSend)
   }
   render() {
     return (
@@ -18,7 +30,7 @@ export default class TabDragAndDrop extends Component {
         <form onSubmit={this.onFormSubmit}>
           <h1>File Upload(TEST)</h1>
           <input type="file" onChange={this.handleUpload} />
-          <button type="submit">Upload</button>
+          <button type="submit">Send</button>
       </form>
       </div>
     )
