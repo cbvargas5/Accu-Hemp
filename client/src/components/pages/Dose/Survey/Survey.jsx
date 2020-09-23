@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom';
-import { updateSurveySteps } from '../../../../actions/survey'
+import { updateSurveySteps, updateValidationError } from '../../../../actions/survey'
 
 import ProgressTracker from '../../../ProgressTracker.jsx'
 import TabSurveyCondition from './TabSurveyCondition.jsx'
@@ -10,6 +10,7 @@ import TabWeightSeverity from './TabWeightSeverity.jsx'
 import TabExtras from './TabExtras.jsx'
 import TabHowMuch from './TabHowMuch.jsx'
 import TabSubmit from './TabSubmit.jsx'
+import SubmissionError from '../../../SubmissionError.jsx';
 
 class Survey extends Component {
   constructor(props) {
@@ -18,10 +19,33 @@ class Survey extends Component {
   }
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
   }
+  // parseInputs = () => {
+  //   const { step, selectedCondition, updateValidationError, severityId } = this.props
+  //   switch(step) {
+  //     case 1:
+  //       if (!selectedCondition) {
+  //         updateValidationError({validationError: true})
+  //         return true
+  //       }
+  //       break;
+  //       case 2:
+  //         if (!severityId) {
+  //           updateValidationError({validationError: true})
+  //           return true
+  //         }
+  //         break;
+  //     default:
+  //       return false;
+  //   }
+  // }
   onNext = () => {
     const { step } = this.props
-    if (step < 5) {
+    const isThereAnError = this.parseInputs()
+    if (step < 5 && !isThereAnError) {
       this.props.updateSurveySteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
     }
@@ -43,6 +67,13 @@ class Survey extends Component {
     return (
       <section className="survey-wrapper big-card">
         <ProgressTracker title="CBD Dose Survey" currStep={this.props.step} lastStep={5}/>
+        {
+          this.props.validationError
+          ?
+          <SubmissionError />
+          :
+          ""
+        }
         <Switch>
           <Route path={`${URL}/1`} exact render={props => <TabSurveyCondition {...this.props}/>} />
           <Route path={`${URL}/2`} exact render={props => <TabWeightSeverity {...this.props}/>} />
@@ -61,4 +92,4 @@ class Survey extends Component {
 
 const mapStateToProps = (state) => ({ ...state.survey })
 
-export default connect(mapStateToProps, { updateSurveySteps })(Survey)
+export default connect(mapStateToProps, { updateSurveySteps, updateValidationError })(Survey)
