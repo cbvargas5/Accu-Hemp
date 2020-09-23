@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectDoseDuration, selectImprovement, updateInputElaborate } from '../../../../actions/survey'
+import { selectDoseDuration, selectImprovement, updateInputElaborate, updateValidationError } from '../../../../actions/survey'
 
-// selectedDoseDuration, selectedImprovement, inputElaborate
 
 class TabHowMuch extends Component {
   constructor(props) {
@@ -10,32 +9,37 @@ class TabHowMuch extends Component {
   }
   handleChange = (e) => {
     const { name,value } = e.target
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
     switch(name) {
       case 'duration':
         this.props.selectDoseDuration({selectedDoseDuration: value})
-        return
+        break;
       case 'elaborate':
         this.props.updateInputElaborate({inputElaborate: value})
-        return
+        break;
       default:
-        return
+        break;
     }
   }
   handleSelection = (e) => {
     const { value } = e.target
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
     this.props.selectImprovement({selectedImprovement: value})
   }
   render() {
     return (
       <section className="tab how-much-tab">
-        <div>
-          <p className="instructions">How long have you been using this dose of CBD?*</p>
+        <div className={this.props.validationError ? "highlight-error" : ""}>
+          <p className="instructions required-field">How long have you been using this dose of CBD?</p>
           <span>Please provide estimated number of days, weeks, months, years</span>
           <input onChange={this.handleChange} type="text" name="duration" id="duration"/>
         </div>
-        <div>
-          {/* Need to add faces to AWS */}
-          <p className="instructions">How much has this dose of CBD improved your symptoms or condition?*</p>
+        <div className={this.props.validationError ? "highlight-error" : ""}>
+          <p className="instructions required-field">How much has this dose of CBD improved your symptoms or condition?</p>
           <ul>
             <li>
               <input onClick={this.handleSelection} name="improvement" type="button" value={'0-24%'}/>
@@ -63,5 +67,5 @@ class TabHowMuch extends Component {
 
 const mapStateToProps = (state) => ({ ...state.survey })
 
-export default connect(mapStateToProps, { selectDoseDuration, selectImprovement, updateInputElaborate })(TabHowMuch)
+export default connect(mapStateToProps, { selectDoseDuration, selectImprovement, updateInputElaborate, updateValidationError })(TabHowMuch)
 

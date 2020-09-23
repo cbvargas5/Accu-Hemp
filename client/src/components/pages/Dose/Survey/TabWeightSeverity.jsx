@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity } from '../../../../actions/survey'
+import { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity, updateValidationError } from '../../../../actions/survey'
 
 class TabWeightSeverity extends Component {
   constructor(props) {
@@ -11,20 +11,26 @@ class TabWeightSeverity extends Component {
     this.props.getSeveritiesForSurvey()
   }
   handleChange = (e) => {
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
     this.props.updateInputWeight({inputWeight: e.target.value})
   }
   handleSelection = (e) => {
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
     this.props.selectSurveySeverity({selectedSeverity: e.target.name})
   }
   render() {
     return (
       <section className="tab severity-tab survey-severity">
-        <div>
-          <p className="instructions">What is your weight in lbs:*</p>
+        <div className={this.props.validationError ? "highlight-error" : ""}>
+          <p className="instructions required-field">What is your weight in lbs:</p>
           <input onChange={this.handleChange} type="number" name="weight" id="weight"/>
         </div>
-        <div>
-          <p className="instructions">Select the severity of your condition:*</p>
+        <div className={this.props.validationError ? "highlight-error" : ""}>
+          <p className="instructions required-field">Select the severity of your condition:</p>
           <ul>
             {this.props.severities.map(({ severity, id }) => (
               <li key={id}>
@@ -40,4 +46,4 @@ class TabWeightSeverity extends Component {
 
 const mapStateToProps = (state) => ({...state.survey})
 
-export default connect(mapStateToProps, { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity })(TabWeightSeverity)
+export default connect(mapStateToProps, { getSeveritiesForSurvey, updateInputWeight, selectSurveySeverity, updateValidationError })(TabWeightSeverity)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import { verifySurvey } from '../../../../actions/survey'
+import { verifySurvey, updateValidationError } from '../../../../actions/survey'
 import ButtonCard from '../../../cards/ButtonCard.jsx'
 import axios from 'axios'
 
@@ -10,7 +10,10 @@ class TabSubmit extends Component {
     super(props)
   }
   handleSelection = (e) => {
-    const { name } = e.target 
+    const { name } = e.target
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    } 
     this.props.verifySurvey({selectedVerification: name})
   }
   handleSubmit = (e) => {
@@ -37,7 +40,7 @@ class TabSubmit extends Component {
     return (
       <section className="tab survey-submit-tab">
         <div>
-          <p className="instructions">Please verify that you understand this survey is anonymous and that you give us permission to collect and use the information you have filled out in this survey.*</p>
+          <p className="instructions required-field">Please verify that you understand this survey is anonymous and that you give us permission to collect and use the information you have filled out in this survey.</p>
           <ul>
             <li>
               <input onClick={this.handleSelection} name="Yes" type="button" value={'Yes, I understand and agree to these statements.'}/>
@@ -47,7 +50,7 @@ class TabSubmit extends Component {
             </li>
           </ul>
         </div>
-        <div style={this.props.selectedVerification === 'No' ? {display: "block"} : {display: "none"}}>
+        <div className={this.props.selectedVerification === 'No' ? "" : "hide"}>
           <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
           <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
         </div>
@@ -65,4 +68,4 @@ class TabSubmit extends Component {
 
 const mapStateToProps = (state) => ({ ...state.survey })
 
-export default connect(mapStateToProps, { verifySurvey })(TabSubmit)
+export default connect(mapStateToProps, { verifySurvey, updateValidationError })(TabSubmit)
