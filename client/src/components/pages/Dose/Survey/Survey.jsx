@@ -23,25 +23,56 @@ class Survey extends Component {
       this.props.updateValidationError({validationError: false})
     }
   }
-  // parseInputs = () => {
-  //   const { step, selectedCondition, updateValidationError, severityId } = this.props
-  //   switch(step) {
-  //     case 1:
-  //       if (!selectedCondition) {
-  //         updateValidationError({validationError: true})
-  //         return true
-  //       }
-  //       break;
-  //       case 2:
-  //         if (!severityId) {
-  //           updateValidationError({validationError: true})
-  //           return true
-  //         }
-  //         break;
-  //     default:
-  //       return false;
-  //   }
-  // }
+  parseInputs = () => {
+    const { 
+      step, 
+      updateValidationError,
+      selectedCondition, 
+      inputWeight, 
+      selectedSeverity, 
+      selectedDose, 
+      selectedProfessionalHelp, 
+      selectedOtherMedication, 
+      selectedDoseDuration, 
+      selectedImprovement,
+      selectedVerification
+      } = this.props
+
+    switch(step) {
+      case 1:
+        if (!selectedCondition) {
+          updateValidationError({validationError: true})
+          return true
+        }
+        break;
+        case 2:
+          if (!inputWeight || !selectedSeverity) {
+            updateValidationError({validationError: true})
+            return true
+          }
+          break;
+        case 3:
+          if (!selectedDose || !selectedProfessionalHelp || !selectedOtherMedication) {
+            updateValidationError({validationError: true})
+            return true
+          }
+          break;
+        case 4:
+          if (!selectedDoseDuration || !selectedImprovement) {
+            updateValidationError({validationError: true})
+            return true
+          }
+          break;
+        case 5:
+          if (!selectedVerification) {
+            updateValidationError({validationError: true})
+            return true
+          }
+          break;
+      default:
+        return false;
+    }
+  }
   onNext = () => {
     const { step } = this.props
     const isThereAnError = this.parseInputs()
