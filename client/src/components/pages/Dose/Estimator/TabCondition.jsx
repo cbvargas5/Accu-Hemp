@@ -20,7 +20,7 @@ export class TabCondition extends Component {
   render() {
     return (
       <section className={`tab ${this.props.validationError ? "highlight-error" : ""} condition-tab`}>
-        <p className="instructions">Select a Condition:*</p>
+        <p className="instructions required-field">Select a Condition:</p>
         <ul>
           {this.props.conditions
             .map(({ condition }, index) => (
