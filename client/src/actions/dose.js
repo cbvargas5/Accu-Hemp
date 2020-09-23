@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, GET_SEVERITIES, UPDATE_INPUT_EMAIL, SELECT_SEVERITY, GET_DOSE } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, GET_SEVERITIES, UPDATE_INPUT_EMAIL, SELECT_SEVERITY, GET_DOSE, UPDATE_VALIDATION_ERR } from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditions = () => (dispatch, getState) => {
@@ -38,5 +38,10 @@ export const selectSeverity = (payload) => ({
 
 export const updateEmail = (payload) => ({
     type: UPDATE_INPUT_EMAIL,
+    payload
+})
+
+export const updateValidationError = (payload) => ({
+    type: UPDATE_VALIDATION_ERR,
     payload
 })
