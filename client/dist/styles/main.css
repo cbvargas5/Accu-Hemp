@@ -184,6 +184,8 @@ p {
 
 input {
   border-style: solid; }
+  input:focus {
+    outline: none; }
 
 header {
   align-items: center;
@@ -451,6 +453,13 @@ footer .footer-end-wrapper {
     display: block;
     color: #aaa;
     font-size: .8rem; }
+  .results-tab .email-results-section .email-results input {
+    background-color: #f9f9f9;
+    color: #6396b3;
+    padding: 10px;
+    border: solid 3px #cde6d6;
+    border-radius: 10px;
+    width: 15rem; }
 
 /*
   PRODUCT PAGES
