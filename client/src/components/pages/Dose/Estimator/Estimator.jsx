@@ -18,19 +18,29 @@ class Estimator extends Component {
   }
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+    if (this.props.validationError) {
+      this.props.updateValidationError()
+    }
   }
-  parseInputs() {
-    const { step } = this.props
+  parseInputs = () => {
+    const { step, selectedCondition, updateValidationError, validationError } = this.props
     switch(step) {
       case 1:
+        if (!selectedCondition) {
+          updateValidationError({validationError: true})
+          return true
+        }
+        break;
       case 2:
       default:
-        break;
+        return false;
     }
   }
   onNext = () => {
-    const { step } = this.props
-    if (step < 3) {
+    const { step, validationError } = this.props
+    const isThereAnError = this.parseInputs()
+    console.log('err: ',  validationError)
+    if (step < 3 && !isThereAnError) {
       this.props.updateSteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
     }
