@@ -1,4 +1,20 @@
-import { GET_CONDITIONS, GET_SEVERITIES, UPDATE_SURVEY_STEPS, UPDATE_OTHER_MEDICATION_INPUT, SELECT_CONDITION, SELECT_SEVERITY, INPUT_WEIGHT, SELECT_PROFESSIONAL_HELP, SELECT_DOSE, SELECT_OTHER_MEDICATION, SELECT_DOSE_DURATION, SELECT_IMPROVEMENT, INPUT_ELABORATE, VERIFY_SURVEY } from '../constants/action-types'
+import {
+    GET_CONDITIONS,
+    GET_SEVERITIES,
+    UPDATE_SURVEY_STEPS,
+    UPDATE_OTHER_MEDICATION_INPUT,
+    SELECT_CONDITION,
+    SELECT_SEVERITY,
+    INPUT_WEIGHT,
+    SELECT_PROFESSIONAL_HELP,
+    SELECT_DOSE,
+    SELECT_OTHER_MEDICATION,
+    SELECT_DOSE_DURATION,
+    SELECT_IMPROVEMENT,
+    INPUT_ELABORATE,
+    VERIFY_SURVEY,
+    UPDATE_VALIDATION_ERR
+} from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditionsForSurvey = () => (dispatch, getState) => {
@@ -74,5 +90,10 @@ export const updateInputElaborate = (payload) => ({
 
 export const verifySurvey = (payload) => ({
     type: VERIFY_SURVEY,
+    payload
+})
+
+export const updateValidationError = (payload) => ({
+    type: UPDATE_VALIDATION_ERR,
     payload
 })
