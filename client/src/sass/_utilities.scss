@@ -108,6 +108,10 @@
 
 .error-msg {
     color: $err-text;
+    font-weight: 700;
+    border-top: $err-text;
+    border-bottom: $err-text;
+    padding: 1rem 0;
 }
 
 .highlight-error {

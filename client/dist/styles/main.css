@@ -105,7 +105,11 @@ h6 {
     color: #63b380; }
 
 .error-msg {
-  color: #790000; }
+  color: #790000;
+  font-weight: 700;
+  border-top: #790000;
+  border-bottom: #790000;
+  padding: 1rem 0; }
 
 .highlight-error {
   background-color: #fff7f7; }
