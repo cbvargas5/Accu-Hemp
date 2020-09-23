@@ -4,17 +4,19 @@ import { Button } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom';
 import { updateSteps } from '../../../../actions/dose'
 
-
 import ProgressTracker from '../../../ProgressTracker.jsx'
 import TabCondition from './TabCondition.jsx'
 import TabSeverity from './TabSeverity.jsx'
 import TabResults from './TabResults.jsx'
+import SubmissionError from '../../../SubmissionError.jsx';
 
 
 class Estimator extends Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+      error: true
+    }
   }
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
@@ -46,6 +48,13 @@ class Estimator extends Component {
     return (
       <section className="estimator-wrapper big-card">
         <ProgressTracker title="Dose Estimator" currStep={step} lastStep={3}/>
+        {
+          this.state.error
+          ?
+          <SubmissionError />
+          :
+          ""
+        }
         <Switch>
           <Route path={`${URL}/1`} exact component={TabCondition} />
           <Route path={`${URL}/2`} exact component={TabSeverity} />

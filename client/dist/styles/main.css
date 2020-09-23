@@ -107,8 +107,8 @@ h6 {
 .error-msg {
   color: #790000;
   font-weight: 700;
-  border-top: #790000;
-  border-bottom: #790000;
+  border-top: solid 2px #790000;
+  border-bottom: solid 2px #790000;
   padding: 1rem 0; }
 
 .highlight-error {

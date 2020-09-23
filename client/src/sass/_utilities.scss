@@ -109,8 +109,8 @@
 .error-msg {
     color: $err-text;
     font-weight: 700;
-    border-top: $err-text;
-    border-bottom: $err-text;
+    border-top: solid 2px $err-text;
+    border-bottom: solid 2px $err-text;
     padding: 1rem 0;
 }
 
