@@ -1,15 +1,36 @@
 import React, { Component } from 'react'
 
-import { Modal } from 'react-bootstrap'
+import { Modal, Button } from 'react-bootstrap'
 
 
-export default class Modal extends Component {
+export default class CustomModal extends Component {
   render() {
     return (
       <div>
-        <h2>Modal time!</h2>
-        
-        <p>Modal code</p>
+      <Button variant="primary" onClick={handleShow}>
+        Launch static backdrop modal
+      </Button>
+
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          I will not close if you click outside me. Don't even try to press
+          escape key.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary">Understood</Button>
+        </Modal.Footer>
+      </Modal>
       </div>
     )
   }

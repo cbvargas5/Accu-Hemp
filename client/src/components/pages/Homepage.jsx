@@ -1,6 +1,7 @@
 import React from 'react';
 import IconCard from '../cards/IconCard.jsx';
 import Carousel from '../Carousel.jsx'
+import Modal from '../Modal.jsx';
 
 class Homepage extends React.Component {
   constructor(props) {
