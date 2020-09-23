@@ -32,8 +32,14 @@ export default class CustomModal extends Component {
         backdrop="static"
         keyboard={false}
       >
+          <div className="modal-banner">
+            User Agreement
+          </div>
         <Modal.Header>
-          <Modal.Title><span>Welcome to AccuHemp™!</span><br/>In order to access Accu-Hemp.com you must verify your age and agree to our User Agreement.</Modal.Title>
+          <Modal.Title>
+            <h3>Welcome to AccuHemp™!</h3>
+            <p>In order to access Accu-Hemp.com you must verify your age and agree to our User Agreement.</p>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p>By clicking “I Agree” you have read, understand, and agree to all of the following:</p>
@@ -47,12 +53,14 @@ export default class CustomModal extends Component {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={this.handleClose}>
-            I Agree
-          </Button>
-          <Button variant="primary" onClick={this.handleClose}>
-            Disagree
-          </Button>
+          <div>
+            <Button variant="primary" className="tab-btn" onClick={this.handleClose}>
+              I Agree
+            </Button>
+            <Button variant="primary" className="tab-btn" onClick={this.handleClose}>
+              Disagree
+            </Button>
+          </div>
         </Modal.Footer>
       </Modal>
       </div>

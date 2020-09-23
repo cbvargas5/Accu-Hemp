@@ -191,6 +191,28 @@ input {
   input:focus {
     outline: none; }
 
+.modal-content .modal-banner {
+  background-color: #C81F2C;
+  color: #fff; }
+
+.modal-content .modal-title p {
+  line-height: 1rem;
+  font-size: 1.25rem; }
+
+.modal-content .modal-body p,
+.modal-content .modal-body li {
+  text-align: left; }
+
+.modal-content .modal-body p {
+  color: #63b380; }
+
+.modal-content .modal-body li {
+  color: #6396b3; }
+
+.modal-content .modal-footer {
+  display: flex;
+  justify-content: center; }
+
 header {
   align-items: center;
   display: flex;

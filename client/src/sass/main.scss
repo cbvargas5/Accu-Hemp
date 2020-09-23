@@ -45,6 +45,38 @@
             }
         }
         
+        /////////////
+        /// MODAL ///
+        /////////////
+        .modal-content {
+            .modal-banner {
+                background-color: #C81F2C;
+                color: #fff;
+            }
+            .modal-title {
+                p {
+                    line-height: 1rem;
+                    font-size: 1.25rem;
+                }
+            }
+            .modal-body {
+                p,
+                li {
+                    text-align: left;
+                }
+                p {
+                    color: $primary-color;
+                }
+                li {
+                    color: $secondary-color;
+                }
+            }
+            .modal-footer {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        
         //////////////
         /// HEADER ///
         //////////////
