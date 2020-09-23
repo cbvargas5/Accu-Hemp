@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { getDose, updateEmail } from '../../../../actions/dose'
+import { Button } from 'react-bootstrap'
 
 
 export class TabResults extends Component {
@@ -57,7 +58,7 @@ export class TabResults extends Component {
               <label className="question">Do you want your results emailed to you?</label>
               <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
               <input onChange={this.handleChange} type="email" name="email" id="email"/>
-              <button type="submit">Email my Results!</button>
+              <Button className={`tab-btn ${this.props.userEmail.includes("@") ? "" : "hide"}`} type="submit">Email my Results!</Button>
             </form>
           </section>
         </section>
