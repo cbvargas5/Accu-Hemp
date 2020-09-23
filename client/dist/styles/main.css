@@ -104,6 +104,12 @@ h6 {
     background-color: #fff;
     color: #63b380; }
 
+.error-msg {
+  color: #790000; }
+
+.highlight-error {
+  background-color: #fff7f7; }
+
 .product-card {
   text-align: center;
   max-width: 14.5rem;

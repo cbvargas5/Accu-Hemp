@@ -106,6 +106,14 @@
     }
 }
 
+.error-msg {
+    color: $err-text;
+}
+
+.highlight-error {
+    background-color: $err-background;
+}
+
 .product-card {
     text-align: center;
     max-width: 14.5rem;
