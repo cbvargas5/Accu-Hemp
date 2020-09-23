@@ -10,6 +10,7 @@ class Homepage extends React.Component {
   render() {
    return (
     <section className="homepage-mid-sec">
+      <Modal />
         <div className="opening-msgs">
           <h3>Why is using CBD Hemp Oil so <span>complicated?</span></h3>
           <h2>AccuHemp can make it easy:</h2>
