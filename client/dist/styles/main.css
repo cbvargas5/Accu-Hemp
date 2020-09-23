@@ -61,7 +61,8 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  margin-top: 1rem; }
   .tab .instructions {
     font-size: 1.25rem; }
   .tab ul {

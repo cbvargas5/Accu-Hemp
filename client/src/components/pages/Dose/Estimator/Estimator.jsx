@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import { Switch, Route } from 'react-router-dom';
-import { updateSteps } from '../../../../actions/dose'
+import { updateSteps, updateValidationError } from '../../../../actions/dose'
 
 import ProgressTracker from '../../../ProgressTracker.jsx'
 import TabCondition from './TabCondition.jsx'
@@ -14,12 +14,19 @@ import SubmissionError from '../../../SubmissionError.jsx';
 class Estimator extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      error: true
-    }
+
   }
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
+  }
+  parseInputs() {
+    const { step } = this.props
+    switch(step) {
+      case 1:
+      case 2:
+      default:
+        break;
+    }
   }
   onNext = () => {
     const { step } = this.props
@@ -27,7 +34,6 @@ class Estimator extends Component {
       this.props.updateSteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
     }
-
   }
   onPrevious = () => {
     const { step } = this.props
@@ -44,12 +50,12 @@ class Estimator extends Component {
   
   render() {
     const { url: URL } = this.props.match
-    const { step } = this.props 
+    const { step, validationError } = this.props 
     return (
       <section className="estimator-wrapper big-card">
         <ProgressTracker title="Dose Estimator" currStep={step} lastStep={3}/>
         {
-          this.state.error
+          validationError
           ?
           <SubmissionError />
           :
@@ -71,4 +77,4 @@ class Estimator extends Component {
 
 const mapStateToProps = (state) => ({ ...state.estimator })
 
-export default connect(mapStateToProps, { updateSteps })(Estimator)
+export default connect(mapStateToProps, { updateSteps, updateValidationError })(Estimator)
