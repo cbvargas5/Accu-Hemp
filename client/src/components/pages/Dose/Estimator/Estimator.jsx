@@ -19,7 +19,7 @@ class Estimator extends Component {
   componentDidMount() {
     this.props.history.push(`${this.props.match.url}/${this.props.step}`)
     if (this.props.validationError) {
-      this.props.updateValidationError()
+      this.props.updateValidationError({validationError: false})
     }
   }
   parseInputs = () => {

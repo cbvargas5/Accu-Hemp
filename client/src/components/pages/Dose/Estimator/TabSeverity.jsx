@@ -18,7 +18,7 @@ export class TabSeverity extends Component {
   }
   render() {
     return (
-      <section className="tab severity-tab">
+      <section className={`tab ${this.props.validationError ? "highlight-error" : ""} severity-tab`}>
         <p className="instructions">Select the severity of your condition:*</p>
         <ul>
           {this.props.severities.map(({ severity, id }) => (
