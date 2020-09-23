@@ -23,7 +23,7 @@ class Estimator extends Component {
     }
   }
   parseInputs = () => {
-    const { step, selectedCondition, updateValidationError, validationError } = this.props
+    const { step, selectedCondition, updateValidationError, severityId } = this.props
     switch(step) {
       case 1:
         if (!selectedCondition) {
@@ -31,15 +31,19 @@ class Estimator extends Component {
           return true
         }
         break;
-      case 2:
+        case 2:
+          if (!severityId) {
+            updateValidationError({validationError: true})
+            return true
+          }
+          break;
       default:
         return false;
     }
   }
   onNext = () => {
-    const { step, validationError } = this.props
+    const { step } = this.props
     const isThereAnError = this.parseInputs()
-    console.log('err: ',  validationError)
     if (step < 3 && !isThereAnError) {
       this.props.updateSteps({step: step + 1})
       this.props.history.push(`${this.props.match.url}/${step + 1}`)
