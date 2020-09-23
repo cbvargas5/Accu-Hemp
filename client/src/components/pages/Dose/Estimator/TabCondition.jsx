@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { getConditions, selectCondition } from '../../../../actions/dose'
+import { getConditions, selectCondition, updateValidationError } from '../../../../actions/dose'
 
 
 export class TabCondition extends Component {
@@ -13,6 +13,9 @@ export class TabCondition extends Component {
   }
   handleSelection = (e) => {
     this.props.selectCondition({selectedCondition: e.target.value})
+    if (this.props.validationError) {
+      this.props.updateValidationError({validationError: false})
+    }
   }
   render() {
     return (
@@ -34,4 +37,4 @@ export class TabCondition extends Component {
 const mapStateToProps = (state) => ({ ...state.estimator })
 
 
-export default connect(mapStateToProps, { getConditions, selectCondition })(TabCondition)
+export default connect(mapStateToProps, { getConditions, selectCondition, updateValidationError })(TabCondition)
