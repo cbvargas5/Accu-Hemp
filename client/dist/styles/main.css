@@ -62,7 +62,8 @@ h6 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  padding: 1rem 0; }
   .tab .instructions {
     font-size: 1.25rem; }
   .tab ul {
@@ -113,7 +114,12 @@ h6 {
   padding: 1rem 0; }
 
 .highlight-error {
-  background-color: #fff7f7; }
+  background-color: #fff7f7;
+  border-top: solid 1px #790000;
+  border-bottom: solid 1px #790000; }
+  .highlight-error::after {
+    content: "Please fill all required fields.";
+    color: #ccc; }
 
 .product-card {
   text-align: center;

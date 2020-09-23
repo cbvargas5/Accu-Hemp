@@ -55,6 +55,7 @@
     justify-content: center;
     text-align: center;
     margin-top: 1rem;
+    padding: 1rem 0;
     .instructions {
         font-size: 1.25rem;
     }
@@ -117,6 +118,12 @@
 
 .highlight-error {
     background-color: $err-background;
+    border-top: solid 1px $err-text;
+    border-bottom: solid 1px $err-text;
+    &::after {
+        content: "Please fill all required fields.";
+        color: $dim-color;
+    }
 }
 
 .product-card {
