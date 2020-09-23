@@ -519,6 +519,6 @@ footer .footer-end-wrapper {
   .disclaimer-section .main-nav {
     display: none; }
   .homepage-steps,
-  .social-wrapper,
+  .footer-end-wrapper,
   .feature-nav ul {
     flex-direction: column; } }

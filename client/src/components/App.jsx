@@ -33,7 +33,7 @@ class App extends React.Component {
       <Header />
       <main>
           <FeatureNav />
-          <section className="homepage-mid-sec underline-sec">
+          <section className="underline-sec">
             <Switch>
               <Route path="/" exact component={Homepage} />
               <Route path="/dose" exact component={DosePage} />

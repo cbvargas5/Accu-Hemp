@@ -8,7 +8,7 @@ class Homepage extends React.Component {
   }
   render() {
    return (
-    <>
+    <section className="homepage-mid-sec">
         <div className="opening-msgs">
           <h3>Why is using CBD Hemp Oil so <span>complicated?</span></h3>
           <h2>AccuHemp can make it easy:</h2>
@@ -19,7 +19,7 @@ class Homepage extends React.Component {
           <IconCard step="3" icon="fas fa-syringe" title="Measure">Already know your dose and have your product? Take our Measurement Quiz to help you measure your dose specific to your product! Currently we offer measurements for drops and syringes.</IconCard>
         </section>
         <Carousel />
-    </>
+    </section>
     )
   }
 }
