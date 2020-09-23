@@ -106,15 +106,15 @@ class Survey extends Component {
           ""
         }
         <Switch>
-          <Route path={`${URL}/1`} exact render={props => <TabSurveyCondition {...this.props}/>} />
-          <Route path={`${URL}/2`} exact render={props => <TabWeightSeverity {...this.props}/>} />
-          <Route path={`${URL}/3`} exact render={props => <TabExtras {...this.props}/>} />
-          <Route path={`${URL}/4`} exact render={props => <TabHowMuch {...this.props}/>} />
-          <Route path={`${URL}/5`} exact render={props => <TabSubmit {...this.props}/>} />
+          <Route path={`${URL}/1`} exact component={TabSurveyCondition} />
+          <Route path={`${URL}/2`} exact component={TabWeightSeverity} />
+          <Route path={`${URL}/3`} exact component={TabExtras} />
+          <Route path={`${URL}/4`} exact component={TabHowMuch} />
+          <Route path={`${URL}/5`} exact component={TabSubmit} />
         </Switch>
         <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
-          <Button onClick={this.onNext} className="tab-btn">Next</Button>
+          <Button onClick={this.onNext} className={`tab-btn ${this.props.step == 5 ? "hide" : ""}`}>Next</Button>
         </div>
       </section>
     )
