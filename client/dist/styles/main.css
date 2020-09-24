@@ -184,13 +184,17 @@ h6 {
   .btn-card:hover {
     transform: scale(0.95); }
 
-.tab-input {
+.tab-input,
+.tab-text-area {
   background-color: #f9f9f9;
   color: #6396b3;
   padding: 10px;
   border: solid 3px #cde6d6;
   border-radius: 10px;
   width: 15rem; }
+
+.tab-text-area {
+  width: 80%; }
 
 * {
   margin: 0;

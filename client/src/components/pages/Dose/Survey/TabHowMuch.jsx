@@ -57,7 +57,7 @@ class TabHowMuch extends Component {
         </div>
         <div>
           <p className="instructions">If you would like to elaborate on anything, please do so here:</p>
-          <textarea className="tab-input" onChange={this.handleChange} name="elaborate" id="elaborate" cols="50" rows="5"></textarea>
+          <textarea className="tab-text-area" onChange={this.handleChange} name="elaborate" id="elaborate" cols="50" rows="5"></textarea>
         </div>
       </section>
     )

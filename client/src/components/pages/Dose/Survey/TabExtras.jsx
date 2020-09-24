@@ -78,7 +78,7 @@ class TabExtras extends Component {
         </div>
         <div className={this.props.selectedOtherMedication == 'Yes' ? "" : "hide"}>
           <p className="instructions">Other than CBD hemp oil, what else are you taking for your condition?</p>
-          <textarea className="tab-input" onChange={this.handleChange} name="other medications explanation" id="other-medications" cols="50" rows="5"></textarea>
+          <textarea className="tab-text-area" onChange={this.handleChange} name="other medications explanation" id="other-medications" cols="50" rows="5"></textarea>
         </div>
       </section>
     )
