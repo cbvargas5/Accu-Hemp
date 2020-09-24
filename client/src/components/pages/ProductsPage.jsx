@@ -16,7 +16,7 @@ class ProductsPage extends Component {
   }
   render() {
     return (
-      <section>
+      <section className="product-page">
         <section className="mini-header">
           <h1>Products</h1>
         </section>

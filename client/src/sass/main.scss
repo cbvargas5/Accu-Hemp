@@ -473,7 +473,16 @@
         ////////////////////
         /// PRODUCT PAGE ///
         ////////////////////
+        .product-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
         .product-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             ul {
                 display: flex;
                 flex-wrap: wrap;

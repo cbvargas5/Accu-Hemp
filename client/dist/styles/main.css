@@ -130,20 +130,18 @@ h6 {
 
 .product-card {
   text-align: center;
-  max-width: 14.5rem;
-  max-height: 23.5rem;
+  border: solid 2px #6396b3;
+  border-radius: 25px;
   padding: 2rem;
-  border: solid #6396b3 2px; }
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.19);
+  background-color: #fff;
+  max-width: 15rem; }
   .product-card .product-card-link {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    display: block;
+    position: relative; }
     .product-card .product-card-link img {
-      display: block;
-      max-height: 10rem;
-      max-width: 10rem; }
+      border-radius: 25px;
+      width: 100%; }
 
 .btn-card {
   padding: 1rem 0;
@@ -490,9 +488,18 @@ footer .footer-end-wrapper {
 /*
   PRODUCT PAGES
 */
-.product-list ul {
+.product-page {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: column;
+  align-items: center; }
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .product-list ul {
+    display: flex;
+    flex-wrap: wrap; }
 
 .quiz-wrapper .tab ul {
   flex-wrap: nowrap;

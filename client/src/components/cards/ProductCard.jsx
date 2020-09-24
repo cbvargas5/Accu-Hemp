@@ -5,7 +5,9 @@ function ProductCard({ link, brand, description, thumbnail, price }) {
     <>
       <li className="product-card">
         <a className="product-card-link" href={link} target="_blank">
-          <img src={thumbnail} alt="product thumbnail"/>
+          <div>
+            <img src={thumbnail} alt="product thumbnail"/>
+          </div>
           <strong>{brand}:</strong>{description}
           <br/>
           <span className="price">${price}</span>
