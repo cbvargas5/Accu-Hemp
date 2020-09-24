@@ -1,40 +1,41 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+import { setAgreement } from '../actions/index'
 import { Modal, Button } from 'react-bootstrap'
 
 
-export default class CustomModal extends Component {
+class CustomModal extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      show: true
-    }
+
   }
 
-  handleClose = () => {
-    this.setState({show: false})
+  handleAgree = () => {
+    this.props.setAgreement({agreement: true})
   }
   handleShow = () => {
-    this.setState({show: true})
-
+    this.props.setAgreement({agreement: false})
+  }
+  handleDisagree = () => {
+    window.location.replace('https://google.com')
   }
   render() {
-    const { show } = this.state
+    const { agreement } = this.props
     return (
       <div>
-      <Button variant="primary" onClick={this.handleShow}>
+      {/* <Button variant="primary" onClick={this.handleShow}>
         Launch static backdrop modal
-      </Button>
+      </Button> */}
 
       <Modal
-        show={show}
-        onHide={this.handleClose}
+        show={!agreement}
+        onHide={this.handleAgree}
         backdrop="static"
         keyboard={false}
       >
-          <div className="modal-banner">
-            User Agreement
-          </div>
+        <div className="modal-banner">
+          User Agreement
+        </div>
         <Modal.Header>
           <Modal.Title>
             <h3>Welcome to AccuHemp™!</h3>
@@ -54,10 +55,10 @@ export default class CustomModal extends Component {
         </Modal.Body>
         <Modal.Footer>
           <div>
-            <Button variant="primary" className="tab-btn" onClick={this.handleClose}>
+            <Button variant="primary" className="tab-btn" onClick={this.handleAgree}>
               I Agree
             </Button>
-            <Button variant="primary" className="tab-btn" onClick={this.handleClose}>
+            <Button variant="primary" className="tab-btn" onClick={this.handleDisagree}>
               Disagree
             </Button>
           </div>
@@ -67,3 +68,7 @@ export default class CustomModal extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({ ...state.home })
+
+export default connect(mapStateToProps, { setAgreement })(CustomModal)
