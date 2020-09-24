@@ -60,15 +60,15 @@ export default function ContactPage() {
         </div>
         <section className="form-wrapper">
           <form onSubmit={handleSubmit}className="contact-form">
-            <div className="name-field-wrapper">
+            <div className="contact-field-wrapper">
               <label htmlFor="form-name">Name</label>
               <input onChange={handleChange} type="text" name="form-name" id="form-name"/>
             </div>
-            <div className="email-field-wrapper">
+            <div className="contact-field-wrapper">
               <label htmlFor="form-email">Email</label>
               <input onChange={handleChange} type="email" required="required" name="form-email" id="form-email"/>
             </div>
-            <div className="message-field-wrapper">
+            <div className="contact-field-wrapper">
               <label htmlFor="form-message">Message</label>
               <textarea onChange={handleChange} name="form-message" id="form-message" rows="4"></textarea>
             </div>

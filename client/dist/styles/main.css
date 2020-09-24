@@ -646,6 +646,22 @@ footer .footer-end-wrapper {
     margin-top: 1rem;
     padding-top: 1rem; }
 
+.contact-form .contact-field-wrapper {
+  margin: .75rem 0; }
+  .contact-form .contact-field-wrapper label {
+    display: block;
+    text-align: left;
+    padding-bottom: .8rem;
+    color: #63b380; }
+  .contact-form .contact-field-wrapper input,
+  .contact-form .contact-field-wrapper textarea {
+    color: #6396b3;
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    border: solid 1px #6396b3;
+    padding: 5px 14px; }
+
 @media screen and (max-width: 767px) {
   .main-nav {
     display: none; }

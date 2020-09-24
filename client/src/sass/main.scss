@@ -634,6 +634,30 @@
             font-size: 1.25rem;
         }
         
+        ///////////////
+        /// CONTACT ///
+        ///////////////
+        .contact-form {
+            .contact-field-wrapper {
+                margin: .75rem 0;
+                label {
+                    display: block;
+                    text-align: left;
+                    padding-bottom: .8rem;
+                    color: $primary-color;
+                }
+                input,
+                textarea {
+                    color: $secondary-color;
+                    width: 100%;
+                    text-align: left;
+                    background-color: #fff;
+                    border: solid 1px $secondary-color;
+                    padding: 5px 14px;
+                }
+            }
+        }
+        
         //////////////
         /// MOBILE ///
         //////////////
