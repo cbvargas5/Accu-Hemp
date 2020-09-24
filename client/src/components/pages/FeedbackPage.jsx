@@ -49,9 +49,9 @@ class FeedbackPage extends Component {
   render() {
     return (
     <section className="big-card">
-      <StarRating rxAction={this.props.updateOverallRating} starsSubmitted={this.props.overallRating} stateKey={'overallRating'}>1) Overall Rating:*</StarRating>
-      <StarRating rxAction={this.props.updateEaseOfUseRating} starsSubmitted={this.props.easeOfUseRating} stateKey={'easeOfUseRating'}>2) Ease of Use:*</StarRating>
-      <StarRating rxAction={this.props.updateHelpfulness} starsSubmitted={this.props.helpfulnessRating} stateKey={'helpfulnessRating'}>3) Helpfulness:*</StarRating>
+      <StarRating rxAction={this.props.updateOverallRating} starsSubmitted={this.props.overallRating} stateKey={'overallRating'}>1) Overall Rating:</StarRating>
+      <StarRating rxAction={this.props.updateEaseOfUseRating} starsSubmitted={this.props.easeOfUseRating} stateKey={'easeOfUseRating'}>2) Ease of Use:</StarRating>
+      <StarRating rxAction={this.props.updateHelpfulness} starsSubmitted={this.props.helpfulnessRating} stateKey={'helpfulnessRating'}>3) Helpfulness:</StarRating>
       <div>
         <p className="instructions">4) What do you like the most about AccuHemp?</p>
         <textarea className="tab-text-area" onChange={this.handleChange} name="like-most" rows="10" cols="50"/>

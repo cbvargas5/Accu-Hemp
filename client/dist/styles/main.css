@@ -228,7 +228,8 @@ input {
   input:focus {
     outline: none; }
 
-button:focus {
+button:focus,
+textarea:focus {
   outline: none; }
 
 /* Chrome, Safari, Edge, Opera */
@@ -599,26 +600,23 @@ footer .footer-end-wrapper {
     .help-page .accordion p {
       margin: 0; }
 
-.write-rating-container-jr {
+.write-rating-container {
   line-height: normal;
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 283px auto;
   margin: 50px 0px 0px 0px;
   padding-bottom: 44px;
-  border-bottom: 1px solid #F1F1F1; }
+  border-bottom: 1px solid #F1F1F1;
+  color: #6396b3; }
 
-.write-red-asterix-jr {
+.write-star {
   line-height: normal;
   box-sizing: content-box;
-  color: red; }
+  display: inline-block;
+  cursor: pointer; }
 
-.write-star-jr {
-  line-height: normal;
-  box-sizing: content-box;
-  display: inline-block; }
-
-.star-black-filled-jr {
+.star-black-filled {
   line-height: normal;
   box-sizing: content-box;
   display: inline-block;
@@ -627,7 +625,7 @@ footer .footer-end-wrapper {
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   background: gold; }
 
-.star-grey-filled-jr {
+.star-grey-filled {
   line-height: normal;
   box-sizing: content-box;
   display: inline-block;

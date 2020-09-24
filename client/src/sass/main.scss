@@ -45,7 +45,8 @@
             }
         }
         
-        button {
+        button,
+        textarea {
             &:focus {
                 outline: none;
             }
@@ -587,7 +588,7 @@
             }
         }
         
-        .write-rating-container-jr {
+        .write-rating-container {
             line-height: normal;
             box-sizing: content-box;
             display: grid;
@@ -595,21 +596,17 @@
             margin: 50px 0px 0px 0px;
             padding-bottom: 44px;
             border-bottom: 1px solid #F1F1F1;
+            color: $secondary-color;
         }
         
-        .write-red-asterix-jr {
-            line-height: normal;
-            box-sizing: content-box;
-            color: red;
-        }
-        
-        .write-star-jr {
+        .write-star {
             line-height: normal;
             box-sizing: content-box;
             display: inline-block;
+            cursor: pointer;
         }
         
-        .star-black-filled-jr {
+        .star-black-filled {
             line-height: normal;
             box-sizing: content-box;
             display: inline-block;
@@ -619,7 +616,7 @@
             background: gold;
         }
         
-        .star-grey-filled-jr {
+        .star-grey-filled {
             line-height: normal;
             box-sizing: content-box;
             display: inline-block;
