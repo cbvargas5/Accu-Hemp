@@ -9,12 +9,25 @@ import ProductCard from '../cards/ProductCard.jsx'
 class ProductsPage extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      page: 0
+    }
   }
   componentDidMount() {
     this.props.getProducts()
     window.scrollTo(0, 0)
   }
   render() {
+    const { products } = this.props
+    const { page } = this.state
+    const displayedProductsNum = 16
+    const start = page * displayedProductsNum
+    const end = ((page + 1) * displayedProductsNum) - 1
+    const numOfPages = Math.ceil(products.length / displayedProductsNum)
+    const newProducts = products.filter((product, index) => {
+      if(index >= start && index <= end) return product
+    })
+    console.log(newProducts.length, start, end, numOfPages)
     return (
       <section className="product-page">
         <section className="mini-header">
@@ -26,8 +39,9 @@ class ProductsPage extends Component {
           <p><strong>Please note:</strong> We may earn a small commission if you purchase products through the links on our website.</p>
         </section>
         <section className="product-list">
+          {/* I can make an array of arrays */}
           <ul>
-            {this.props.products.map( product => <ProductCard key={product.id} {...product}/> )}
+            {newProducts.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
         </section>
       </section>
