@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateEmail } from '../../../actions/measure'
 import axios from 'axios'
+import { Button } from 'react-bootstrap'
 
 class TabMeasureResults extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class TabMeasureResults extends Component {
           <label className="question">Do you want your results emailed to you?</label>
           <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
           <input className="tab-input" onChange={this.handleChange} type="email" name="email" id="email"/>
-          <button type="submit">Email my Results!</button>
+          <Button className={`tab-btn ${this.props.userEmail.includes("@") ? "" : "hide"}`} type="submit">Email my Results!</Button>
         </form>
       </section>
     </section>
