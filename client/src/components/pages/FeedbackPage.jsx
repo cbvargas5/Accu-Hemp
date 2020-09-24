@@ -5,28 +5,28 @@ import StarRating from '../StarRating.jsx'
 import { Button } from 'react-bootstrap'
 import axios from 'axios'
 
-
 class FeedbackPage extends Component {
   constructor(props) {
     super(props)
+
   }
   handleChange = (e) => {
     const { name, value } = e.target
     switch(name) {
       case 'like-most':
           this.props.updateInputMostLike({inputMostLike: value})
-        return
+        break;
       case 'like-least':
         this.props.updateInputLeastLike({inputLeastLike: value})
-        return
+        break;
       case 'suggestions':
           this.props.updateInputSuggestions({inputSuggestions: value})
-        return
+        break;
       case 'optional-email':
         this.props.updateInputFeedbackEmail({inputFeedbackEmail: value})
-        return
+        break;
       default:
-        return
+        break;
     }
   }
   handleSubmit = (e) => {
@@ -69,16 +69,16 @@ class FeedbackPage extends Component {
         <span className="instructions-help-txt">Please provide us with your email if you would like to receive a response from us.</span>
         <input className="tab-input" onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
-      <div className="tabNav-btns">
-          <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
-      </div>
-      {/* {
-        this.props.selectedVerification === "Yes"
+
+      {
+        this.props.overallRating && this.props.easeOfUseRating && this.props.helpfulnessRating
         ?
-        <Button onClick={this.handleSubmit} type="submit">Send</Button>
+        <div className="tabNav-btns">
+          <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
+        </div>
         :
         ""
-      } */}
+      }
     </section>
     )
   }
