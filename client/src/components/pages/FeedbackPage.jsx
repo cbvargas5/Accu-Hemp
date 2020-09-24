@@ -54,20 +54,20 @@ class FeedbackPage extends Component {
       <StarRating rxAction={this.props.updateHelpfulness} starsSubmitted={this.props.helpfulnessRating} stateKey={'helpfulnessRating'}>3) Helpfulness:*</StarRating>
       <div>
         <p className="instructions">4) What do you like the most about AccuHemp?</p>
-        <textarea onChange={this.handleChange} name="like-most" rows="10" cols="50"/>
+        <textarea className="tab-text-area" onChange={this.handleChange} name="like-most" rows="10" cols="50"/>
       </div>
       <div>
         <p className="instructions">5) What do you like the least about AccuHemp?</p>
-        <textarea onChange={this.handleChange} name="like-least" rows="10" cols="50"/>
+        <textarea className="tab-text-area" onChange={this.handleChange} name="like-least" rows="10" cols="50"/>
       </div>
       <div>
         <p className="instructions">6) Do you have any suggestions to help us improve?</p>
-        <textarea onChange={this.handleChange} name="suggestions" rows="10" cols="50"/>
+        <textarea className="tab-text-area" onChange={this.handleChange} name="suggestions" rows="10" cols="50"/>
       </div>
       <div>
         <p className="instructions">Your Email: (Optional)</p>
         <span>Please provide us with your email if you would like to receive a response from us.</span>
-        <input onChange={this.handleChange} type="email" name="optional-email"/>
+        <input className="tab-input" onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
       <div className="tabNav-btns">
           <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
