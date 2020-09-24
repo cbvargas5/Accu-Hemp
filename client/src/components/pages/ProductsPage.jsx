@@ -17,6 +17,10 @@ class ProductsPage extends Component {
     this.props.getProducts()
     window.scrollTo(0, 0)
   }
+  onNavClick = (num) => {
+    window.scrollTo(0, 0)
+    this.setState({page: num})
+  }
   render() {
     const { products } = this.props
     const { page } = this.state
@@ -46,7 +50,7 @@ class ProductsPage extends Component {
             {displayedProducts.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
           <ul>
-            {numOfPagesArray.map((num, index) => <li key={index}><button className="product-nav-btn">{num}</button></li>)}
+            {numOfPagesArray.map((num, index) => <li key={index}><button onClick={() => this.onNavClick(index)} className="product-nav-btn">{num}</button></li>)}
           </ul>
         </section>
       </section>
