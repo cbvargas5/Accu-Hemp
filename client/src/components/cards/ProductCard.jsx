@@ -9,7 +9,7 @@ function ProductCard({ link, brand, description, thumbnail, price }) {
             <img src={thumbnail} alt="product thumbnail"/>
           </div>
           <div className="product-details">
-            <span className="product-card-desc"><strong>{brand}:</strong>{description}</span>
+            <span className="product-card-desc"><strong>{brand}: </strong>{description}</span>
             <span className="price">${price}</span>
           </div>
         </a>

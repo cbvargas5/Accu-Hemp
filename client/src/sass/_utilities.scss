@@ -161,10 +161,10 @@
         span {
             display: block;
             color: $primary-color;
+            strong {
+                font-size: 1.15rem;
+            }
         }
-        // .product-card-desc,
-        // .price {
-        // }
         .price {
             margin: 1rem 0;
             color: $secondary-color;

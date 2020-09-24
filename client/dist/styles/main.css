@@ -151,6 +151,8 @@ h6 {
     .product-card .product-card-link span {
       display: block;
       color: #63b380; }
+      .product-card .product-card-link span strong {
+        font-size: 1.15rem; }
     .product-card .product-card-link .price {
       margin: 1rem 0;
       color: #6396b3; }
