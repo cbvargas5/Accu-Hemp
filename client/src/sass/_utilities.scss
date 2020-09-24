@@ -141,16 +141,18 @@
     text-align: center;
     border: solid 2px $secondary-color;
     border-radius: 25px;
-    padding: 2rem;
+    padding: .5rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.19);
     background-color: #fff;
     max-width: 15rem;
+    margin: 1rem;
+    height: 25.5rem;
     .product-card-link {
         display: block;
         position: relative;
         img {
             border-radius: 25px;
-            // max-height: 10rem;
+            max-height: 15rem;
             width: 100%;
         }
     }
