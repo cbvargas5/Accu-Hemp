@@ -20,14 +20,16 @@ class ProductsPage extends Component {
   render() {
     const { products } = this.props
     const { page } = this.state
-    const displayedProductsNum = 16
-    const start = page * displayedProductsNum
-    const end = ((page + 1) * displayedProductsNum) - 1
-    const numOfPages = Math.ceil(products.length / displayedProductsNum)
-    const newProducts = products.filter((product, index) => {
+    const numOfdisplayedProducts = 16
+    const start = page * numOfdisplayedProducts
+    const end = ((page + 1) * numOfdisplayedProducts) - 1
+    const numOfPages = Math.ceil(products.length / numOfdisplayedProducts)
+    const numOfPagesArray = Array.from({length: numOfPages}, (x, i) => i + 1)
+    const displayedProducts = products.filter((product, index) => {
       if(index >= start && index <= end) return product
     })
-    console.log(newProducts.length, start, end, numOfPages)
+
+    console.log(displayedProducts.length, start, end, numOfPages, numOfPagesArray)
     return (
       <section className="product-page">
         <section className="mini-header">
@@ -41,7 +43,10 @@ class ProductsPage extends Component {
         <section className="product-list">
           {/* I can make an array of arrays */}
           <ul>
-            {newProducts.map( product => <ProductCard key={product.id} {...product}/> )}
+            {displayedProducts.map( product => <ProductCard key={product.id} {...product}/> )}
+          </ul>
+          <ul>
+            {numOfPagesArray.map((num, index) => <li key={index}><button className="product-nav-btn">{num}</button></li>)}
           </ul>
         </section>
       </section>
