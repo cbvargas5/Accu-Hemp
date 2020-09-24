@@ -205,6 +205,9 @@ input {
   input:focus {
     outline: none; }
 
+button:focus {
+  outline: none; }
+
 .modal-content .modal-banner {
   background-color: #C81F2C;
   color: #fff; }
@@ -517,6 +520,22 @@ footer .footer-end-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
+  .product-list .product-btns li {
+    margin: 0 1rem;
+    font-size: 2rem; }
+  .product-list .product-btns .product-nav-btn {
+    font-weight: 700;
+    padding: .25rem;
+    background: none;
+    border: none;
+    color: #63b380;
+    transition: .2s; }
+    .product-list .product-btns .product-nav-btn:hover {
+      color: #6396b3; }
+  .product-list .product-btns .active {
+    color: #6396b3;
+    cursor: not-allowed;
+    pointer-events: none; }
 
 .quiz-wrapper .tab ul {
   flex-wrap: nowrap;

@@ -51,8 +51,8 @@ class ProductsPage extends Component {
           <ul>
             {displayedProducts.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
-          <ul>
-            {numOfPagesArray.map((num, index) => <li key={index}><button onClick={() => this.onNavClick(index)} className="product-nav-btn">{num}</button></li>)}
+          <ul className="product-btns">
+            {numOfPagesArray.map((num, index) => <li key={index}><button onClick={() => this.onNavClick(index)} className={`product-nav-btn ${index == page ? "active" : ""}`}>{num}</button></li>)}
           </ul>
         </section>
       </section>

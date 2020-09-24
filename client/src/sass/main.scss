@@ -45,6 +45,12 @@
             }
         }
         
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+        
         /////////////
         /// MODAL ///
         /////////////
@@ -487,6 +493,28 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .product-btns {
+                li {
+                    margin: 0 1rem;
+                    font-size: 2rem;
+                }
+                .product-nav-btn {
+                    font-weight: 700;
+                    padding: .25rem;
+                    background: none;
+                    border: none;
+                    color: $primary-color;
+                    transition: .2s;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+                .active {
+                    color: $secondary-color;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
             }
         }
         
