@@ -638,6 +638,16 @@
         /// CONTACT ///
         ///////////////
         .contact-form {
+            button {
+                background-color: $primary-color;
+                width: 10%;
+                min-width: 4rem;
+                border: none;
+                &:hover,
+                 :active {
+                    background-color: $secondary-color;
+                }
+            }
             .contact-field-wrapper {
                 margin: .75rem 0;
                 label {
@@ -654,8 +664,16 @@
                     background-color: #fff;
                     border: solid 1px $secondary-color;
                     padding: 5px 14px;
+                    border-radius: 3px;
                 }
             }
+        }
+        
+        .feedback-redirect {
+            h3 {
+                font-size: 2.5rem;
+            }
+            margin: 2.5rem 0;
         }
         
         //////////////

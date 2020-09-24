@@ -646,6 +646,15 @@ footer .footer-end-wrapper {
     margin-top: 1rem;
     padding-top: 1rem; }
 
+.contact-form button {
+  background-color: #63b380;
+  width: 10%;
+  min-width: 4rem;
+  border: none; }
+  .contact-form button:hover,
+  .contact-form button :active {
+    background-color: #6396b3; }
+
 .contact-form .contact-field-wrapper {
   margin: .75rem 0; }
   .contact-form .contact-field-wrapper label {
@@ -660,7 +669,13 @@ footer .footer-end-wrapper {
     text-align: left;
     background-color: #fff;
     border: solid 1px #6396b3;
-    padding: 5px 14px; }
+    padding: 5px 14px;
+    border-radius: 3px; }
+
+.feedback-redirect {
+  margin: 2.5rem 0; }
+  .feedback-redirect h3 {
+    font-size: 2.5rem; }
 
 @media screen and (max-width: 767px) {
   .main-nav {

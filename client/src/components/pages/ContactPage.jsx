@@ -58,7 +58,7 @@ export default function ContactPage() {
         <div className="mini-header">
           <h1>Contact Us</h1>
         </div>
-        <section className="form-wrapper">
+        <section className="form-wrapper underline-sec">
           <form onSubmit={handleSubmit}className="contact-form">
             <div className="contact-field-wrapper">
               <label htmlFor="form-name">Name</label>
