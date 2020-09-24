@@ -27,7 +27,7 @@ class TabWeightSeverity extends Component {
       <section className="tab severity-tab survey-severity">
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">What is your weight in lbs:</p>
-          <input onChange={this.handleChange} type="number" name="weight" id="weight"/>
+          <input className="tab-input" onChange={this.handleChange} type="number" name="weight" id="weight"/>
         </div>
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">Select the severity of your condition:</p>

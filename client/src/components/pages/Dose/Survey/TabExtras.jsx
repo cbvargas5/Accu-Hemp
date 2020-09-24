@@ -45,7 +45,7 @@ class TabExtras extends Component {
       <section className="tab extras-tab">
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">How many milligrams of CBD do you take for your condition?</p>
-          <input onChange={this.handleChange} type="number" name="dose" id="dose"/>
+          <input className="tab-input" onChange={this.handleChange} type="number" name="dose" id="dose"/>
         </div>
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">Did a licensed medical professional help you figure out your dose of CBD?</p>
@@ -78,7 +78,7 @@ class TabExtras extends Component {
         </div>
         <div className={this.props.selectedOtherMedication == 'Yes' ? "" : "hide"}>
           <p className="instructions">Other than CBD hemp oil, what else are you taking for your condition?</p>
-          <textarea onChange={this.handleChange} name="other medications explanation" id="other-medications" cols="50" rows="5"></textarea>
+          <textarea className="tab-input" onChange={this.handleChange} name="other medications explanation" id="other-medications" cols="50" rows="5"></textarea>
         </div>
       </section>
     )

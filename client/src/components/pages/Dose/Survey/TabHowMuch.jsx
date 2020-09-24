@@ -36,7 +36,7 @@ class TabHowMuch extends Component {
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">How long have you been using this dose of CBD?</p>
           <span>Please provide estimated number of days, weeks, months, years</span>
-          <input onChange={this.handleChange} type="text" name="duration" id="duration"/>
+          <input className="tab-input" onChange={this.handleChange} type="text" name="duration" id="duration"/>
         </div>
         <div className={this.props.validationError ? "highlight-error" : ""}>
           <p className="instructions required-field">How much has this dose of CBD improved your symptoms or condition?</p>
@@ -57,7 +57,7 @@ class TabHowMuch extends Component {
         </div>
         <div>
           <p className="instructions">If you would like to elaborate on anything, please do so here:</p>
-          <textarea onChange={this.handleChange} name="elaborate" id="elaborate" cols="50" rows="5"></textarea>
+          <textarea className="tab-input" onChange={this.handleChange} name="elaborate" id="elaborate" cols="50" rows="5"></textarea>
         </div>
       </section>
     )

@@ -81,6 +81,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
         li {
             margin: .25rem .7rem;
             input,
@@ -201,4 +202,13 @@
     &:hover {
         transform: scale(.95);
     }
+}
+
+.tab-input {
+    background-color: #f9f9f9;
+    color: $secondary-color;
+    padding: 10px;
+    border: solid 3px #cde6d6;
+    border-radius: 10px;
+    width: 15rem;
 }

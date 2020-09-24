@@ -24,7 +24,7 @@ class TabDoseInput extends Component {
         </div>
         <div className="dose-input-wrapper">
           <ul>
-            <input onChange={this.handleChange} type="number"/>
+            <input  className="tab-input" onChange={this.handleChange} type="number"/>
           </ul>
         </div>
       </div>

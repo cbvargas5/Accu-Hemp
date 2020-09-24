@@ -83,7 +83,8 @@ h6 {
   .tab ul {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .tab ul li {
       margin: .25rem .7rem; }
       .tab ul li input,
@@ -182,6 +183,14 @@ h6 {
       margin-left: 1rem; }
   .btn-card:hover {
     transform: scale(0.95); }
+
+.tab-input {
+  background-color: #f9f9f9;
+  color: #6396b3;
+  padding: 10px;
+  border: solid 3px #cde6d6;
+  border-radius: 10px;
+  width: 15rem; }
 
 * {
   margin: 0;
@@ -516,13 +525,6 @@ footer .footer-end-wrapper {
     display: block;
     color: #aaa;
     font-size: .8rem; }
-  .results-tab .email-results-section .email-results input {
-    background-color: #f9f9f9;
-    color: #6396b3;
-    padding: 10px;
-    border: solid 3px #cde6d6;
-    border-radius: 10px;
-    width: 15rem; }
 
 /*
   PRODUCT PAGES

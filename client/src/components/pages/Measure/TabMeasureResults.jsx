@@ -56,7 +56,7 @@ class TabMeasureResults extends Component {
         <form onSubmit={this.handleSubmit} action="" className="email-results">
           <label className="question">Do you want your results emailed to you?</label>
           <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
-          <input onChange={this.handleChange} type="email" name="email" id="email"/>
+          <input className="tab-input" onChange={this.handleChange} type="email" name="email" id="email"/>
           <button type="submit">Email my Results!</button>
         </form>
       </section>
