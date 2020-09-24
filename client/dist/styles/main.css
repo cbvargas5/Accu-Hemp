@@ -75,6 +75,9 @@ h6 {
   text-align: center;
   margin-top: 1rem;
   padding: 1rem 0; }
+  .tab div {
+    margin: .5rem 0;
+    padding: .5rem 0; }
   .tab .instructions {
     font-size: 1.25rem; }
   .tab ul {
@@ -214,6 +217,16 @@ input {
 
 button:focus {
   outline: none; }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield; }
 
 .modal-content .modal-banner {
   background-color: #C81F2C;
