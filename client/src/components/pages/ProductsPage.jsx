@@ -24,16 +24,18 @@ class ProductsPage extends Component {
   render() {
     const { products } = this.props
     const { page } = this.state
-    const numOfdisplayedProducts = 16
+
+    const numOfdisplayedProducts = 12
     const start = page * numOfdisplayedProducts
     const end = ((page + 1) * numOfdisplayedProducts) - 1
+
     const numOfPages = Math.ceil(products.length / numOfdisplayedProducts)
     const numOfPagesArray = Array.from({length: numOfPages}, (x, i) => i + 1)
+
     const displayedProducts = products.filter((product, index) => {
       if(index >= start && index <= end) return product
     })
 
-    console.log(displayedProducts.length, start, end, numOfPages, numOfPagesArray)
     return (
       <section className="product-page">
         <section className="mini-header">
@@ -45,7 +47,7 @@ class ProductsPage extends Component {
           <p><strong>Please note:</strong> We may earn a small commission if you purchase products through the links on our website.</p>
         </section>
         <section className="product-list">
-          {/* I can make an array of arrays */}
+          <span>Showing {start+1}-{start + displayedProducts.length} of {products.length} results</span>
           <ul>
             {displayedProducts.map( product => <ProductCard key={product.id} {...product}/> )}
           </ul>
