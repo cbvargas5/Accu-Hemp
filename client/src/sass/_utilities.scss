@@ -3,12 +3,15 @@
 .mini-header {
     border-bottom: $secondary-color solid .15rem;
     padding: 1.4rem 0;
+    margin: 1rem 0;
 }
 
 .mini-header {
     h1 {
         font-size: 3.25rem;
     }
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .hide {
@@ -177,6 +180,8 @@
 
 .btn-card {
     padding: 1rem 0;
+    margin: 1.5rem;
+    transition: .4s;
     a {
         border: solid $secondary-color 2px;
         border-radius: 1.25rem;
@@ -185,8 +190,10 @@
         line-height: 4rem;
         padding: 2.5rem 2rem;
         box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.3);
+        i {
+            margin-left: 1rem;
+        }
     }
-    transition: .4s;
     &:hover {
         transform: scale(.95);
     }

@@ -19,10 +19,14 @@ h6 {
 .underline-sec,
 .mini-header {
   border-bottom: #6396b3 solid 0.15rem;
-  padding: 1.4rem 0; }
+  padding: 1.4rem 0;
+  margin: 1rem 0; }
 
-.mini-header h1 {
-  font-size: 3.25rem; }
+.mini-header {
+  margin-top: 0;
+  padding-top: 0; }
+  .mini-header h1 {
+    font-size: 3.25rem; }
 
 .hide {
   display: none; }
@@ -161,6 +165,7 @@ h6 {
 
 .btn-card {
   padding: 1rem 0;
+  margin: 1.5rem;
   transition: .4s; }
   .btn-card a {
     border: solid #6396b3 2px;
@@ -170,6 +175,8 @@ h6 {
     line-height: 4rem;
     padding: 2.5rem 2rem;
     box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.3); }
+    .btn-card a i {
+      margin-left: 1rem; }
   .btn-card:hover {
     transform: scale(0.95); }
 
@@ -509,8 +516,7 @@ footer .footer-end-wrapper {
 */
 .product-page {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
 
 .product-list {
   display: flex;
