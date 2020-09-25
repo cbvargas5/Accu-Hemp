@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
-
+import ButtonCard from '../cards/ButtonCard.jsx';
 
 
 class MeasurePage extends Component {
@@ -19,8 +19,8 @@ class MeasurePage extends Component {
           <h2>Measure Your Dose of CBD:</h2>
           <p><strong>Warning:</strong> this quiz is meant only for CBD hemp oil in liquid form. It only works for CBD products that are measured by mL, not by grams.</p>
         </section>
-        <section className="big-card">
-          <Link to="/measure/measure-quiz">Quiz</Link>
+        <section>
+          <ButtonCard link="/measure/measure-quiz" icon="fas fa-syringe">Measure Quiz</ButtonCard>
         </section>
       </section>
     )
