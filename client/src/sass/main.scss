@@ -7,6 +7,7 @@
             box-sizing: border-box;
             line-height: 1.5rem;
             text-align: center;
+            text-size-adjust: 100%;
         }
         
         html {
@@ -675,6 +676,44 @@
                 font-size: 2.5rem;
             }
             margin: 2.5rem 0;
+        }
+        
+        /////////////////
+        /// COMPANIES ///
+        /////////////////
+        .companies-page {
+            .basic-requirements,
+            .option-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .basic-requirements {
+                font-size: 2rem;
+            }
+            li {
+                text-align: left;
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+                span {
+                    color: $secondary-color;
+                }
+            }
+            i {
+                margin-right: 1rem;
+                color: $primary-color;
+            }
+            .right-to-deny {
+                padding: 1.5rem 0;
+                .right-to-deny-list {
+                    padding: 0 1rem;
+                    li {
+                        font-size: 1.25rem;
+                        margin-bottom: 1rem;
+                        color: $secondary-color;
+                    }
+                }
+            }
         }
         
         //////////////

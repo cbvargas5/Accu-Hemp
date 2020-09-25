@@ -12,15 +12,15 @@ export default function CompaniesPage() {
         <div className="requirements-list">
           <ul>
             <li>
-              <i className="fas fa-check-circle"></i>
+              <i className="fas fa-check"></i>
               <span>Be a legitimate company</span>
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>
+              <i className="fas fa-check"></i>
               <span>Have products containing CBD from legal hemp</span>
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>
+              <i className="fas fa-check"></i>
               <span>Have products in dropper bottles or syringes</span>
             </li>
           </ul>
