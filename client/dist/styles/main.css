@@ -604,7 +604,8 @@ footer .footer-end-wrapper {
     .help-page .accordion .card-body {
       background-color: rgba(239, 239, 239, 0.43); }
     .help-page .accordion p {
-      margin: 0; }
+      margin: 0;
+      text-align: left; }
 
 .write-rating-container {
   line-height: normal;
