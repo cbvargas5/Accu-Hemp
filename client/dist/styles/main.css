@@ -708,6 +708,30 @@ footer .footer-end-wrapper {
       margin-bottom: 1rem;
       color: #6396b3; }
 
+.legal-page h3 {
+  font-size: 2rem;
+  margin: 2rem 0; }
+
+.legal-page ul li {
+  margin: 1rem .5rem;
+  text-align: left;
+  color: #6396b3;
+  font-size: 1.1rem; }
+
+.legal-page p {
+  color: #63b380;
+  font-size: 1.3rem;
+  margin: 1.5rem; }
+
+.legal-page .legal-redirect ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .legal-page .legal-redirect ul li {
+    display: block; }
+    .legal-page .legal-redirect ul li .btn-card {
+      margin: 0; }
+
 @media screen and (max-width: 767px) {
   .main-nav {
     display: none; }

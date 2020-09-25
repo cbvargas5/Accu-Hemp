@@ -716,6 +716,42 @@
             }
         }
         
+        /////////////
+        /// LEGAL ///
+        /////////////
+        .legal-page {
+            h3 {
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+            ul {
+                li {
+                    margin: 1rem .5rem;
+                    text-align: left;
+                    color: $secondary-color;
+                    font-size: 1.1rem;
+                }
+            }
+            p {
+                color: $primary-color;
+                font-size: 1.3rem;
+                margin: 1.5rem;
+            }
+            .legal-redirect {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    li {
+                        display: block;
+                        .btn-card {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
         //////////////
         /// MOBILE ///
         //////////////
