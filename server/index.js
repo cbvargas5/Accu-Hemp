@@ -21,5 +21,4 @@ app.use('/dosages', DOSAGES)
 app.use('/products', PRODUCTS)
 app.use('/mail', MAIL)
 
-
 app.listen(port, err => err ? console.error('SERVER ERROR: ', err) : console.log(`Server is listening on port ${port}`))
