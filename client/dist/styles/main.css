@@ -265,7 +265,8 @@ input[type=number] {
   color: #63b380; }
 
 .modal-content .modal-body li {
-  color: #6396b3; }
+  color: #6396b3;
+  padding: .25rem 0; }
 
 .modal-content .modal-footer {
   display: flex;
@@ -570,14 +571,16 @@ footer .footer-end-wrapper {
     cursor: not-allowed;
     pointer-events: none; }
 
-.quiz-wrapper .tab ul {
-  flex-wrap: nowrap;
-  flex-direction: column; }
-  .quiz-wrapper .tab ul li {
-    width: 100%; }
-    .quiz-wrapper .tab ul li input {
-      height: 3rem;
+.quiz-wrapper .tab {
+  width: 100%; }
+  .quiz-wrapper .tab ul {
+    flex-wrap: nowrap;
+    flex-direction: column; }
+    .quiz-wrapper .tab ul li {
       width: 100%; }
+      .quiz-wrapper .tab ul li input {
+        height: 3rem;
+        width: 100%; }
 
 /*
   OTHER PAGES
