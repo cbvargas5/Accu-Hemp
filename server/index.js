@@ -7,9 +7,7 @@ require('dotenv').config();
 const DOSAGES = require('./routers/dosages')
 const PRODUCTS = require('./routers/products')
 const MAIL = require('./routers/mail')
-    // const main = require('./testEmail')
 
-// main().catch(console.error);
 
 // app.use(helmet());
 app.use(express.json());
