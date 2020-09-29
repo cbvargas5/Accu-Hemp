@@ -7,10 +7,10 @@
         "dev-start": "nodemon server/index.js",
         "dev-build": "webpack -w",
         "dev-sass": "node-sass -w client/src/sass/ -o client/dist/styles --recursive",
-        "start-server": "node server/index.js",
+        "start": "node server/index.js",
         "build": "webpack",
         "sass": "node-sass client/src/sass/ -o client/dist/styles",
-        "start": "npm run build && npm run start-server"
+        "quick-start": "npm run build && npm run start-server"
     },
     "repository": {
         "type": "git",
