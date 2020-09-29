@@ -12,11 +12,14 @@ const MAIL = require('./routers/mail')
 // app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 //routes
 app.use('/dosages', DOSAGES)
 app.use('/products', PRODUCTS)
 app.use('/mail', MAIL)
-
+    // app.use('*', express.static(path.join(__dirname, '../client/dist')));
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+})
 app.listen(port, err => err ? console.error('SERVER ERROR: ', err) : console.log(`Server is listening on port ${port}`))
