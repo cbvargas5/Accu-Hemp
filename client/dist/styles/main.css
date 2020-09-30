@@ -736,6 +736,10 @@ footer .footer-end-wrapper {
       margin: 0; }
 
 @media screen and (max-width: 767px) {
+  header .header-logo-wrapper {
+    padding: 0 1rem; }
+    header .header-logo-wrapper img {
+      max-width: 15rem; }
   .main-nav {
     display: none; }
   .disclaimer-section .main-nav {

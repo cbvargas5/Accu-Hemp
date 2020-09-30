@@ -758,6 +758,15 @@
         /// MOBILE ///
         //////////////
         @media screen and (max-width: 767px) {
+            //Header
+            header {
+                .header-logo-wrapper {
+                    padding: 0 1rem;
+                    img {
+                        max-width: 15rem;
+                    }
+                }
+            }
             // Navigation
             .main-nav {
                 display: none;
