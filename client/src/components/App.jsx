@@ -27,8 +27,6 @@ class App extends React.Component {
   render() {
    return (
     <>
-    {/* React dnd for Drag and Drop */}
-    {/* Might change */}
       <BrowserRouter>
       <Header />
       <main>
@@ -57,7 +55,6 @@ class App extends React.Component {
       </main>
       <Footer />
       </BrowserRouter>
-
     </>
     )
   }
