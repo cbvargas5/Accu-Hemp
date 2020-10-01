@@ -18,7 +18,6 @@ app.use('/', express.static(path.join(__dirname, '../client/dist')));
 app.use('/dosages', DOSAGES)
 app.use('/products', PRODUCTS)
 app.use('/mail', MAIL)
-    // app.use('*', express.static(path.join(__dirname, '../client/dist')));
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 })
