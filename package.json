@@ -10,7 +10,7 @@
         "start": "node server/index.js",
         "build": "webpack",
         "sass": "node-sass client/src/sass/ -o client/dist/styles",
-        "quick-start": "npm run build && npm run start-server"
+        "quick-start": "npm run sass && npm run build && npm run start"
     },
     "repository": {
         "type": "git",
