@@ -35,7 +35,6 @@ export default function ContactPage() {
     }
   }, [])
 
-  console.log(wasFormSubmitted)
   const handleSubmit = e => {
     e.preventDefault()
     const dataToSend = {
