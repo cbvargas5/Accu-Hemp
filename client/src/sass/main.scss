@@ -794,8 +794,10 @@
                 .hamburger-container {
                     display: inline-block;
                     cursor: pointer;
-                    position: absolute;
                     padding: 0 2rem;
+                    &.change {
+                        position: absolute;
+                    }
                 }
                 // Hamburger Nav
                 .main-nav {
@@ -821,6 +823,10 @@
                         a {
                             font-size: 1.75rem;
                         }
+                    }
+                    transform: translateX(-100%);
+                    &.open {
+                        transform: translateX(0);
                     }
                 }
             }

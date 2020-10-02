@@ -762,8 +762,9 @@ footer .footer-end-wrapper {
   header .hamburger-container {
     display: inline-block;
     cursor: pointer;
-    position: absolute;
     padding: 0 2rem; }
+    header .hamburger-container.change {
+      position: absolute; }
   header .main-nav {
     background: #EFFFFA;
     height: 100vh;
@@ -775,7 +776,8 @@ footer .footer-end-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    transform: translateX(-100%); }
     header .main-nav ul {
       display: flex;
       flex-direction: column;
@@ -785,6 +787,8 @@ footer .footer-end-wrapper {
         padding: 1.5rem .5rem; }
       header .main-nav ul a {
         font-size: 1.75rem; }
+    header .main-nav.open {
+      transform: translateX(0); }
   .main-nav {
     display: none; }
   .disclaimer-section .main-nav {
