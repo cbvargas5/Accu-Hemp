@@ -806,7 +806,7 @@
                     padding: 2rem;
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: -100%;
                     transition: transform 0.3s ease-in-out;
                     width: 100%;
                     display: flex;
@@ -824,9 +824,9 @@
                             font-size: 1.75rem;
                         }
                     }
-                    transform: translateX(-100%);
+                    transform: translateX(0);
                     &.open {
-                        transform: translateX(0);
+                        transform: translateX(100%);
                     }
                 }
             }
