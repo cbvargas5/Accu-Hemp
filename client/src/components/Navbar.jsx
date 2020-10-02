@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 
 // const pages = [['Home', '/path'], ['Companies', '/path'], ['Help', '/path'], ['Contact Us', '/path'], ['Legal', '/path'], ['Accugentix', '/path']]
 
-const Navbar = (props) => (
+const Navbar = ({ open, click, handleClick }) => {
+    console.log(open, click)
+  return (
   <nav className="main-nav">
     <ul>
       <li><Link to="/">Home</Link></li>
@@ -14,6 +16,6 @@ const Navbar = (props) => (
       <li><a href="https://accugentix.com/" target="_blank">Accugentix</a></li>
     </ul>
   </nav>
-);
+)};
 
 export default Navbar
