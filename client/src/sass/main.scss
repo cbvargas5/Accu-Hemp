@@ -769,6 +769,7 @@
                         max-width: 15rem;
                     }
                 }
+                // Hamburger
                 .bar1,
                 .bar2,
                 .bar3 {
@@ -793,7 +794,34 @@
                 .hamburger-container {
                     display: inline-block;
                     cursor: pointer;
+                    position: absolute;
                     padding: 0 2rem;
+                }
+                // Hamburger Nav
+                .main-nav {
+                    background: #EFFFFA;
+                    height: 100vh;
+                    padding: 2rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: transform 0.3s ease-in-out;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        justify-content: center;
+                        li {
+                            padding: 1.5rem .5rem;
+                        }
+                        a {
+                            font-size: 1.75rem;
+                        }
+                    }
                 }
             }
             // Navigation
