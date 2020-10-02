@@ -283,6 +283,8 @@ header {
     header .header-logo-wrapper .image-wrapper {
       display: flex;
       width: 100%; }
+  header .hamburger-container {
+    display: none; }
   header .main-nav {
     padding: 0 3rem; }
   header .image-wrapper {
@@ -740,6 +742,25 @@ footer .footer-end-wrapper {
     padding: 0 1rem; }
     header .header-logo-wrapper img {
       max-width: 15rem; }
+  header .bar1,
+  header .bar2,
+  header .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s; }
+  header .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px); }
+  header .change .bar2 {
+    opacity: 0; }
+  header .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px); }
+  header .hamburger-container {
+    display: inline-block;
+    cursor: pointer; }
   .main-nav {
     display: none; }
   .disclaimer-section .main-nav {
