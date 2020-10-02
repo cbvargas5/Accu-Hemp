@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Header = (props) => {
   const [click, setClick] = useState('')
-  const handleClick = (e) => {
+  const [open, setOpen] = useState('')
+
+  const handleClick = () => {
     click ? setClick('') : setClick('change')
+    open ? setOpen('') : setOpen('open')
   }
   return (
     <header>
@@ -14,7 +17,7 @@ const Header = (props) => {
           <Link to="/"><img src="./images/main-logo.png" alt="Accu-Hemp Main Logo"/></Link>
         </div>
       </div>
-      <Navbar />
+      <Navbar open setOpen click setClick/>
       <div className={`hamburger-container ${click}`} onClick={handleClick}>
         <div className="bar1"></div>
         <div className="bar2"></div>
