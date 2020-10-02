@@ -760,7 +760,7 @@
         //////////////
         /// MOBILE ///
         //////////////
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 815px) {
             //Header
             header {
                 .header-logo-wrapper {
@@ -774,7 +774,7 @@
                 .bar3 {
                     width: 35px;
                     height: 5px;
-                    background-color: #333;
+                    background-color: $secondary-color;
                     margin: 6px 0;
                     transition: 0.4s;
                 }
@@ -792,6 +792,7 @@
                 .hamburger-container {
                     display: inline-block;
                     cursor: pointer;
+                    padding: 0 2rem;
                 }
             }
             // Navigation
