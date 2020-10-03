@@ -11,8 +11,8 @@ router
     .get(dosages.getConditions);
 
 router
-    .route('/:condition')
-    .get(dosages.getByCondition);
+    .route('/:id')
+    .get(dosages.getSeverity);
 
 router
     .route('/dose/:id')
