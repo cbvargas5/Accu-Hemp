@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, GET_SEVERITIES, SELECT_SEVERITY, GET_DOSE, UPDATE_INPUT_EMAIL, UPDATE_VALIDATION_ERR } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, SELECT_CONDITION_ID, GET_SEVERITIES, SELECT_SEVERITY, GET_DOSE, UPDATE_INPUT_EMAIL, UPDATE_VALIDATION_ERR } from '../constants/action-types'
 
 
 const initialState = {
@@ -7,6 +7,7 @@ const initialState = {
     severities: [],
     dose: [],
     selectedCondition: '',
+    conditionId: '',
     severityId: '',
     userEmail: '',
     validationError: false
@@ -28,6 +29,9 @@ export default (state = initialState, { type, payload }) => {
             return {...state, ...payload }
 
         case SELECT_CONDITION:
+            return {...state, ...payload }
+
+        case SELECT_CONDITION_ID:
             return {...state, ...payload }
 
         case SELECT_SEVERITY:

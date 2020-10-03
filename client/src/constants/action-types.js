@@ -6,6 +6,7 @@ export const GET_SEVERITIES = 'GET_SEVERITIES' // also used in: [Survey]
 export const GET_DOSE = 'GET_DOSE'
 export const UPDATE_STEPS = 'UPDATE_STEPS'
 export const SELECT_CONDITION = 'SELECT_CONDITION' // also used in: [Survey]
+export const SELECT_CONDITION_ID = 'SELECT_CONDITION_ID' // also used in: [Survey]
 export const SELECT_SEVERITY = 'SELECT_SEVERITY' // also used in: [Survey]
 export const UPDATE_VALIDATION_ERR = 'UPDATE_VALIDATION_ERR' // also used in: [ALL]
 
