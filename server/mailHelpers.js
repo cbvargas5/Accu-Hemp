@@ -9,8 +9,8 @@ const survey = require('./email_templates/survey')
 const addProducts = require('./email_templates/addProducts')
 const advertising = require('./email_templates/advertising')
 
-const ACCU_HEMP_EMAIL = process.env.EMAIL_USER
-const ACCU_HEMP_PASSWORD = process.env.EMAIL_PW
+const { ACCU_HEMP_EMAIL } = process.env
+const { ACCU_HEMP_PASSWORD } = process.env
 
 const getEmailData = (clientData, dataType) => {
     let data = null
@@ -102,7 +102,9 @@ const getEmailData = (clientData, dataType) => {
 module.exports = {
     sendEmail: (clientData, type) => {
         const smtpTransport = mailer.createTransport({
-            host: 'smtp-mail.outlook.com',
+            host: 'accugentix.com',
+            secure: true,
+            port: 465,
             auth: {
                 user: ACCU_HEMP_EMAIL,
                 pass: ACCU_HEMP_PASSWORD,
