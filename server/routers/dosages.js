@@ -11,11 +11,11 @@ router
     .get(dosages.getConditions);
 
 router
-    .route('/:condition')
-    .get(dosages.getByCondition);
-
-router
     .route('/dose/:id')
     .get(dosages.getDose)
+
+router
+    .route('/:condition(*)')
+    .get(dosages.getByCondition);
 
 module.exports = router
