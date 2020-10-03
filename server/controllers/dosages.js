@@ -12,8 +12,8 @@ module.exports = {
             .then(data => res.status(200).send(data.rows))
             .catch(err => res.status(400).send(err))
     },
-    getSeverity: (req, res) => {
-        dosages.getSeverity(req.params.id)
+    getByCondition: (req, res) => {
+        dosages.getByCondition(req.params.condition)
             .then(data => res.status(200).send(data.rows))
             .catch(err => res.status(400).send(err.message))
     },

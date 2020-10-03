@@ -1,4 +1,4 @@
-import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, SELECT_CONDITION_ID, GET_SEVERITIES, UPDATE_INPUT_EMAIL, SELECT_SEVERITY, GET_DOSE, UPDATE_VALIDATION_ERR } from '../constants/action-types'
+import { GET_CONDITIONS, UPDATE_STEPS, SELECT_CONDITION, GET_SEVERITIES, UPDATE_INPUT_EMAIL, SELECT_SEVERITY, GET_DOSE, UPDATE_VALIDATION_ERR } from '../constants/action-types'
 import axios from 'axios'
 
 export const getConditions = () => (dispatch, getState) => {
@@ -9,7 +9,7 @@ export const getConditions = () => (dispatch, getState) => {
 
 export const getSeverities = () => (dispatch, getState) => {
     const { estimator } = getState()
-    return axios.get(`/dosages/${estimator.conditionId}`)
+    return axios.get(`/dosages/${estimator.selectedCondition}`)
         .then(({ data }) => dispatch({ type: GET_SEVERITIES, payload: data }))
         .catch(err => console.log('failed to get severities. ERROR: ', err))
 }
@@ -28,11 +28,6 @@ export const updateSteps = (payload) => ({
 
 export const selectCondition = (payload) => ({
     type: SELECT_CONDITION,
-    payload
-})
-
-export const selectConditionId = (payload) => ({
-    type: SELECT_CONDITION_ID,
     payload
 })
 
