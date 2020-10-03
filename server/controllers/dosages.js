@@ -13,7 +13,13 @@ module.exports = {
             .catch(err => res.status(400).send(err))
     },
     getByCondition: (req, res) => {
-        dosages.getByCondition(req.params.condition)
+        const { condition } = req.params
+        let parsedCondition = ''
+        for (let char of condition) {
+            if (char == '\'') parsedCondition += '\''
+            parsedCondition += char
+        }
+        dosages.getByCondition(parsedCondition)
             .then(data => res.status(200).send(data.rows))
             .catch(err => res.status(400).send(err.message))
     },
