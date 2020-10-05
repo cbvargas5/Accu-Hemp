@@ -65,8 +65,18 @@ export class TabResults extends Component {
             <form onSubmit={this.handleSubmit} className="email-results">
               <label className="question">Do you want your results emailed to you?</label>
               <label className="pls-enter">Please enter your email below to have your results emailed to you.</label>
-              <input className="tab-input" onChange={this.handleChange} type="email" name="email" id="email"/>
-              <Button className={`tab-btn ${this.props.userEmail.includes("@") ? "" : "hide"}`} type="submit">Email my Results!</Button>
+              {
+                this.state.wasFormSubmitted
+                ?
+                <div className="success">
+                  <p><span>Thank You!</span> Your form has been sent</p>
+                </div>
+                :
+                <>
+                <input className="tab-input" onChange={this.handleChange} type="email" name="email" id="email"/>
+                <Button className={`tab-btn ${this.props.userEmail.includes("@") ? "" : "hide"}`} type="submit">Email my Results!</Button>
+                </>
+              }
             </form>
           </section>
         </section>
