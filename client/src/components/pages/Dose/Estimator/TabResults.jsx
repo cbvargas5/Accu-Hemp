@@ -9,9 +9,15 @@ import { Button } from 'react-bootstrap'
 export class TabResults extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      wasFormSubmitted: false 
+    }
   }
   componentDidMount() {
       this.props.getDose()
+      if (this.state.wasFormSubmitted) {
+        this.setState({wasFormSubmitted: false})
+      }
   }
   handleSubmit = (e) => {
     e.preventDefault()
@@ -23,7 +29,9 @@ export class TabResults extends Component {
     }
     axios.post('/mail/estimator', dataToSend)
       .then(() => {
-        // insert form submit boolean
+        if (!this.state.wasFormSubmitted) {
+          this.setState({wasFormSubmitted: true})
+        }
       })
       .catch((err) => console.error(err))
   }
