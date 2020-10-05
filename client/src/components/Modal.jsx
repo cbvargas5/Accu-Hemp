@@ -7,7 +7,6 @@ import { Modal, Button } from 'react-bootstrap'
 class CustomModal extends Component {
   constructor(props) {
     super(props)
-
   }
 
   handleAgree = () => {
@@ -23,10 +22,6 @@ class CustomModal extends Component {
     const { agreement } = this.props
     return (
       <div>
-      {/* <Button variant="primary" onClick={this.handleShow}>
-        Launch static backdrop modal
-      </Button> */}
-
       <Modal
         show={!agreement}
         onHide={this.handleAgree}
