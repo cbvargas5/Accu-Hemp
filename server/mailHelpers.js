@@ -1,5 +1,4 @@
 const mailer = require('nodemailer');
-const test = require('./email_templates/test')
 const estimator = require('./email_templates/estimator')
 const dropper = require('./email_templates/dropper')
 const syringe = require('./email_templates/syringe')
@@ -16,15 +15,6 @@ const getEmailData = (clientData, dataType) => {
     let data = null
     const { to } = clientData
     switch (dataType) {
-        case "test":
-            data = {
-                from: `Test Person <${ACCU_HEMP_EMAIL}>`,
-                to,
-                subject: `Howdy again ${name}.  This is a test`,
-                html: test()
-            }
-            break;
-
         case "estimator":
             data = {
                 from: `Accu-Hemp.com <${ACCU_HEMP_EMAIL}>`,
