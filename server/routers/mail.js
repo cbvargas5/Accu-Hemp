@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { sendTestEmail, sendEstimatorResults, sendDropperResults, sendSyringeResults, sendContactFormToAH, sendFeedbackFormToAH, sendSurveyToAH, sendAddProductsRequestToAH, sendAdvertisingRequestToAH } = require('../controllers/mail')
+const { sendEstimatorResults, sendDropperResults, sendSyringeResults, sendContactFormToAH, sendFeedbackFormToAH, sendSurveyToAH, sendAddProductsRequestToAH, sendAdvertisingRequestToAH } = require('../controllers/mail')
 
-
-router
-    .route('/')
-    .post(sendTestEmail);
 
 router
     .route('/estimator')
