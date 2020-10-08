@@ -1,12 +1,6 @@
 const { sendEmail } = require('../mailHelpers')
 
 module.exports = {
-    sendTestEmail: (req, res) => {
-        sendEmail(req.body, 'test')
-            .then(() => res.status(200).end())
-            .catch(err => res.status(400).send(err))
-    },
-
     sendEstimatorResults: (req, res) => {
         sendEmail(req.body, 'estimator')
             .then(() => res.status(200).end())
