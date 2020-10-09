@@ -40,7 +40,9 @@ class TabSubmit extends Component {
     }
     axios.post('/mail/survey', dataToSend)
       .then(() => {
-        // insert form submit boolean
+        if (!this.state.wasFormSubmitted) {
+          this.setState({wasFormSubmitted: true})
+        }
       })
       .catch((err) => console.error(err))
   }
