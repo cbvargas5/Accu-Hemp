@@ -8,7 +8,15 @@ import axios from 'axios'
 class TabSubmit extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      wasFormSubmitted: false 
+    }
   }
+  componentDidMount() {
+    if (this.state.wasFormSubmitted) {
+      this.setState({wasFormSubmitted: false})
+    }
+}
   handleSelection = (e) => {
     const { name } = e.target
     if (this.props.validationError) {
