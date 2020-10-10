@@ -67,7 +67,7 @@ class TabSubmit extends Component {
         {
           this.props.selectedVerification === "Yes"
           ?
-          <Button onClick={this.handleSubmit} type="submit">Send</Button>
+          <Button className="tab-btn" onClick={this.handleSubmit} type="submit">Send</Button>
           :
           ""
         }
