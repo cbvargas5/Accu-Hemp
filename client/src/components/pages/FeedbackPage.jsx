@@ -79,18 +79,16 @@ class FeedbackPage extends Component {
         <span className="instructions-help-txt">Please provide us with your email if you would like to receive a response from us.</span>
         <input className="tab-input" onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
-      <div className={`tabNav-btns ${areAllRequiredFieldsSelected ? "" : "hide"}`}>
-        <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
-      </div>
-
-      {
-        
+      {        
+        this.state.wasFormSubmitted
         ?
-        <div className="tabNav-btns">
-          <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
+        <div className="success">
+          <p><span>Thank You!</span> Your form has been sent</p>
         </div>
         :
-        ""
+        <div className={`tabNav-btns ${areAllRequiredFieldsSelected ? "" : "hide"}`}>
+          <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
+        </div>
       }
     </section>
     )
