@@ -56,6 +56,7 @@ class FeedbackPage extends Component {
       .catch((err) => console.error(err))
   }
   render() {
+    const areAllRequiredFieldsSelected = this.props.overallRating && this.props.easeOfUseRating && this.props.helpfulnessRating
     return (
     <section className="big-card feedback-page">
       <StarRating rxAction={this.props.updateOverallRating} starsSubmitted={this.props.overallRating} stateKey={'overallRating'}>1) Overall Rating:</StarRating>
@@ -78,9 +79,12 @@ class FeedbackPage extends Component {
         <span className="instructions-help-txt">Please provide us with your email if you would like to receive a response from us.</span>
         <input className="tab-input" onChange={this.handleChange} type="email" name="optional-email"/>
       </div>
+      <div className={`tabNav-btns ${areAllRequiredFieldsSelected ? "" : "hide"}`}>
+        <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
+      </div>
 
       {
-        this.props.overallRating && this.props.easeOfUseRating && this.props.helpfulnessRating
+        
         ?
         <div className="tabNav-btns">
           <Button onClick={this.handleSubmit} className="tab-btn">Submit</Button>
