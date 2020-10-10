@@ -7,7 +7,15 @@ import { Button } from 'react-bootstrap'
 class TabMeasureResults extends Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+      wasFormSubmitted: false 
+    }
+  }
+  componentDidMount() {
+    this.props.getDose()
+    if (this.state.wasFormSubmitted) {
+      this.setState({wasFormSubmitted: false})
+    }
   }
   handleSubmit = (e) => {
     e.preventDefault()
