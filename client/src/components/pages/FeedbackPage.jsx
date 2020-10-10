@@ -8,7 +8,14 @@ import axios from 'axios'
 class FeedbackPage extends Component {
   constructor(props) {
     super(props)
-
+    this.state = {
+      wasFormSubmitted: false 
+    }
+  }
+  componentDidMount() {
+    if (this.state.wasFormSubmitted) {
+      this.setState({wasFormSubmitted: false})
+    }
   }
   handleChange = (e) => {
     const { name, value } = e.target
