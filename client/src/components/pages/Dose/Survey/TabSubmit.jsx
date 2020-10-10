@@ -47,32 +47,48 @@ class TabSubmit extends Component {
       .catch((err) => console.error(err))
   }
   render() {
-    return (
-      <section className="tab survey-submit-tab">
-        <div>
-          <p className="instructions required-field">Please verify that you understand this survey is anonymous and that you give us permission to collect and use the information you have filled out in this survey.</p>
-          <ul>
-            <li>
-              <input onClick={this.handleSelection} name="Yes" type="button" value={'Yes, I understand and agree to these statements.'}/>
-            </li>
-            <li>
-              <input onClick={this.handleSelection} name="No" type="button" value={'No'}/>
-            </li>
-          </ul>
-        </div>
-        <div className={this.props.selectedVerification === 'No' ? "" : "hide"}>
-          <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
-          <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
-        </div>
-        {
-          this.props.selectedVerification === "Yes"
-          ?
+    if (this.props.selectedVerification === "Yes") {
+      return (
+        <section className="tab survey-submit-tab">
+          <div>
+            <p className="instructions required-field">Please verify that you understand this survey is anonymous and that you give us permission to collect and use the information you have filled out in this survey.</p>
+            <ul>
+              <li>
+                <input onClick={this.handleSelection} name="Yes" type="button" value={'Yes, I understand and agree to these statements.'}/>
+              </li>
+              <li>
+                <input onClick={this.handleSelection} name="No" type="button" value={'No'}/>
+              </li>
+            </ul>
+          </div>
+          <div className={this.props.selectedVerification === 'No' ? "" : "hide"}>
+            <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
+            <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
+          </div>            
           <Button className="tab-btn" onClick={this.handleSubmit} type="submit">Send</Button>
-          :
-          ""
-        }
-      </section>
-    )
+        </section>
+      )
+    } else {
+        return (
+          <section className="tab survey-submit-tab">
+            <div>
+              <p className="instructions required-field">Please verify that you understand this survey is anonymous and that you give us permission to collect and use the information you have filled out in this survey.</p>
+              <ul>
+                <li>
+                  <input onClick={this.handleSelection} name="Yes" type="button" value={'Yes, I understand and agree to these statements.'}/>
+                </li>
+                <li>
+                  <input onClick={this.handleSelection} name="No" type="button" value={'No'}/>
+                </li>
+              </ul>
+            </div>
+            <div className={this.props.selectedVerification === 'No' ? "" : "hide"}>
+              <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
+              <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
+            </div>            
+          </section>
+        )
+    }
   }
 }
 
