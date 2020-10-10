@@ -64,7 +64,15 @@ class TabSubmit extends Component {
           <p>If you do not agree to the statement above, just click the button "Go Back" and it will take you back to the main page. None of your responses will be saved/submitted.</p>
           <ButtonCard link="/Dose" icon="fas fa-laptop-medical">Go Back to Dose Page</ButtonCard>
         </div>
-        <Button className={`tab-btn ${this.props.selectedVerification === "Yes" ? "" : "hide"}`} onClick={this.handleSubmit} type="submit">Send</Button>
+        {
+          this.state.wasFormSubmitted
+          ?
+          <div className="success">
+            <p><span>Thank You!</span> Your form has been sent</p>
+          </div>
+          :
+          <Button className={`tab-btn ${this.props.selectedVerification === "Yes" ? "" : "hide"}`} onClick={this.handleSubmit} type="submit">Send</Button>
+        }
       </section>
     )
   }
