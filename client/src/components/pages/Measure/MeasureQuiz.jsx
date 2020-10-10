@@ -37,7 +37,6 @@ export class MeasureQuiz extends Component {
       this.props.history.push(`${this.props.match.url}/${1}`)
     } else if (step === 1) {
       this.props.history.push('/measure')
-      //redirect somewhere else
     } else {
       this.props.updateMeasureSteps({step: step - 1})
       this.props.history.push(`${this.props.match.url}/${step - 1}`)
@@ -57,7 +56,7 @@ export class MeasureQuiz extends Component {
         </Switch>
         <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
-          <Button onClick={this.onNext} className="tab-btn">Next</Button>
+          <Button onClick={this.onNext} className={`tab-btn ${this.props.step == 5 ? "hide" : ""}`}>Next</Button>
         </div>
       </section>
     )
