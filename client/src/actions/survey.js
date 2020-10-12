@@ -21,14 +21,14 @@ export const getConditionsForSurvey = () => (dispatch, getState) => {
     const { conditions } = getState().estimator
     conditions.length ?
         dispatch({ type: GET_CONDITIONS, payload: conditions }) :
-        axios.get('/dosages/conditions')
+        axios.get('/api/dosages/conditions')
         .then(({ data }) => dispatch({ type: GET_CONDITIONS, payload: data }))
         .catch(err => console.log('failed to get CONDITIONS. ERROR: ', err))
 }
 
 export const getSeveritiesForSurvey = () => (dispatch, getState) => {
     const { survey } = getState()
-    return axios.get(`/dosages/${survey.selectedCondition}`)
+    return axios.get(`/api/dosages/${survey.selectedCondition}`)
         .then(({ data }) => dispatch({ type: GET_SEVERITIES, payload: data }))
         .catch(err => console.log('failed to get severities. ERROR: ', err))
 }
