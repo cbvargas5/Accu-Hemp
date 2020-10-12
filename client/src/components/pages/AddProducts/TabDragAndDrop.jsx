@@ -32,7 +32,7 @@ export default class TabDragAndDrop extends Component {
       email: '',
       website: ''
     }
-    axios.post('/mail/addproducts', dataToSend)
+    axios.post('/api/mail/addproducts', dataToSend)
   }
   render() {
     return (

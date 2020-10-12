@@ -31,7 +31,7 @@ class TabMeasureResults extends Component {
       dose: this.props.selectedDose
     }
     if (device === 'syringe') {
-      axios.post('/mail/syringe', dataToSend)
+      axios.post('/api/mail/syringe', dataToSend)
         .then(() => {
           if (!this.state.wasFormSubmitted) {
             this.setState({wasFormSubmitted: true})
@@ -39,7 +39,7 @@ class TabMeasureResults extends Component {
         })
         .catch((err) => console.error(err))
       } else if (device === 'dropper') {
-        axios.post('/mail/dropper', dataToSend)
+        axios.post('/api/mail/dropper', dataToSend)
           .then(() => {
             if (!this.state.wasFormSubmitted) {
               this.setState({wasFormSubmitted: true})

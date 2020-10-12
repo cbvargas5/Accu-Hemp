@@ -42,7 +42,7 @@ export default function ContactPage() {
       email,
       message
     }
-    axios.post('/mail/contact', dataToSend)
+    axios.post('/api/mail/contact', dataToSend)
       .then(() => {
         if (!wasFormSubmitted) {
           setWasFormSubmitted(true)

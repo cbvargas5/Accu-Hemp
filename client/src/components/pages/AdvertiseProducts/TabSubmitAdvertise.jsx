@@ -35,7 +35,7 @@ class TabSubmitAdvertise extends Component {
       linkToAffiliateProgram: this.props.inputAffiliateAppLink,
       brandDescription: this.props.inputBrandDesc
     }
-    axios.post('/mail/advertising', dataToSend)
+    axios.post('/api/mail/advertising', dataToSend)
       .then(() => {
         // insert form submit boolean
       })

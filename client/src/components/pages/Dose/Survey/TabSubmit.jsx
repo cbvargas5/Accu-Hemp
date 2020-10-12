@@ -38,7 +38,7 @@ class TabSubmit extends Component {
       doseImprovement: this.props.selectedImprovement,
       elaborate: this.props.inputElaborate
     }
-    axios.post('/mail/survey', dataToSend)
+    axios.post('/api/mail/survey', dataToSend)
       .then(() => {
         if (!this.state.wasFormSubmitted) {
           this.setState({wasFormSubmitted: true})

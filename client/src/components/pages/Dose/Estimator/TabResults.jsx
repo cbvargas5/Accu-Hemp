@@ -27,7 +27,7 @@ export class TabResults extends Component {
       lowerdose,
       upperdose
     }
-    axios.post('/mail/estimator', dataToSend)
+    axios.post('/api/mail/estimator', dataToSend)
       .then(() => {
         if (!this.state.wasFormSubmitted) {
           this.setState({wasFormSubmitted: true})

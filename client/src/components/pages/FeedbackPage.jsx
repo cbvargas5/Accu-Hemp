@@ -47,7 +47,7 @@ class FeedbackPage extends Component {
       suggestions: this.props.inputSuggestions,
       email: this.props.inputFeedbackEmail
     }
-    axios.post('/mail/feedback', dataToSend)
+    axios.post('/api/mail/feedback', dataToSend)
       .then(() => {
         if (!this.state.wasFormSubmitted) {
           this.setState({wasFormSubmitted: true})
