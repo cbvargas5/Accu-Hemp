@@ -6,7 +6,7 @@ export const getProductsForMeasure = () => (dispatch, getState) => {
     const { products } = getState().products
     products.length ?
         dispatch({ type: GET_PRODUCTS, payload: products }) :
-        axios.get('/products')
+        axios.get('/api/products')
         .then(({ data }) => dispatch({ type: GET_PRODUCTS, payload: data }))
         .catch(err => console.log('failed to get PRODUCTS. ERROR: ', err))
 }
