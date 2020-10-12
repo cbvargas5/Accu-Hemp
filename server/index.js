@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 //routes
-app.use('/dosages', DOSAGES)
+app.use('/api/dosages', DOSAGES)
 app.use('/api/products', PRODUCTS)
-app.use('/mail', MAIL)
+app.use('/api/mail', MAIL)
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 })
