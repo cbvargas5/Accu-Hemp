@@ -2,7 +2,7 @@ import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, UPDATE_FILTERED_PRODUCTS, SELECT_DOSE,
 import axios from 'axios'
 
 export const getProducts = () => (dispatch, getState) => {
-    return axios.get('/products')
+    return axios.get('/api/products')
         .then(({ data }) => dispatch({ type: GET_PRODUCTS, payload: data }))
         .catch(err => console.log('failed to get PRODUCTS. ERROR: ', err))
 }
