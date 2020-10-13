@@ -3,9 +3,9 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/cbvargas5/Accu-Hemp)
 ![GitHub contributors](https://img.shields.io/github/contributors/cbvargas5/Accu-Hemp)
 
+Accu-Hemp is an application designed to help CBD Hemp users through the process of dosing, shopping, and measuring CBD Hemp product. Accuhemp by Accugentix
 
-
-Visit the live site now: https://accu-hemp.com
+Visit the live app now: https://accu-hemp.com
 
 ## Video Demo
 
@@ -28,6 +28,10 @@ run command: npm run quick-start
 ## Original Team
 
 Brian Vargas - https://github.com/cbvargas5
+
+## Company
+
+Accugentix - https://accugentix.com/
 
 
 ## Contributing
