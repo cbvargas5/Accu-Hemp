@@ -51,13 +51,13 @@ class TabExtras extends Component {
           <p className="instructions required-field">Did a licensed medical professional help you figure out your dose of CBD?</p>
           <ul>
             <li>
-              <input onClick={this.handleSelection} name="professional" type="button" value={'Yes'}/>
+              <input className={this.props.selectedProfessionalHelp == 'Yes' ? "active" : ""} onClick={this.handleSelection} name="professional" type="button" value={'Yes'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="professional" type="button" value={'No'}/>
+              <input className={this.props.selectedProfessionalHelp == 'No' ? "active" : ""} onClick={this.handleSelection} name="professional" type="button" value={'No'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="professional" type="button" value={'I would prefer not to answer'}/>
+              <input className={this.props.selectedProfessionalHelp == 'I would prefer not to answer' ? "active" : ""} onClick={this.handleSelection} name="professional" type="button" value={'I would prefer not to answer'}/>
             </li>
           </ul>
         </div>
@@ -66,13 +66,13 @@ class TabExtras extends Component {
           <span>i.e. pharmaceuticals, over the counter medications</span>
           <ul>
             <li>
-              <input onClick={this.handleSelection} name="other medications" type="button" value={'Yes'}/>
+              <input className={this.props.selectedOtherMedication == 'Yes' ? "active" : ""} onClick={this.handleSelection} name="other medications" type="button" value={'Yes'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="other medications" type="button" value={'No'}/>
+              <input className={this.props.selectedOtherMedication == 'No' ? "active" : ""} onClick={this.handleSelection} name="other medications" type="button" value={'No'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="other medications" type="button" value={'I would prefer not to answer'}/>
+              <input className={this.props.selectedOtherMedication == 'I would prefer not to answer' ? "active" : ""} onClick={this.handleSelection} name="other medications" type="button" value={'I would prefer not to answer'}/>
             </li>
           </ul>
         </div>
