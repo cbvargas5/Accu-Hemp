@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Option({ children, handleSelection }) {
+export default function Option({ children, handleSelection, active }) {
   return (
     <>
-      <li><input onClick={handleSelection} type="button" value={children}/></li>
+      <li><input className={active} onClick={handleSelection} type="button" value={children}/></li>
     </>
   )
 }
