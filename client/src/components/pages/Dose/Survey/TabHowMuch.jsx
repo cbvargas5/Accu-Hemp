@@ -42,16 +42,16 @@ class TabHowMuch extends Component {
           <p className="instructions required-field">How much has this dose of CBD improved your symptoms or condition?</p>
           <ul>
             <li>
-              <input onClick={this.handleSelection} name="improvement" type="button" value={'0-24%'}/>
+              <input className={this.props.selectedImprovement == '0-24%' ? "active" : ""} onClick={this.handleSelection} name="improvement" type="button" value={'0-24%'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="improvement" type="button" value={'25-49%'}/>
+              <input className={this.props.selectedImprovement == '25-49%' ? "active" : ""} onClick={this.handleSelection} name="improvement" type="button" value={'25-49%'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="improvement" type="button" value={'50-74%'}/>
+              <input className={this.props.selectedImprovement == '50-74%' ? "active" : ""} onClick={this.handleSelection} name="improvement" type="button" value={'50-74%'}/>
             </li>
             <li>
-              <input onClick={this.handleSelection} name="improvement" type="button" value={'75-100%'}/>
+              <input className={this.props.selectedImprovement == '75-100%' ? "active" : ""} onClick={this.handleSelection} name="improvement" type="button" value={'75-100%'}/>
             </li>
           </ul>
         </div>
