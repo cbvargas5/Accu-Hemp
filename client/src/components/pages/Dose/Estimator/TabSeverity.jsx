@@ -23,7 +23,7 @@ export class TabSeverity extends Component {
         <ul>
           {this.props.severities.map(({ severity, id }) => (
             <li key={id}>
-              <button className="severity-btn" onClick={this.handleSelection} name={id}><img name={id} src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt={`${severity} severity`}/>{severity}</button>
+              <button className={this.props.severityId == id ? "active severity-btn" : "severity-btn"} onClick={this.handleSelection} name={id}><img name={id} src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt={`${severity} severity`}/>{severity}</button>
             </li>
           ))}
         </ul>
