@@ -35,7 +35,7 @@ class TabQualities extends Component {
       </div>
       <div className="options-wrapper">
         <ul className="options">
-          {OPTIONS.map((option, index) => <Option handleSelection={this.handleSelection} key={index}>{option}</Option>)}
+          {OPTIONS.map((option, index) => <Option active={this.props.selectedQualities == option ? "active" : ""} handleSelection={this.handleSelection} key={index}>{option}</Option>)}
         </ul>
       </div>
     </div>
