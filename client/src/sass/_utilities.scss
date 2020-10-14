@@ -77,6 +77,13 @@
     .instructions {
         font-size: 1.25rem;
     }
+    input,
+    button {
+        &.active {
+            color: green;
+            background-color: indigo;
+        }
+    }
     ul {
         display: flex;
         justify-content: center;

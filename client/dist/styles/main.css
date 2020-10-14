@@ -80,6 +80,10 @@ h6 {
     padding: .5rem 0; }
   .tab .instructions {
     font-size: 1.25rem; }
+  .tab input.active,
+  .tab button.active {
+    color: green;
+    background-color: indigo; }
   .tab ul {
     display: flex;
     justify-content: center;
