@@ -13,6 +13,7 @@ class FeedbackPage extends Component {
     }
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
     if (this.state.wasFormSubmitted) {
       this.setState({wasFormSubmitted: false})
     }
