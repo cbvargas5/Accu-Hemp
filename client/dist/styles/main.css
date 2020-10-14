@@ -587,14 +587,11 @@ footer .footer-end-wrapper {
 
 .quiz-wrapper .tab {
   width: 100%; }
-  .quiz-wrapper .tab ul {
-    flex-wrap: nowrap;
-    flex-direction: column; }
-    .quiz-wrapper .tab ul li {
+  .quiz-wrapper .tab ul li {
+    width: 100%; }
+    .quiz-wrapper .tab ul li input {
+      height: 3rem;
       width: 100%; }
-      .quiz-wrapper .tab ul li input {
-        height: 3rem;
-        width: 100%; }
 
 /*
   OTHER PAGES
