@@ -52,7 +52,7 @@ export class FinderQuiz extends Component {
         </Switch>
         <div className="tabNav-btns">
           <Button onClick={this.onPrevious} className="tab-btn">Back</Button>
-          <Button onClick={this.onNext} className="tab-btn">Next</Button>
+          <Button onClick={this.onNext}  className={`tab-btn ${this.props.step == 4 ? "hide" : ""}`}>Next</Button>
         </div>
       </section>
     )
