@@ -161,7 +161,7 @@
             // display: none;
             // text-decoration: underline;
             color: $secondary-color;
-            // transition: .5s;
+            transition: .3s;
         }
         
         .feature-nav-section {
@@ -187,7 +187,7 @@
                             transform: translateY(-.5rem);
                             color: $secondary-color;
                             .steps-nav {
-                                display: none;
+                                color: #fff;
                             }
                         }
                     }
