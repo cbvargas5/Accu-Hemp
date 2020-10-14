@@ -34,7 +34,7 @@ class TabWeightSeverity extends Component {
           <ul>
             {this.props.severities.map(({ severity, id }) => (
               <li key={id}>
-                <button className="severity-btn" onClick={this.handleSelection} name={severity}><img name={severity} src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt={`${severity} severity`}/>{severity}</button>
+                <button className={this.props.selectedSeverity == severity ? "active severity-btn" : "severity-btn"} onClick={this.handleSelection} name={severity}><img name={severity} src={`..\\..\\images\\Buttons_icons\\Severity options\\${severity}.png`} alt={`${severity} severity`}/>{severity}</button>
               </li>
             ))}
           </ul>
