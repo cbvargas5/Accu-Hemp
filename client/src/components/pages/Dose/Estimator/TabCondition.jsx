@@ -25,7 +25,7 @@ export class TabCondition extends Component {
           {this.props.conditions
             .map(({ condition }, index) => (
               <li key={index}>
-                <input onClick={this.handleSelection} type="button" value={condition}/>
+                <input className={this.props.selectedCondition == condition ? "active" : ""} onClick={this.handleSelection} type="button" value={condition}/>
               </li>
             ))}
         </ul>
