@@ -1,10 +1,16 @@
 import React from 'react'
 import ButtonCard from '../cards/ButtonCard.jsx'
+import { useEffect } from 'react'
 
 import { Accordion, Card } from 'react-bootstrap'
 
 
 export default function HelpPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="help-page">
       <section className="mini-header">

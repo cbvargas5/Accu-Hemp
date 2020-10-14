@@ -1,7 +1,13 @@
 import React from 'react'
 import ButtonCard from '../cards/ButtonCard.jsx'
+import { useEffect } from 'react'
 
 export default function CompaniesPage() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="companies-page">
       <section className="mini-header">

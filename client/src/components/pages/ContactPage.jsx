@@ -30,6 +30,7 @@ export default function ContactPage() {
   }
   
   useEffect(() => {
+    window.scrollTo(0, 0)
     if (wasFormSubmitted) {
       setWasFormSubmitted(false)
     }

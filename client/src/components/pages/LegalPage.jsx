@@ -1,9 +1,14 @@
 import React from 'react'
-
+import { useEffect } from 'react'
 import ButtonCard from '../cards/ButtonCard.jsx'
 
 
 export default function LegalPage() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="legal-page">
       <div className="mini-header">
