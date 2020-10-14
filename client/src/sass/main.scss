@@ -849,6 +849,14 @@
             .tracker-parent {
                 width: 90%;
             }
+            // Feedback
+            .write-rating-container {
+                display: block;
+                padding: 0;
+                .write-stars-container {
+                    padding: 1rem 0;
+                }
+            }
         }
         
         // .social-wrapper {}

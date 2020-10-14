@@ -809,4 +809,9 @@ footer .footer-end-wrapper {
   .results-tab {
     padding: 0; }
   .tracker-parent {
-    width: 90%; } }
+    width: 90%; }
+  .write-rating-container {
+    display: block;
+    padding: 0; }
+    .write-rating-container .write-stars-container {
+      padding: 1rem 0; } }
