@@ -82,8 +82,10 @@ h6 {
     font-size: 1.25rem; }
   .tab input.active,
   .tab button.active {
-    color: green;
-    background-color: indigo; }
+    outline: none;
+    background-color: #96ccaa;
+    color: #fff;
+    border: none; }
   .tab ul {
     display: flex;
     justify-content: center;

@@ -80,8 +80,10 @@
     input,
     button {
         &.active {
-            color: green;
-            background-color: indigo;
+            outline: none;
+            background-color: $primary-light;
+            color: #fff;
+            border: none;
         }
     }
     ul {
