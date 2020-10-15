@@ -176,7 +176,8 @@ h6 {
         font-size: 1.15rem; }
     .product-card .product-card-link .price {
       margin: 1rem 0;
-      color: #6396b3; }
+      color: #6396b3;
+      font-size: 1rem; }
   .product-card:hover {
     background-color: #e4ede7; }
 
