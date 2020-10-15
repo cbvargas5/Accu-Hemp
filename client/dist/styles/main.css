@@ -86,6 +86,12 @@ h6 {
     background-color: #96ccaa;
     color: #fff;
     border: none; }
+  .tab span {
+    color: #ccc;
+    display: block;
+    font-size: .8rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem; }
   .tab ul {
     display: flex;
     justify-content: center;

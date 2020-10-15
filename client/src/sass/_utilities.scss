@@ -86,6 +86,13 @@
             border: none;
         }
     }
+    span {
+        color: $dim-color;
+        display: block;
+        font-size: .8rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+    }
     ul {
         display: flex;
         justify-content: center;
