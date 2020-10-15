@@ -102,7 +102,8 @@
                 outline: none;
                 text-overflow: ellipsis;
                 font-size: 1rem;
-                width: 12rem;
+                min-width: 12rem;
+                padding: 0 1rem;
                 height: 4.5rem;
                 transition: .45s;
                 &:active, // Might include on hover
