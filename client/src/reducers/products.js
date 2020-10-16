@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, UPDATE_FILTERED_PRODUCTS, SELECT_DOSE, SELECT_IMPORTANCE, SELECT_QUALITY } from '../constants/action-types'
+import { GET_PRODUCTS, UPDATE_QUIZ_STEPS, UPDATE_VALIDATION_ERR, UPDATE_FILTERED_PRODUCTS, SELECT_DOSE, SELECT_IMPORTANCE, SELECT_QUALITY } from '../constants/action-types'
 
 const initialState = {
     products: [],
@@ -6,7 +6,8 @@ const initialState = {
     step: 1,
     selectedDose: '',
     selectedImportance: '',
-    selectedQualities: ''
+    selectedQualities: '',
+    validationError: false
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -28,6 +29,9 @@ export default (state = initialState, { type, payload }) => {
             return {...state, ...payload }
 
         case SELECT_QUALITY:
+            return {...state, ...payload }
+
+        case UPDATE_VALIDATION_ERR:
             return {...state, ...payload }
 
         default:
