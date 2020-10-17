@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// const pages = [['Home', '/path'], ['Companies', '/path'], ['Help', '/path'], ['Contact Us', '/path'], ['Legal', '/path'], ['Accugentix', '/path']]
-
 const Navbar = ({ open, handleClick }) => {
   return (
   <nav className={`main-nav ${open}`}>
