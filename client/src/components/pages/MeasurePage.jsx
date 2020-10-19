@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import ButtonCard from '../cards/ButtonCard.jsx';
 
 
@@ -29,7 +28,4 @@ class MeasurePage extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({...state})
-
-
-export default connect(mapStateToProps)(MeasurePage)
+export default MeasurePage
