@@ -1,7 +1,5 @@
 # Accu-Hemp
 
-![GitHub contributors](https://img.shields.io/github/contributors/cbvargas5/Accu-Hemp)
-
 Accu-Hemp is an application designed to help CBD Hemp users through the process of dosing, shopping, and measuring CBD Hemp product. Accuhemp by Accugentix
 
 Visit the live app now: https://accu-hemp.com
