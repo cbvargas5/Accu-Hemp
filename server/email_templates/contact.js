@@ -18,4 +18,3 @@ module.exports = ({ name, email, message }) => {
 </html>
 `;
 };
-// brand, product, measurement, email, selected dose

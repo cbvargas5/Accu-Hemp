@@ -19,4 +19,3 @@ module.exports = ({ brand, product, measurement, dose }) => {
 </html>
 `;
 };
-// brand, product, measurement, email, selected dose
