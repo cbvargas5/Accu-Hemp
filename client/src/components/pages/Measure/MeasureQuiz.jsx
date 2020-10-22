@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { updateMeasureSteps, getProductsForMeasure } from '../../../actions/measure'
 
 import { Button } from 'react-bootstrap'
